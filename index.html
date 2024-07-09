@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Builderius CSS</title>
+    <meta name="description"
+          content="BCSS - well balanced between CSS vars plus several utility-like classes and progressive enhancement CSS framework."/>
+
+    <link rel="stylesheet" href="./builderius-framework.css" />
+</head>
+
+<body class="builderiusContent">
+<!-- Header -->
+<header class="outer-wrapper">
+    <hgroup class="container">
+        <h1>Builderius CSS</h1>
+        <abbr title="Builderius CSS">BCSS</abbr>
+    </hgroup>
+</header>
+<!-- ./ Header -->
+
+<!-- Main -->
+<main>
+    <section id="typography">
+        <div class="container flex-column">
+            <h2>Typography</h2>
+            <!-- Inline text elements-->
+            <h3>Inline text elements</h3>
+            <div class="grid">
+                <p><a href="#" onclick="event.preventDefault()">Link</a></p>
+            </div>
+            <div class="grid">
+                <p><strong>Bold</strong></p>
+                <p><em>Italic</em></p>
+                <p><u>Underline</u></p>
+            </div>
+            <div class="grid">
+                <p>
+                    <del>Deleted</del>
+                </p>
+                <p>
+                    <ins>Inserted</ins>
+                </p>
+                <p><s>Strikethrough</s></p>
+            </div>
+            <div class="grid">
+                <p><small>Small </small></p>
+                <p>Text <sub>Sub</sub></p>
+                <p>Text <sup>Sup</sup></p>
+            </div>
+            <div class="grid">
+                <p>
+                    <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+                </p>
+                <p><kbd>Kbd</kbd></p>
+                <p>
+                    <mark>Highlighted</mark>
+                </p>
+            </div>
+
+            <!-- Headings-->
+            <h1>Heading 1 Integer bibendum malesuada</h1>
+            <a href="#" role="button">Button link here</a>
+            <p>
+                Integer bibendum malesuada   <mark>libero vel eleifend</mark>. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <!-- Paragraph-->
+            <p>
+                Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
+                iaculis eros a elit pharetra egestas.
+            </p>
+            <h2 class="font-size-step-3">Heading 2 Integer bibendum malesuada</h2>
+            <p>
+                Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <!-- Blockquote-->
+            <blockquote>
+                "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet
+                ipsum cursus ornare."
+                <footer>
+                    <cite>- Phasellus eget lacinia</cite>
+                </footer>
+            </blockquote>
+            <h3>Heading 3 Integer bibendum malesuada</h3>
+            <p>
+                Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <ul>
+                <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+                <li>Nam et magna at libero scelerisque egestas.</li>
+                <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+                <li>Proin ultricies turpis et volutpat vehicula.</li>
+            </ul>
+            <p>
+                Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <h4>Heading 4 Integer bibendum malesuada</h4>
+            <p>
+                Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
+                fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
+            </p>
+            <ol>
+                <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+                <li>Nam et magna at libero scelerisque egestas.</li>
+                <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+                <li>Proin ultricies turpis et volutpat vehicula.</li>
+            </ol>
+            <p>
+                Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <h4>Heading 4 Integer bibendum malesuada</h4>
+            <p>
+                Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
+                fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
+            </p>
+            <dl>
+                <dt>Aliquam lobortis lacus eu libero ornare facilisis.</dt>
+                <dd>Some more text here as this is the definition content rather then the title</dd>
+                <dt>Nam et magna at libero scelerisque egestas.</dt>
+                <dd>Some more text here as this is the definition content rather then the title</dd>
+                <dt>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</dt>
+                <dd>Some more text here as this is the definition content rather then the title</dd>
+                <dt>Proin ultricies turpis et volutpat vehicula.</dt>
+                <dd>Some more text here as this is the definition content rather then the title</dd>
+            </dl>
+            <p>
+                Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+
+            <h5>Heading 5 Integer bibendum malesuada</h5>
+            <p>
+                Donec nec egestas nulla. Sed varius placerat felis eu suscipit. Mauris maximus ante in
+                consequat luctus. Morbi euismod sagittis efficitur. Aenean non eros orci. Vivamus ut diam
+                sem.
+            </p>
+            <h6>Heading 6 Integer bibendum malesuada</h6>
+            <p>
+                Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt nulla ut
+                tortor posuere, vitae malesuada tortor molestie. Sed nec interdum dolor. Vestibulum id
+                auctor nisi, a efficitur sem. Aliquam sollicitudin efficitur turpis, sollicitudin
+                hendrerit ligula semper id. Nunc risus felis, egestas eu tristique eget, convallis in
+                velit.
+            </p>
+        </div>
+    </section>
+
+    <section id="media">
+        <div class="container flex-column">
+
+            <h2>Media</h2>
+            <figure>
+                <img src="https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA" alt="Minimal landscape" />
+                <figcaption>
+                    Image from
+                    <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+                </figcaption>
+            </figure>
+            <video src="https://ia801903.us.archive.org/32/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4" controls ></video>
+            <audio src="https://ia601204.us.archive.org/3/items/datpiff-mixtape-maab0307/02%20-%20Summertime%20Sadness.mp3" controls ></audio>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=mw2W42pDC0HR6qai" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88583.7580350149!2d14.449699296371282!3d46.06620685137995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476531f5969886d1%3A0x400f81c823fec20!2sLjubljana!5e0!3m2!1sen!2ssi!4v1717075454372!5m2!1sen!2ssi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <figure>
+                <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.762587 0.889252C-0.611945 28.6298 4.81119 84.1107 37.5 84.1107C70.1888 84.1107 75.6119 53.1214 74.2374 37.6267H37.5C37.5 35.6274 37.5 30.0543 37.5 23.7564C37.5 15.8841 48.3713 0.889252 74.2374 0.889252" stroke="black"/>
+                </svg>
+            </figure>
+            <figure>
+                <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.5 84.1107C4.8112 84.1107 -0.611941 28.6298 0.76259 0.889252H74.2374C48.3713 0.889252 37.5 15.8841 37.5 23.7564V37.6267H74.2374C75.6119 53.1214 70.1888 84.1107 37.5 84.1107Z" fill="black"/>
+                </svg>
+            </figure>
+
+            <p><code>let e = document.querySelector('.select-me');
+if (e) ? e.classList.add('.you-are-selected') : console.log('nothing found');</code>
+            </p>
+
+            <pre>let e = document.querySelector('.select-me');
+if (e) ? e.classList.add('.you-are-selected') : console.log('nothing found');</pre>
+
+            <pre><code>let e = document.querySelector('.select-me');
+if (e) ? e.classList.add('.you-are-selected') : console.log('nothing found');</code></pre>
+            <samp>
+            'Nothing found'
+            </samp>
+        </div>
+
+    </section>
+
+    <section id="buttons">
+        <div class="container flex-column">
+
+            <h2>Buttons</h2>
+            <h3>Link buttons</h3>
+            <p class="grid">
+                <a href="#" class="button">Link</a>
+                <a href="#" class="button btn-primary">Link Primary</a>
+                <a href="#" class="button btn-secondary">Link Secondary</a>
+                <a href="#" class="button btn-outline" >Link Outline</a>
+                <a href="#" class="button btn-primary btn-outline" >Link Primary Outline</a>
+                <a href="#" class="button btn-secondary btn-outline" >Link Secondary Outline</a>
+            </p>
+            <h3>Buttons</h3>
+            <p class="grid">
+                <button>Button</button>
+                <button class="btn-primary">Button Primary</button>
+                <button class="btn-secondary">Button Secondary</button>
+                <button class="btn-outline">Button Outline</button>
+                <button class="btn-primary btn-outline">Button Primary Outline</button>
+                <button class="btn-secondary btn-outline">Button Secondary Outline</button>
+            </p>
+            <h3>Role Buttons</h3>
+            <p class="grid">
+                <span role="button">Role Button</span>
+                <span role="button" class="btn-primary">Role Primary</span>
+                <span role="button" class="btn-secondary">Role Secondary</span>
+                <span role="button" class="btn-outline">Role Outline</span>
+                <span role="button" class="btn-primary btn-outline">Role Primary Outline</span>
+                <span role="button" class="btn-secondary btn-outline">Role Secondary Outline</span>
+            </p>
+            <h3>Inputs</h3>
+            <p class="grid">
+                <input type="submit" value="Input" />
+                <input type="submit" value="Input Primary" class="btn-primary" />
+                <input type="submit" value="Input Secondary" class="btn-secondary"/>
+                <input type="submit" value="Input Outline" class="btn-outline"/>
+                <input type="submit" value="Input Primary Outline" class="btn-secondary btn-outline"/>
+                <input type="submit" value="Input Secondary Outline" class="btn-secondary btn-outline"/>
+            </p>
+            <h3>Toggles</h3>
+            <div>
+                <input type="checkbox" role="switch">
+            </div>
+            <div style="display:none">
+                <h3>Form buttons</h3>
+                <p class="grid">
+                    <button class="btn-primary">Primary</button>
+                    <button class="btn-secondary">Secondary</button>
+                </p>
+                <p class="grid">
+                    <button class="btn-primary btn-outline" >Primary Outline</button>
+                    <button class="btn-secondary btn-outline" >Secondary Outline</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" style="display: none;">
+        <form class="container">
+            <h2>Form</h2>
+            <div class="grid">
+                <input
+                        type="text"
+                        name="firstname"
+                        placeholder="First name"
+                        aria-label="First name"
+                        required
+                />
+                <input
+                        type="email"
+                        name="email"
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                />
+                <button type="submit">Subscribe</button>
+            </div>
+            <fieldset>
+                <legend>Privacy</legend>
+                <label for="terms">
+                    <input type="checkbox" role="switch" id="terms" name="terms"/>
+                    I agree to the
+                    <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+                </label>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="form_elements" style="display: none;">
+        <form class="container">
+            <h2>Form elements</h2>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea"></textarea>
+
+            <!-- Search -->
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" placeholder="Search"/>
+
+            <!-- Text -->
+            <label for="text">Text</label>
+            <input type="text" id="text" name="text" placeholder="Text"/>
+            <small>Curabitur consequat lacus at lacus porta finibus.</small>
+
+            <!-- Select -->
+            <label for="select">Select</label>
+            <select id="select" name="select" required>
+                <option value="" selected>Select…</option>
+                <option>…</option>
+            </select>
+
+            <!-- File browser -->
+            <label for="file">
+                File browser
+                <input type="file" id="file" name="file"/>
+            </label>
+
+            <!-- Range slider control -->
+            <label for="range">
+                Range slider
+                <input type="range" min="0" max="100" value="50" id="range" name="range"/>
+            </label>
+
+            <!-- States -->
+            <div class="grid">
+                <label for="valid">
+                    Valid
+                    <input type="text" id="valid" name="valid" placeholder="Valid" aria-invalid="false"/>
+                </label>
+                <label for="invalid">
+                    Invalid
+                    <input
+                            type="text"
+                            id="invalid"
+                            name="invalid"
+                            placeholder="Invalid"
+                            aria-invalid="true"
+                    />
+                </label>
+                <label for="disabled">
+                    Disabled
+                    <input type="text" id="disabled" name="disabled" placeholder="Disabled" disabled/>
+                </label>
+            </div>
+
+            <div class="grid">
+                <!-- Date-->
+                <label for="date"
+                >Date
+                    <input type="date" id="date" name="date"/>
+                </label>
+
+                <!-- Time-->
+                <label for="time"
+                >Time
+                    <input type="time" id="time" name="time"/>
+                </label>
+
+                <!-- Color-->
+                <label for="color"
+                >Color
+                    <input type="color" id="color" name="color" value="#0eaaaa"/>
+                </label>
+            </div>
+
+            <div class="grid">
+                <!-- Checkboxes -->
+                <fieldset>
+                    <legend><strong>Checkboxes</strong></legend>
+                    <label for="checkbox-1">
+                        <input type="checkbox" id="checkbox-1" name="checkbox-1" checked/>
+                        Checkbox
+                    </label>
+                    <label for="checkbox-2">
+                        <input type="checkbox" id="checkbox-2" name="checkbox-2"/>
+                        Checkbox
+                    </label>
+                </fieldset>
+
+                <!-- Radio buttons -->
+                <fieldset>
+                    <legend><strong>Radio buttons</strong></legend>
+                    <label for="radio-1">
+                        <input type="radio" id="radio-1" name="radio" value="radio-1" checked/>
+                        Radio button
+                    </label>
+                    <label for="radio-2">
+                        <input type="radio" id="radio-2" name="radio" value="radio-2"/>
+                        Radio button
+                    </label>
+                </fieldset>
+
+                <!-- Switch -->
+                <fieldset>
+                    <legend><strong>Switches</strong></legend>
+                    <label for="switch-1">
+                        <input type="checkbox" id="switch-1" name="switch-1" role="switch" checked/>
+                        Switch
+                    </label>
+                    <label for="switch-2">
+                        <input type="checkbox" id="switch-2" name="switch-2" role="switch"/>
+                        Switch
+                    </label>
+                </fieldset>
+            </div>
+
+            <!-- Buttons -->
+            <input type="reset" value="Reset" onclick="event.preventDefault()"/>
+            <input type="submit" value="Submit" onclick="event.preventDefault()"/>
+        </form>
+    </section>
+
+    <section id="tables">
+        <div class="container">
+            <h2>Tables</h2>
+            <div class="overflow-auto">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                </tr>
+                </thead>
+                <tbody class="striped-rows">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                        <th scope="col">Foot</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="accordions">
+        <div class="container">
+            <h2>Accordions</h2>
+            <details>
+                <summary>Details question 1</summary>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                    amet, congue turpis.
+                </p>
+            </details>
+            <details>
+                <summary>Details question 2</summary>
+                <ul>
+                    <li>Vestibulum id elit quis massa interdum sodales.</li>
+                    <li>Nunc quis eros vel odio pretium tincidunt nec quis neque.</li>
+                    <li>Quisque sed eros non eros ornare elementum.</li>
+                    <li>Cras sed libero aliquet, porta dolor quis, dapibus ipsum.</li>
+                </ul>
+            </details>
+        </div>
+        <div class="container">
+            <builderius-accordion class="icon-right uni-node-u3e4a11322" data-content="[{&quot;name&quot;: &quot;Some question?&quot;, &quot;text&quot;: &quot;Some answer here&quot;},{&quot;name&quot;: &quot;Some question2?&quot;, &quot;text&quot;: &quot;Some answer here&quot;}]">
+                <div class="description-term">
+                    <button id="accordion-header-39ruvhuiq" aria-controls="accordion-panel-39ruvhuiq" aria-expanded="false" data-accordion-header="true">
+                        Buidlerius accordion question 1<span aria-hidden="true"><i class="plusIcon"></i></span>
+                    </button>
+                </div>
+
+                <div class="description-details" id="accordion-panel-39ruvhuiq" aria-labelledby="accordion-header-39ruvhuiq" role="region">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </div>
+                <div class="description-term expanded">
+                    <button id="accordion-header-olun7t4d4" aria-controls="accordion-panel-olun7t4d4" aria-expanded="true" data-accordion-header="true">
+                        Buidlerius accordion question<span aria-hidden="true"><i class="plusIcon"></i></span>
+                    </button>
+                </div>
+
+                <div class="description-details" id="accordion-panel-olun7t4d4" aria-labelledby="accordion-header-olun7t4d4" role="region">
+                    <ul>
+                        <li>Vestibulum id elit quis massa interdum sodales.</li>
+                        <li>Nunc quis eros vel odio pretium tincidunt nec quis neque.</li>
+                        <li>Quisque sed eros non eros ornare elementum.</li>
+                        <li>Cras sed libero aliquet, porta dolor quis, dapibus ipsum.</li>
+                    </ul>
+                </div>
+            </builderius-accordion>
+        </div>
+    </section>
+
+    <section class="tabs">
+        <div class="container">
+            <h2>Tabs</h2>
+            <builderius-tabs class="uni-node-ue251f81da">
+                <div class="uni-node-u811fa8812" role="tablist" aria-label="tab buttons">
+                    <button id="tab-1" class="uni-node-ud192c965b builderiusTabs_tab active" type="button" data-tab="1" role="tab" aria-controls="tabpanel-1" aria-selected="true">The first tab</button>
+                    <button id="tab-2" class="uni-node-uef38c37f6 builderiusTabs_tab" type="button" data-tab="2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">The second tab</button>
+                    <button id="tab-3" class="uni-node-u7a3772893 builderiusTabs_tab" type="button" data-tab="3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">The third tab</button>
+                </div>
+
+                <div id="tabpanel-1" class="uni-node-u643163e27 builderiusTabs_panel active" data-tab-panel="1" aria-labelledby="tab-1" aria-hidden="false" role="tabpanel" tabindex="0">
+                    <p class="uni-node-u8828112c5">The first tab content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="tabpanel-2" class="uni-node-u7381293f3 builderiusTabs_panel" data-tab-panel="2" aria-labelledby="tab-2" aria-hidden="true" role="tabpanel" tabindex="0" hidden="">
+                    <p class="uni-node-ua151b4b5f">The second tab content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="tabpanel-3" class="uni-node-uf9ad2c56f builderiusTabs_panel" data-tab-panel="3" aria-labelledby="tab-3" aria-hidden="true" role="tabpanel" tabindex="0" hidden="">
+                    <p class="uni-node-u52021015f">The third tab content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </builderius-tabs>
+        </div>
+    </section>
+
+    <section class="dialogs">
+        <div class="container">
+            <h2>Modal</h2>
+            <builderius-modal>
+            <div class="uni-node-u6709fabca">
+                <button onclick="openModal()"
+                class="uni-node-u544e98ac3 open-modal-1" type="button" aria-controls="dialog-1">Open Modal</button>
+
+                <dialog id="f8ed95b" class="builderiusModal" role="dialog" aria-labelledby="dialog-f8ed95b__label" aria-describedby="dialog-f8ed95b__screenreader" aria-controledby="dialog-f8ed95b__label" aria-modal="true" tabindex="0">
+                    <div class="uni-node-u3718179da">
+                        <h2 id="dialog-1__label" class="uni-node-ud85814411">Modal heading</h2>
+
+                        <p class="uni-node-ua14ee29c1">Modal content here</p>
+
+                    </div>
+                    <button onclick="closeModal()" class="uni-node-ub2c77797a close-modal-1" data-action="close" type="button" aria-controls="dialog-1">
+                        <span class="uni-node-u33202cfa8">Close Modal</span>
+                    </button>
+                </dialog>
+                <div class="backdrop"></div>
+            </builderius-modal>
+        </div>
+        </div>
+        <div class="container">
+            <h2>Cookie Notice</h2>
+            <dialog open class="builderiusCookieNotice uni-node-u2a1b27533"  >
+                <h2 id="cookieLabel" class=font-size-step3 uni-node-u3acd42509">Cookie settings</h2>
+                <p id="cookieDescription" class="uni-node-ue681e7ef9">Our website uses some essential cookies to function well. With your permission, we would like to set up some additional cookies to improve your experience. Our
+                    <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
+                </p>
+                <form class="uni-node-uc45468f62" method="dialog">
+                    <button class="uni-node-u687739d2c btn-primary" value="accept">Accept</button>
+                    <button class="uni-node-u291a27470 btn-secondary" value="reject">Reject</button>
+                </form>
+            </dialog>
+        </div>
+    </section>
+
+    <section class="gallery " style="display: none;">
+        <div class="container">
+            <div class="uni-node-u499c0e093">
+                <builderius-glightbox class="uni-node-u94e3f33b6"></builderius-glightbox>
+                <figure class="uni-node-u292ea1e8a"><a class="uni-node-uecfc86a26 glightbox" data-type="image" href="https://source.unsplash.com/wpU4veNGnHg/1200x800"><img class="uni-node-u16be8ba6d" src="https://source.unsplash.com/wpU4veNGnHg/600x400">
+
+                </a>
+                <a class="uni-node-u042f6dfcd glightbox" data-type="image" href="https://source.unsplash.com/4hjNYoFPYRo/1200x800"><img class="uni-node-uca2415b16" src="https://source.unsplash.com/4hjNYoFPYRo/600x400">
+
+                </a>
+                <a class="uni-node-uc199641f2 glightbox" data-type="image" href="https://source.unsplash.com/EYrooq4hk6c/1200x800"><img class="uni-node-u9bea0920a" src="https://source.unsplash.com/EYrooq4hk6c/600x400">
+
+                </a>
+                </figure>
+                </div>
+        </div>
+    </section>
+</main>
+<!-- ./ Main -->
+<script>
+    // Function to open the modal
+    function openModal() {
+        document.getElementById('f8ed95b').classList.add('open');
+        document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+        document.getElementById('f8ed95b').classList.remove('open');
+        document.body.style.overflow = "auto";
+    }
+</script>
+</body>
+</html>
