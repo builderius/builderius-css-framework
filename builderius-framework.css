@@ -4,7 +4,7 @@
     --font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--font-family-emoji);
     --font-family: var(--font-family-sans-serif);
     --font-spacing-block: 1rem;
-    --font-line-height: 1.5;
+    --font-line-height: 1.25;
     --font-weight: 400;
     --font-size: 100%;
     --font-size-step-0: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
@@ -20,13 +20,12 @@
     --border-radius-xxl: calc(var(--border-radius)*3);
     --border-radius-max: 100vh;
     --border-width: 0.0625rem;
-    --border-primary: solid var(--border-width) var(--color-primary-border);
-    --border-secondary: solid var(--border-width) var(--color-secondary-border);
-    --border-muted: solid var(--border-width) var(--color-muted-border);
+    --border-primary: var(--border-width) solid var(--color-primary-border);
+    --border-secondary: var(--border-width) solid var(--color-secondary-border);
+    --border-muted: var(--border-width) solid var(--color-muted-border);
     --outline-width: 0.125rem;
-    --outline: solid var(--outline-width) var(--color-primary-border);
+    --outline: var(--outline-width) solid var(--color-primary-border);
     --box-shadow: 0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024), 0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03), 0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036), 0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.04302), 0.5rem 1rem 6rem rgba(129, 145, 181, 0.06), 0 0 0 0.0625rem rgba(129, 145, 181, 0.015);
-    --box-shadow-focus-with-button: 0 0 0 var(--outline-width) var(--color-primary-focus);
     --spacing: 1rem;
     --spacing-block: var(--spacing);
     --spacing-block-start: var(--spacing-block);
@@ -80,20 +79,6 @@
     --color-muted-border: #e7eaf0;
     --color-success: hsl(162.1, 59.4%, 37.6%);
     --color-error: hsl(3.3, 53.8%, 53.3%);
-    --blockquote-border-color: var(--color-muted-border);
-    --blockquote-footer-color: var(--color-muted);
-    --table-border-color: var(--color-muted-border);
-    --table-row-stripped-background-color: var(--color-muted-background);
-    --code-background-color: #f3f5f7;
-    --code-color: #646b79;
-    --code-kbd-background-color: var(--color-text);
-    --code-kbd-color: var(--color-background);
-    --button-hover-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --switch-background-color: #bfc7d9;
-    --switch-checked-background-color: var(--color-primary-background);
-    --switch-color: #fff;
-    --switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     --accordion-border-color: var(--color-muted-border);
     --accordion-active-summary-color: var(--color-primary-hover);
     --accordion-close-summary-color: var(--color-text);
@@ -122,6 +107,7 @@
     --icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E")
 }
 body {
+    --font-size-body: var(--font-size-step-0);
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -129,14 +115,12 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     font-weight: var(--font-weight);
-    font-size: var(--font-size);
+    font-size: var(--font-size-body);
     line-height: var(--font-line-height);
     font-family: var(--font-family);
     text-rendering: optimizeLegibility;
     overflow-wrap: break-word;
     margin: 0;
-    --font-size: var(--font-size-step-0);
-    --font-line-height: 1.25
 }
 ::before,
 ::after {
@@ -148,8 +132,8 @@ body {
 }
 small,
 .small {
-    --font-size: 0.875em;
-    font-size: var(--font-size)
+    --font-size-small: 0.875em;
+    font-size: var(--font-size-small);
 }
 h1,
 h2,
@@ -193,16 +177,18 @@ pre,
 code,
 kbd,
 samp {
-    --font-family: var(--font-family-monospace);
+    --font-family-code: var(--font-family-monospace);
     font-size: 0.875em;
-    font-family: var(--font-family);
+    font-family: var(--font-family-code);
     max-width: 100%;
     -moz-tab-size: 2;
     -o-tab-size: 2;
     tab-size: 2
 }
 kbd {
-    --font-weight: bolder;
+    --code-kbd-background-color: var(--color-text);
+    --code-kbd-color: var(--color-background);
+    --font-weight-kbd: bolder;
     background-color: var(--code-kbd-background-color);
     color: var(--code-kbd-color);
     vertical-align: baseline
@@ -239,7 +225,7 @@ ul {
     margin-bottom: var(--spacing-block-end, var(--spacing-block));
     color: var(--color-text);
     font-style: normal;
-    font-weight: var(--font-weight)
+    font-weight: var(--font-weight);
 }
 h1,
 .font-size-step-5,
@@ -262,145 +248,110 @@ h6,
     font-family: var(--font-family)
 }
 mark {
+    --mark-color: var(--color-primary);
+    --mark-background-color: hsl(60, 100%, 90%);
     padding: 0.125rem 0.25rem;
     background-color: var(--mark-background-color, var(--color-primary-contrast-background));
     color: var(--mark-color);
     vertical-align: baseline;
-    --mark-background-color: hsl(60, 100%, 90%)
 }
 blockquote {
+    --blockquote-border-color: var(--color-muted-border);
     display: block;
     margin: var(--spacing-block) 0;
     padding: var(--spacing);
-    border-right: none;
-    border-left: 0.25rem solid var(--blockquote-border-color);
+    border-inline-end-style: none;
     border-inline-start: 0.25rem solid var(--blockquote-border-color);
     border-inline-end: none
 }
 abbr[title] {
-    border-bottom: 1px dotted;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
     text-decoration: none;
-    cursor: help
+    cursor: help;
 }
 ins {
     color: var(--color-success);
-    text-decoration: none
+    text-decoration: none;
 }
 del {
-    color: var(--color-error)
+    color: var(--color-error);
 }
 a {
-    --text-decoration: underline;
-    --color-text: var(--color-primary);
+    --text-decoration-anchor: underline;
+    --color-text-anchor: var(--color-primary);
     outline: none;
-    color: var(--color-text);
-    text-decoration: var(--text-decoration);
+    color: var(--color-text-anchor);
+    text-decoration: var(--text-decoration-anchor);
     transition: background-color var(--transition), color var(--transition), box-shadow var(--transition), -webkit-text-decoration var(--transition)
 }
 a:where(:hover, :active, :focus) {
-    --color-text: var(--color-primary-hover);
-    --text-decoration: none
+    --color-text-anchor: var(--color-primary-hover);
+    --text-decoration-anchor: none
 }
-:is(button, .button, [role=button], [type=submit]) {
-    --background-color: var(--color-muted-background);
-    --border-color: transparent;
-    --color-text: var(--color-primary);
-    --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-    --text-decoration: none;
-    color: var(--color-text);
-    background-color: var(--background-color);
-    border: var(--border-width) solid var(--background-color);
+:is(button, [role=button], [type=submit]) {
+    --color-background-button: var(--color-muted-background);
+    --color-text-button: var(--color-primary);
+    --text-decoration-button: none;
+    --hover-box-shadow-button: 0px 0px 0px rgba(0, 0, 0, 0.15);
+    --box-shadow-button: 0 0 0 rgba(0, 0, 0, 0);
+    color: var(--color-text-button);
+    background-color: var(--color-background-button);
+    border: var(--border-width) solid var(--color-background);
     padding: var(--spacing-block) var(--spacing-inline);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-button);
     font-weight: var(--font-weight);
     font-size: 1rem;
     line-height: var(--font-line-height);
     text-align: center;
-    text-decoration: var(--text-decoration);
+    text-decoration: var(--text-decoration-button);
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
     transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition)
 }
-:where(button, .button, [role=button], [type=submit]):is([aria-current]:not([aria-current=false])),
-:where(button, .button, [role=button], [type=submit]):is(:hover, :active, :focus) {
-    --background-color: transparent;
+:where(button, [role=button], [type=submit]):is([aria-current]:not([aria-current=false])),
+:where(button, [role=button], [type=submit]):is(:hover, :active, :focus) {
+    --color-background-button: transparent;
+    --hover-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0);
+    --text-decoration-button: none;
     border: var(--border-muted);
-    --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-    --text-decoration: none
 }
-:where(button, .button, [role=button], [type=submit], a):is([aria-current]:not([aria-current=false])):focus:not(:focus-visible) {
-    --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+:where(button, [role=button], [type=submit], a):is([aria-current]:not([aria-current=false])):focus:not(:focus-visible) {
+    --box-shadow-button: var(--hover-box-shadow-button, 0 0 0 rgba(0, 0, 0, 0));
     outline: none
 }
-:where(button, .button, [role=button], [type=submit], a):focus-visible,
-:where(button, .button, [role=button], [type=submit], a):is([aria-current]:not([aria-current=false])):focus-visible {
+:where(button, [role=button], [type=submit], a):focus-visible,
+:where(button, [role=button], [type=submit], a):is([aria-current]:not([aria-current=false])):focus-visible {
     outline: var(--outline)
 }
-:where(button, .button, [role=button], [type=submit] )[disabled] {
+:where(button, [role=button], [type=submit] )[disabled] {
     opacity: 0.5;
     pointer-events: none
 }
-:where(button, .button, [role=button], [type=submit])[aria-busy=true]::before {
+:where(button, [role=button], [type=submit])[aria-busy=true]::before {
     filter: brightness(0) invert(1)
 }
-[aria-controls] {
-    cursor: pointer
-}
-[aria-disabled=true],
-[disabled] {
-    cursor: not-allowed
-}
-[aria-hidden=false][hidden] {
-    display: initial
-}
-[aria-hidden=false][hidden]:not(:focus) {
-    clip: rect(0, 0, 0, 0);
-    position: absolute
-}
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation
-}
-[dir=rtl] {
-    direction: rtl
-}
-::-moz-focus-inner {
-    padding: 0;
-    border-style: none
-}
-:-moz-focusring {
-    outline: 0
-}
-:-moz-ui-invalid {
-    box-shadow: none
-}
-::-ms-expand {
-    display: none
-}
+
 [role=switch] {
-    --border-width: 0.1875rem;
+    --switch-background-color: #bfc7d9;
+    --switch-checked-background-color: var(--color-primary-background);
+    --switch-color: #fff;
+    --switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --switch-border-width: 0.1875rem;
+    --switch-border-color: var(--border-color);
+    color: var(--switch-color);
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    --background-color: var(--switch-background-color);
-    --color: var(--switch-color);
     width: 2.25em;
     height: 1.25em;
-    border: var(--border-width) solid var(--border-color);
+    border: var(--switch-thumb-box-shadow) solid var(--switch-border-color);
     border-radius: 1.25em;
-    background-color: var(--background-color);
+    background-color: var(--switch-background-color);
     line-height: 1.25em
 }
 [role=switch]:before {
@@ -408,26 +359,22 @@ textarea,
     aspect-ratio: 1;
     height: 100%;
     border-radius: 50%;
-    background-color: var(--color);
+    background-color: var(--switch-color);
     box-shadow: var(--switch-thumb-box-shadow);
     content: "";
     transition: margin .1s ease-in-out
 }
-[role=switch]:focus-visible,
-[role=switch]:focus {
-    --background-color: var(--switch-background-color);
-    --border-color: var(--switch-background-color)
-}
+
 [role=switch]:checked {
-    --background-color: var(--switch-checked-background-color);
-    --border-color: var(--switch-checked-background-color);
+    --switch-background-color: var(--switch-checked-background-color);
+    --switch-border-color: var(--switch-checked-background-color);
     background-image: none
 }
 [role=switch]:checked:before {
     margin-inline-start: 1em
 }
 [role=switch]:not([aria-invalid]) {
-    --border-color: var(--switch-background-color)
+    --switch-border-color: var(--switch-background-color)
 }
 details {
     margin-block-end: 0.25rem;
@@ -517,7 +464,7 @@ details:where([open]) summary::after {
 [aria-expanded=true] {
     background-color: var(--accordion-open-summary-background);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    border-bottom: 0;
+    border-bottom-width: 0;
     margin-block-end: 0
 }
 [data-accordion-header] [aria-hidden=true] {
@@ -546,8 +493,11 @@ details:where([open]) summary::after {
     width: 100%;
     margin-block-end: 0.25rem;
     border-color: var(--accordion-border-color);
-    border-width: 0 var(--border-width) var(--border-width);
-    border-radius: var(--border-radius)  var(--border-radius) var(--border-radius)  var(--border-radius);
+    border-top-width: 0;
+    border-right-width: var(--border-width);
+    border-bottom-width: var(--border-width);
+    border-left-width: var(--border-width);
+    border-radius: var(--border-radius);
     border-style: solid;
     background-color: var(--accordion-open-summary-background);
     padding-inline: var(--accordion-spacing-inline);
@@ -572,7 +522,7 @@ details:where([open]) summary::after {
     border-color: var(--tabs-border-color);
     border-width: var(--border-width);
     border-radius: var(--border-radius);
-    border-style: solid
+    border-style: solid;
 }
 [role=tablist] {
     display: flex;
@@ -586,7 +536,7 @@ details:where([open]) summary::after {
     text-decoration: none;
     border-width: var(--border-width);
     border-color: transparent;
-    border-style: solid
+    border-style: solid;
 }
 [role=tab]:where([aria-selected=false]) {
     background-color: var(--tabs-inactive-background);
@@ -597,7 +547,7 @@ details:where([open]) summary::after {
     border-color: var(--tabs-border-color);
     border-width: var(--border-width);
     border-radius: var(--border-radius);
-    color: var(--tabs-active-color)
+    color: var(--tabs-active-color);
 }
 [role=tabpanel].active {
     color: var(--tabs-active-color);
@@ -610,24 +560,21 @@ details:where([open]) summary::after {
 :where(dialog[open]) {
     display: block
 }
-:is([role=dialog],
-  dialog):where([open], .open) {
+:is([role=dialog],dialog):where([open], .open) {
+    --modal-spacing: calc(var(--spacing)*2);
+    --modal-spacing-block-start: var(--spacing);
     position: fixed;
     top: 50%;
     left: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
     background-color: var(--card-sectioning-background-color);
-    border-color: var(--accordion-border-color);
-    border-width: var(--border-width);
-    border-style: solid;
+    border: var(--border-width) solid var(--accordion-border-color);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    --modal-spacing: calc(var(--spacing) * 2);
-    --modal-spacing-block-start: var(--spacing)
 }
 :is([role=dialog], dialog):where([open], .open).builderiusCookieNotice {
     transform: unset;
@@ -639,7 +586,10 @@ details:where([open]) summary::after {
 }
 :where([role=dialog],
   dialog):where([open], .open) > div {
-    padding: var(--modal-spacing-block-start) var(--modal-spacing) var(--modal-spacing)
+    padding-top: var(--modal-spacing-block-start);
+    padding-right: var(--modal-spacing);
+    padding-bottom: var(--modal-spacing);
+    padding-left: var(--modal-spacing)
 }
 :is([role=dialog], dialog):where([open], .open) + .backdrop {
     position: fixed;
@@ -666,35 +616,8 @@ details:where([open]) summary::after {
     overflow: clip;
     position: fixed
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    background-repeat: no-repeat
-}
-:where(section) {
-    padding: var(--section-padding-block) var(--section-padding-inline)
-}
-:where(.outer-wrapper) {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: var(--spacing-block) var(--spacing-inline)
-}
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: var(--container-width)
-}
-.block {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%
+section {
+    padding: var(--section-padding-block);
 }
 table {
     width: 100%;
@@ -702,9 +625,13 @@ table {
     border-spacing: 0;
     text-indent: 0
 }
+tr {
+    --table-row-stripped-background-color: var(--color-muted-background);
+}
 th,
 td {
-    padding: calc(var(--spacing) / 2) var(--spacing);
+    --table-border-color: var(--color-muted-border);
+    padding: calc(var(--spacing)/2);
     border-bottom: var(--border-width) solid var(--table-border-color);
     background-color: var(--color-background);
     color: var(--color-text);
@@ -721,7 +648,7 @@ td {
 :where(tfoot) th,
 :where(tfoot) td {
     border-top: var(--border-width) solid var(--table-border-color);
-    border-bottom: 0
+    border-bottom-width: 0
 }
 .striped-rows :where(tr:nth-child(odd)) > * {
     background-color: var(--table-row-stripped-background-color)
@@ -744,13 +671,15 @@ img {
     object-position: center
 }
 figure {
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: var(--spacing-block-end, var(--spacing));
+    margin-left: 0;
     padding: 0;
-    margin-bottom: var(--spacing-block-end, var(--spacing))
 }
 figcaption {
-    padding: calc(var(--spacing) * 0.5) 0;
-    color: var(--color-muted)
+    padding: calc(var(--spacing)*0.5);
+    color: var(--color-muted);
 }
 svg:not(:root) {
     overflow: hidden
@@ -764,12 +693,13 @@ pre {
     overflow: auto;
     display: block;
     margin-bottom: var(--spacing-block-end, var(--spacing));
-    overflow-x: auto;
-    padding: var(--spacing)
+    padding: var(--spacing);
 }
 pre,
 code,
 kbd {
+    --code-background-color: #f3f5f7;
+    --code-color: #646b79;
     border-radius: var(--border-radius);
     background: var(--code-background-color);
     color: var(--code-color);
@@ -779,13 +709,51 @@ kbd {
 code,
 kbd {
     display: inline-block;
-    padding: 0.375rem
+    padding: 0.375rem;
 }
 pre > code {
     display: block;
     padding: unset;
-    background: none;
+    background-image: none;
     line-height: var(--font-line-height)
+}
+
+.builderiusContent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+.outer-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: var(--spacing-block);
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width)
+}
+.block {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%
+}
+.card {
+    padding: var(--spacing-m);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background-color);
+    border: solid var(--border-width) var(--card-border-color);
+    box-shadow: var(--card-box-shadow);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-sm);
+    align-items: flex-start
 }
 .grid {
     display: grid;
@@ -795,13 +763,13 @@ pre > code {
 }
 .flex-row {
     display: flex;
-    column-gap: var(--spacing-inline);
+    gap: var(--spacing-inline);
     justify-content: flex-start
 }
 .flex-column {
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-block);
+    gap: var(--spacing-block);
     align-items: flex-start
 }
 .overflow-auto {
@@ -815,52 +783,97 @@ pre > code {
     background-color: var(--color-primary-background)
 }
 .border-primary {
-    border: var(--color-primary)
+    border-color: var(--color-primary);
 }
 .color-secondary {
-    color: var(--color-secondary)
+    color: var(--color-secondary);
 }
 .bg-secondary {
-    background-color: var(--color-secondary-background)
+    background-color: var(--color-secondary-background);
 }
 .border-secondary {
-    border-color: var(--color-secondary)
+    border-color: var(--color-secondary);
+}
+.button {
+    --color-background-button: var(--color-muted-background);
+    --color-text-button: var(--color-primary);
+    --text-decoration-button: none;
+    --hover-box-shadow-button: 0px 0px 0px rgba(0, 0, 0, 0.15);
+    --box-shadow-button: 0 0 0 rgba(0, 0, 0, 0);
+    color: var(--color-text-button);
+    background-color: var(--color-background-button);
+    border: var(--border-width) solid var(--color-background);
+    padding: var(--spacing-block) var(--spacing-inline);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-button);
+    font-weight: var(--font-weight);
+    font-size: 1rem;
+    line-height: var(--font-line-height);
+    text-align: center;
+    text-decoration: var(--text-decoration-button);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition)
+}
+.button:is([aria-current]:not([aria-current=false])),
+.button:is(:hover, :active, :focus) {
+    --color-background-button: transparent;
+    --hover-box-shadow-button: 0 0 0 rgba(0, 0, 0, 0);
+    --text-decoration-button: none;
+    border: var(--border-muted);
+}
+.button:is([aria-current]:not([aria-current=false])):focus:not(:focus-visible) {
+    --box-shadow-button: var(--hover-box-shadow-button, 0 0 0 rgba(0, 0, 0, 0));
+    outline: none
+}
+.button:focus-visible,
+.button:is([aria-current]:not([aria-current=false])):focus-visible {
+    outline: var(--outline)
+}
+.button[disabled] {
+    opacity: 0.5;
+    pointer-events: none
+}
+.button[aria-busy=true]::before {
+    filter: brightness(0) invert(1)
 }
 .btn-primary {
+    text-decoration: var(--text-decoration-primary, var(--text-decoration));
     color: var(--color-primary-contrast);
-    --text-decoration: var(--text-decoration);
     background-color: var(--color-primary-background);
     border: 1px solid var(--color-primary-border)
 }
 .btn-primary:hover {
     background-color: var(--color-primary-hover-background);
-    border: 1px solid var(--color-primary-hover-border)
+    border: 1px solid var(--color-primary-hover-border);
 }
 .btn-secondary {
-    --text-decoration: var(--text-decoration);
+    text-decoration: var(--text-decoration-secondary, var(--text-decoration));
     color: var(--color-secondary-contrast);
     background-color: var(--color-secondary-background);
-    border: 1px solid var(--color-secondary)
+    border: 1px solid var(--color-secondary);
 }
 .btn-secondary:hover {
     background-color: var(--color-secondary-hover-background);
-    border: 1px solid var(--color-secondary-hover-border)
+    border: 1px solid var(--color-secondary-hover-border);
 }
 .btn-outline {
-    --text-decoration: var(--text-decoration);
-    border: 1px solid var(--color-text)
+    text-decoration: var(--text-decoration-outline, var(--text-decoration));
+    border: 1px solid var(--color-text);
 }
 .btn-primary.btn-outline {
-    --text-decoration: var(--text-decoration);
+    text-decoration: var(--text-decoration-outline, var(--text-decoration-primary));
     background-color: transparent;
-    color: var(--color-primary-background)
+    color: var(--color-primary-background);
 }
 .btn-primary.btn-outline:hover {
     background-color: transparent;
-    color: var(--color-primary-hover-background)
+    color: var(--color-primary-hover-background);
 }
 .btn-secondary.btn-outline {
-    --text-decoration: var(--text-decoration);
+    text-decoration: var(--text-decoration-outline, var(--text-decoration-secondary));
     background-color: transparent;
     color: var(--color-secondary-background)
 }
@@ -898,44 +911,63 @@ pre > code {
     --font-line-height: 1.25;
     --spacing-block-start: 1.5rem
 }
-.builderiusContent {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
-}
-.page-content {
-    flex: 1
-}
+
 .skip-navigation {
-    position: absolute;
-    top: -9999px;
+    position: fixed;
+    top: -9999999px;
+    z-index: 999999999;
     left: var(--spacing);
-    z-index: 9999;
     background-color: var(--color-background)
 }
 .skip-navigation:focus {
     top: var(--spacing)
 }
-builderius-menu-toggle > button:focus:focus-visible {
-    outline: solid var(--border-width) var(--color-primary-hover-border)
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none
 }
-*:focus:not(:focus-visible) {
-    outline: none
+.is-mobile .main-navigation {
+    display: none
 }
-*:focus:focus-visible {
-    outline: var(--outline)
+.is-mobile.is-expanded .main-navigation {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--color-background)
 }
-.footer-col {
-    display: flex
-}
-.card {
-    padding: var(--spacing-m);
-    border-radius: var(--card-border-radius);
-    background-color: var(--card-background-color);
-    border: solid var(--border-width) var(--card-border-color);
-    box-shadow: var(--card-box-shadow);
+.is-mobile.is-expanded .am-main-menu {
+    background-color: white;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-sm);
-    align-items: flex-start
+    margin: var(--spacing);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow)
+}
+.is-mobile.is-expanded .am-list-item {
+    width: 100%
+}
+.is-mobile.is-expanded .am-menu-link {
+    flex: 1;
+    text-align: center;
+    justify-content: center
+}
+builderius-menu-toggle>button:focus:not(:focus-visible) {
+    outline: none !important
+}
+builderius-menu-toggle {
+    display: none
+}
+.is-mobile builderius-menu-toggle {
+    display: unset
+}
+builderius-menu-toggle > button:focus:focus-visible {
+    outline: solid var(--border-width) var(--color-primary-hover-border)
 }
