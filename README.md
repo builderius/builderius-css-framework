@@ -3,7 +3,7 @@
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
 ## Video walktrough
-[![Watch the video](video-cover.png)(https://www.youtube.com/watch?v=GsGDg6O-Fso)]
+[![Watch the video](video-cover.png)](https://www.youtube.com/watch?v=GsGDg6O-Fso)
 
 ## How does it help users get a quick start?
 - Drop any html element into the canvas and it will look nice and be responsive out of the box. 
