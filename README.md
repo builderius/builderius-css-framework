@@ -1,4 +1,4 @@
-﻿# Builderius CSS - Alpha 1.0
+﻿# Builderius CSS - 1.0 Alpha
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
