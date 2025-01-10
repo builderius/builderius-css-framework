@@ -7,12 +7,12 @@
     --font-line-height: 1.25;
     --font-weight: 400;
     --font-size: 100%;
-    --font-size-step-0: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
-    --font-size-step-1: clamp(1.067rem, 0.949rem + 0.59vi, 1.4063rem);
-    --font-size-step-2: clamp(1.1385rem, 0.9842rem + 0.7714vi, 1.582rem);
-    --font-size-step-3: clamp(1.2148rem, 1.0182rem + 0.9826vi, 1.7798rem);
-    --font-size-step-4: clamp(1.2962rem, 1.0506rem + 1.228vi, 2.0023rem);
-    --font-size-step-5: clamp(1.383rem, 1.0806rem + 1.5122vi, 2.2525rem);
+    --font-size-step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+    --font-size-step-1: clamp(1.067rem, 0.949rem + 0.59vw, 1.4063rem);
+    --font-size-step-2: clamp(1.1385rem, 0.9842rem + 0.7714vw, 1.582rem);
+    --font-size-step-3: clamp(1.2148rem, 1.0182rem + 0.9826vw, 1.7798rem);
+    --font-size-step-4: clamp(1.2962rem, 1.0506rem + 1.228vw, 2.0023rem);
+    --font-size-step-5: clamp(1.383rem, 1.0806rem + 1.5122vw, 2.2525rem);
     --border-radius: 0.5rem;
     --border-radius-sm: calc(var(--border-radius)*0.5);
     --border-radius-lg: calc(var(--border-radius)*1.5);
