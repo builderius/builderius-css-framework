@@ -1,0 +1,13 @@
+.site-edge-section {
+    background-color: var(--color--base--900);
+    color: var(--color--base--0);
+    padding-top: var(--spacing--2xl);
+    padding-bottom: var(--spacing--2xl);
+}
+.site-edge-section p, .site-edge-section span {
+    color: var(--color--base--0);
+}
+.site-edge-section h1 {
+    margin-top: 0;
+    color: var(--color--base--0);
+}
