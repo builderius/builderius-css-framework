@@ -206,8 +206,8 @@
     --switch--thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     --accordion--border-color: var(--color--base--200);
     --accordion--active-summary-color: var(--color--primary--200);
-    --accordion--close-summary-color: var(--color--base--900);
-    --accordion--open-summary-color: var(--color--base--600);
+    --accordion--close-summary-color: var(--color--base--600);
+    --accordion--open-summary-color: var(--color--base--900);
     --accordion--closed-summary-background: transparent;
     --accordion--open-summary-background: var(--color--base--50);
     --accordion--active-summary-background: var(--color--base--50);
@@ -694,7 +694,30 @@ details {
     color: var(--accordion--close-summary-color);
     padding-inline: var(--accordion--spacing-inline)
 }
+details:where(:hover, :focus) {
+    color: var(--accordion--active-summary-color);
+    background-color: var(--accordion--active-summary-background)
+}
+details:where(:hover, :focus) summary::before,
+details:where(:hover, :focus) summary::after {
+    background-color: var(--accordion--active-summary-color)
+}
+details :last-child {
+    margin-block-end: 0
+}
+details:where([open]) {
+    background-color: var(--accordion--open-summary-background);
+    padding-block-end: var(--accordion--spacing-block)
+}
+details:where([open]) summary {
+    color: var(--accordion--open-summary-color);
+}
+details:where([open]) summary::before,
+details:where([open]) summary::after {
+    transform: rotate(-180deg)
+}
 summary {
+    width: 100%;
     padding-block: var(--accordion--spacing-block);
     user-select: none;
     cursor: pointer;
@@ -706,8 +729,8 @@ summary {
     align-items: center;
     gap: var(--spacing--sm)
 }
-summary::before {
-    background-image: var(--icon--chevron);
+summary::before, summary::after {
+    background-image: var(--icon, var(--icon--base));
     background-position: center center;
     background-size: 1rem;
     transform: rotate(0deg);
@@ -719,67 +742,28 @@ summary::before {
     transition: var(--transition);
     border-radius: 24px;
     background-color: var(--accordion--active-summary-background);
-    mask-image: var(--icon-base);
-    -webkit-mask-image: var(--icon-base)
 }
-details:where(:hover, :focus) {
-    color: var(--accordion--active-summary-color);
-    background-color: var(--accordion--active-summary-background)
+summary::after {
+    margin-left: auto;
 }
-details:where(:hover, :focus) summary::before {
-    background-color: var(--accordion--active-summary-color)
+summary:where(.icon-style-plus) {
+    --icon: var(--icon--plus);
 }
-details :last-child {
-    margin-block-end: 0
+summary:where(.icon-style-arrow) {
+    --icon: var(--icon--arrow);
 }
-details:where(.icon-right) summary::before {
-    content: "";
-    width: 0;
-    height: 0;
-    overflow: clip
+summary:where(.icon-style-caret) {
+    --icon: var(--icon--caret);
 }
-details:where(.icon-right) summary::after {
-    content: "";
-    display: block;
-    position: relative;
-    background-image: var(--icon--chevron);
-    background-position: center center;
-    background-size: 1rem;
-    width: 24px;
-    height: 24px;
-    border-radius: 24px;
-    transform: rotate(90deg);
-    transition: var(--transition);
-    margin-inline-start: auto
+summary:where(.icon-right)::before {
+    content: unset;
 }
-details:where([open]) {
-    color: var(--accordion--open-summary-color);
-    background-color: var(--accordion--open-summary-background);
-    padding-block-end: var(--accordion--spacing-block)
-}
-details:where([open]) summary::before,
-details:where([open]) summary::after {
-    transform: rotate(-90deg)
+summary:not(.icon-right)::after {
+    content: unset;
 }
 summary > :where(h1,h2,h3,h4,h5,h6) {
     font-weight: 500;
     font-size: var(--font--size--1)
-}
-summary:where(.icon-right)::before {
-    display: none
-}
-summary:where(.icon-right)::after {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    transform: rotate(90deg);
-    transition: var(--transition);
-    border-radius: 24px;
-    margin-inline-start: auto;
-    mask-image: var(--icon-base);
-    -webkit-mask-image: var(--icon-base);
-    background-color: currentColor
 }
 [data-accordion-header] {
     margin-block-end: 0.25rem;
@@ -993,6 +977,9 @@ pre > code {
     background-image: none;
     line-height: var(--font--line-height)
 }
+.gutter {
+    padding: var(--section--padding-block) var(--section--padding-inline);
+}
 .outer-wrapper {
     display: flex;
     align-items: center;
@@ -1193,7 +1180,7 @@ builderius-smart-form button.processing {
     text-indent: var(--spacing--inline)
 }
 .search-button {
-    --icon-base: var(--icon--search);
+    --icon: var(--icon--search);
     display: flex;
     font-size: inherit;
     color: var(--color--base--0);
@@ -1328,10 +1315,10 @@ builderius-smart-form button.processing {
     flex-direction: row;
     justify-content: flex-start
 }
-.icon-right [aria-hidden=true] {
+:where(.icon-right) [aria-hidden=true] {
     margin-inline-start: auto;
     transform: rotate(90deg)
 }
-.icon-right [aria-expanded=true] [aria-hidden=true] {
+:where(.icon-right) [aria-expanded=true] [aria-hidden=true] {
     transform: rotate(0)
 }
