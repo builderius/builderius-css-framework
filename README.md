@@ -2,6 +2,11 @@
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
+## A video walkthrough of the framework
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EwfXgAwvsRo" frameborder="0" allowfullscreen></iframe>
+
+
+
 ## How does it help users get a quick start?
 - Drop any html element into the canvas and it will look nice and be responsive out of the box. 
 - It takes care of the basic global styling so that you can extend it to fit your needs faster then building from scratch would take you.
