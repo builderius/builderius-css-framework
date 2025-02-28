@@ -3,7 +3,7 @@
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
 ## A video walkthrough of the framework
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EwfXgAwvsRo" frameborder="0" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/EwfXgAwvsRo/0.jpg)](https://www.youtube.com/watch?v=EwfXgAwvsRo)
 
 
 
