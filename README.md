@@ -6,6 +6,10 @@ A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CS
 - Drop any html element into the canvas and it will look nice and be responsive out of the box. 
 - It takes care of the basic global styling so that you can extend it to fit your needs faster then building from scratch would take you.
 
+## Video walkthrough
+
+[![Watch the video](video-cover.jpg)](https://youtu.be/EwfXgAwvsRo)
+
 ## What is included?
 
 ### Elegant HTML Reset
@@ -14,6 +18,10 @@ A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CS
 - Lightweight
 - Low Specificity for easy overrides
 - Semantic styles (button, [input=submit], [role=button] and .button receive the same styles)
+
+### Quick Start Cheatsheet
+
+[Quick explanation of assets available and how to approach them](./css-framework-cheatsheet.md)
 
 ### Tokenization and Figma integration
 The framework is built around "tokens"—constant values for colors, sizes, and style variations. These tokens are applied consistently throughout the framework, so updating them automatically updates all related CSS variables and classes. This approach ensures a reliable and scalable design system. It also enhances integration with our Figma design file, making the transition from design to development smoother and more efficient.

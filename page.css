@@ -14,3 +14,6 @@
 section .container > :where(h2, h3) {
     margin-top: 1rem;
 }
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav {
+    position: relative;
+}
