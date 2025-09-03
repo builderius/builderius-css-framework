@@ -1,37 +1,40 @@
 # CSS Framework Cheatsheet
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Root CSS Variables](#root-css-variables)
-   - [Color Variables](#color-variables)
-   - [Spacing Variables](#spacing-variables)
-   - [Size Variables](#size-variables)
-   - [Border & Radius Variables](#border--radius-variables)
-   - [Typography Variables](#typography-variables)
-   - [Container & Layout Variables](#container--layout-variables)
-   - [Component Variables](#component-variables)
+    - [Color Variables](#color-variables)
+    - [Spacing Variables](#spacing-variables)
+    - [Size Variables](#size-variables)
+    - [Border & Radius Variables](#border--radius-variables)
+    - [Typography Variables](#typography-variables)
+    - [Container & Layout Variables](#container--layout-variables)
+    - [Component Variables](#component-variables)
 3. [Global Classes](#global-classes)
-   - [Layout Classes](#layout-classes)
-   - [Component Classes](#component-classes)
-   - [Utility Classes](#utility-classes)
-   - [Icon & Interaction Classes](#icon--interaction-classes)
+    - [Layout Classes](#layout-classes)
+    - [Component Classes](#component-classes)
+    - [Utility Classes](#utility-classes)
+    - [Icon & Interaction Classes](#icon--interaction-classes)
 4. [Locally Scoped CSS Variables](#locally-scoped-css-variables)
-   - [How They Work](#how-they-work)
-   - [Button Example](#button-example)
-   - [Heading Example](#heading-example)
-   - [Navigation Example](#navigation-example)
+    - [How They Work](#how-they-work)
+    - [Button Example](#button-example)
+    - [Heading Example](#heading-example)
+    - [Navigation Example](#navigation-example)
 5. [Practical Examples](#practical-examples)
-   - [Customizing Colors](#customizing-colors)
-   - [Creating a Custom Component](#creating-a-custom-component)
-   - [Modifying Component Spacing](#modifying-component-spacing)
+    - [Customizing Colors](#customizing-colors)
+    - [Creating a Custom Component](#creating-a-custom-component)
+    - [Modifying Component Spacing](#modifying-component-spacing)
 
 ---
 
 ## Introduction
 
-This CSS framework uses a robust system of CSS custom properties (variables) and utility classes to create a flexible, maintainable design system. The framework follows these key principles:
+This CSS framework uses a robust system of CSS custom properties (variables) and utility classes to create a flexible,
+maintainable design system. The framework follows these key principles:
 
-- **Variable Cascading**: Base variables defined at the root level, component variables reference those base variables, and local element variables can override as needed
+- **Variable Cascading**: Base variables defined at the root level, component variables reference those base variables,
+  and local element variables can override as needed
 - **Component-Based Design**: Provides pre-styled elements while allowing for customization
 - **Utility Classes**: Quick access to common styles without writing custom CSS
 - **Responsive Design**: Built-in responsive behavior using flexible layouts and container queries
@@ -42,55 +45,55 @@ This cheatsheet will help you navigate the framework's structure and understand 
 
 ## Root CSS Variables
 
-The `:root` selector contains global CSS variables that define the core design system elements. These can be overridden at more specific levels when needed.
+The `:root` selector contains global CSS variables that define the core design system elements. These can be overridden
+at more specific levels when needed.
 
 ### Color Variables
 
 ```css
 :root {
     /* Base colors */
-    --color--base--0: #fff;
-    --color--base--25: #fafafa;
-    --color--base--50: #f1f2f6;
-    --color--base--100: #d6d7df;
-    --color--base--200: #bbbcc6;
-    --color--base--300: #a1a2ad;
-    --color--base--400: #868695;
-    --color--base--500: #716f82;
-    --color--base--600: #5e5a6c;
-    --color--base--700: #4b4557;
-    --color--base--800: #393444;
-    --color--base--900: #282432;
-    --color--base--950: #17131e;
-    --color--base--1000: #000;
+    --color--base--0: #ffffff;
+    --color--base--50: #f7f7f7;
+    --color--base--100: #f0f0f0;
+    --color--base--200: #dddedf;
+    --color--base--300: #c6c7c8;
+    --color--base--400: #a8aaad;
+    --color--base--500: #8b8e92;
+    --color--base--600: #6e7277;
+    --color--base--700: #585b5f;
+    --color--base--800: #44474b;
+    --color--base--900: #383a3e;
+    --color--base--950: #292b2e;
+    --color--base--1000: #000000;
 
     /* Primary colors */
-    --color--primary--25: #f7fcff;
-    --color--primary--50: #d4ddff;
-    --color--primary--100: #aebfff;
-    --color--primary--200: #9db2ff;
-    --color--primary--300: #8ca6ff;
-    --color--primary--400: #6883ff;
-    --color--primary--500: #2962ff;
-    --color--primary--600: #1b43de;
-    --color--primary--700: #0024be;
-    --color--primary--800: #001caf;
-    --color--primary--900: #0014a0;
-    --color--primary--950: #000c70;
+    --color--primary--50: #f2f6fc;
+    --color--primary--100: #e6edf9;
+    --color--primary--200: #c8d9f4;
+    --color--primary--300: #a1beed;
+    --color--primary--400: #709de6;
+    --color--primary--500: #3f7cde;
+    --color--primary--600: #2360c3;
+    --color--primary--700: #1e4d9a;
+    --color--primary--800: #183c77;
+    --color--primary--900: #1a335b;
+    --color--primary--950: #0f2548;
+    --color--primary--original: #558be2;
 
     /* Error colors */
-    --color--error--25: #ffdfe1;
-    --color--error--50: #ffbdc1;
-    --color--error--100: #ff9ba3;
-    --color--error--200: #ff8c96;
-    --color--error--300: #ff7c89;
-    --color--error--400: #f35b69;
-    --color--error--500: #e6324b;
-    --color--error--600: #bf1c2b;
-    --color--error--700: #990009;
-    --color--error--800: #890005;
-    --color--error--900: #7a0000;
-    --color--error--950: #590001;
+    --color--error--50: #fdf2f3;
+    --color--error--100: #fbe5e8;
+    --color--error--200: #f6c5cc;
+    --color--error--300: #f19da8;
+    --color--error--400: #ec6a7c;
+    --color--error--500: #e7374f;
+    --color--error--600: #cb1a33;
+    --color--error--700: #a1172a;
+    --color--error--800: #7c1221;
+    --color--error--900: #5f1620;
+    --color--error--950: #4b0c14;
+    --color--error--original: #e6324b;
 }
 ```
 
@@ -168,7 +171,7 @@ Size variables define the core measurements used throughout the system:
     --border--width: calc(var(--size--1) / 2);
     --border--color: var(--color--primary--600);
     --border--radius: var(--radius--xl);
-    
+
     --radius--none: var(--size--0);
     --radius--xxs: var(--size--1);
     --radius--xs: var(--size--2);
@@ -181,7 +184,7 @@ Size variables define the core measurements used throughout the system:
     --radius--4xl: var(--size--12);
     --radius--6xl: var(--size--16);
     --radius--10xl: var(--size--24);
-    
+
     --outline--width: var(--size--1);
     --outline--border: var(--outline--width) solid var(--color--base--800);
     --box--shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -196,15 +199,15 @@ Size variables define the core measurements used throughout the system:
     --font--family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--font--family-emoji);
     --font--family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--font--family-emoji);
     --font--family: var(--font--family-sans-serif);
-    
+
     --font--spacing-block: var(--size--8);
     --font--line-height: 1.5;
     --font--weight: 400;
     --font--size: var(--size--8);
-    
+
     --text--color--content: var(--color--base--900);
     --text--color--heading: var(--color--base--950);
-    
+
     --text--size--h1-max: var(--size--24);
     --text--size--h1-min: var(--size--16);
     --text--size--h2-max: var(--size--18);
@@ -221,7 +224,7 @@ Size variables define the core measurements used throughout the system:
     --text--size--body-min: var(--size--8);
     --text--size--content-max: var(--size--10);
     --text--size--content-min: var(--size--8);
-    
+
     --font--size--content: clamp(var(--text--size--content-min), 0.913rem + 0.4348vi, var(--text--size--content-max));
     --font--size--body: clamp(var(--text--size--body-min), 0.913rem + 0.4348vi, var(--text--size--body-max));
     --font--size--0: clamp(var(--text--size--h6-min), 0.913rem + 0.4348vi, var(--text--size--h6-max));
@@ -242,20 +245,20 @@ Size variables define the core measurements used throughout the system:
     --container--narrow: 820px;
     --container--min: 350px;
     --container--width: var(--container--max);
-    
+
     --spacing--block: var(--spacing--lg);
     --spacing--block-start: var(--spacing--block);
     --spacing--block-end: var(--spacing--block);
     --spacing--inline: var(--spacing--lg);
     --spacing--inline-start: var(--spacing--inline);
     --spacing--inline-end: var(--spacing--inline);
-    
+
     --grid--item-min-width: 240px;
     --grid--item-max-width: 1fr;
     --grid--row-gap: var(--spacing--block);
     --grid--col-gap: var(--spacing--inline);
     --grid--gap: var(--grid--row-gap) var(--grid--col-gap);
-    
+
     --section--padding-block: var(--spacing--xl);
     --section--padding-inline: var(--spacing--lg);
 }
@@ -272,19 +275,19 @@ Size variables define the core measurements used throughout the system:
     --button--filled-bg-hovered: var(--color--primary--700);
     --button--filled-bg-pressed: var(--color--primary--800);
     --button--filled-text: var(--color--base--0);
-    
+
     --button--filled-tonal-bg-disabled: var(--color--base--300);
     --button--filled-tonal-bg-enabled: var(--color--primary--100);
     --button--filled-tonal-bg-focused: var(--color--primary--200);
     --button--filled-tonal-bg-hovered: var(--color--primary--200);
     --button--filled-tonal-bg-pressed: var(--color--primary--300);
     --button--filled-tonal-text: var(--color--base--950);
-    
+
     --button--ghost-text-enabled: var(--color--primary--600);
     --button--ghost-text-focused: var(--color--primary--800);
     --button--ghost-text-hovered: var(--color--primary--800);
     --button--ghost-text-pressed: var(--color--primary--900);
-    
+
     --button--outlined-bg-focused: var(--color--primary--50);
     --button--outlined-bg-hovered: var(--color--primary--50);
     --button--outlined-bg-pressed: var(--color--primary--100);
@@ -295,18 +298,18 @@ Size variables define the core measurements used throughout the system:
     --button--outlined-border-pressed: var(--color--primary--800);
     --button--outlined-text: var(--color--primary--800);
     --button--text-disabled: var(--color--base--500);
-    
+
     /* Badge variables */
     --badge--filled-bg: var(--color--primary--50);
     --badge--outlined-border: var(--color--primary--200);
     --badge--text: var(--color--primary--700);
-    
+
     /* Card variables */
     --card--background-color: var(--color--base--0);
     --card--border-color: var(--color--base--25);
     --card--box-shadow: var(--box--shadow);
     --card--border-radius: var(--border--radius);
-    
+
     /* Other component variables */
     --table--border-color: var(--color--base--400);
     --table--row-stripped-background-color: var(--color--primary--50);
@@ -325,7 +328,9 @@ The framework provides pre-styled elements through global classes for common lay
 ### Layout Classes
 
 #### `.container`
+
 Centers content with configurable max-width:
+
 ```css
 .container {
     margin-left: auto;
@@ -336,7 +341,9 @@ Centers content with configurable max-width:
 ```
 
 #### `.grid`
+
 Creates a responsive grid layout:
+
 ```css
 .grid {
     display: grid;
@@ -347,7 +354,9 @@ Creates a responsive grid layout:
 ```
 
 #### `.flex-row`
+
 Horizontal flexbox with configurable gap:
+
 ```css
 .flex-row {
     display: flex;
@@ -357,7 +366,9 @@ Horizontal flexbox with configurable gap:
 ```
 
 #### `.flex-column`
+
 Vertical flexbox with configurable gap:
+
 ```css
 .flex-column {
     display: flex;
@@ -370,7 +381,9 @@ Vertical flexbox with configurable gap:
 ### Component Classes
 
 #### Buttons
+
 The framework provides several button variants:
+
 ```css
 /* Default button styles */
 :is(button, .button, [role=button], [type=submit]) {
@@ -421,7 +434,9 @@ The framework provides several button variants:
 ```
 
 #### Badge
+
 Badge styles with various variants:
+
 ```css
 :where(.badge, .badge-tonal, .badge-outlined, .badge-ghost) {
     --background-color: var(--badge--filled-bg);
@@ -455,7 +470,9 @@ Badge styles with various variants:
 ```
 
 #### Card
+
 Simple card component:
+
 ```css
 .card {
     padding: var(--spacing--3xl);
@@ -471,7 +488,9 @@ Simple card component:
 ```
 
 #### Navigation
+
 Navigation components:
+
 ```css
 .bldr-nav {
     display: flex;
@@ -517,6 +536,7 @@ Navigation components:
 ### Utility Classes
 
 #### Color Utilities
+
 ```css
 .color-primary {
     color: var(--color--primary--500);
@@ -532,6 +552,7 @@ Navigation components:
 ```
 
 #### Typography Utilities
+
 ```css
 .font-size-1 {
     font-size: var(--font--size--0);
@@ -611,7 +632,8 @@ Navigation components:
 
 ### How They Work
 
-The framework uses locally scoped CSS variables to customize specific elements while inheriting from the global design system. This approach allows for:
+The framework uses locally scoped CSS variables to customize specific elements while inheriting from the global design
+system. This approach allows for:
 
 1. **Consistency**: Components use the same base variables
 2. **Customization**: Components can override variables for their specific needs
@@ -637,7 +659,7 @@ Buttons define their own scoped CSS variables that override or reference global 
     --text-decoration: none;
     --font-weight: 600;
     --font-size: var(--size--9);
-    
+
     /* Then these variables are used in the actual CSS properties */
     color: var(--color-text);
     background-color: var(--background-color);
@@ -717,69 +739,80 @@ The navigation components provide locally scoped variables for customization:
 
 ### Framework Variables Meant to be Customized
 
-When implementing this framework in your project, the following CSS variables are specifically designed to be modified and customized:
+When implementing this framework in your project, the following CSS variables are specifically designed to be modified
+and customized:
 
 #### Typography Variables
+
 All typography variables which start with `--text--size-` are meant to be adjusted per project:
+
 ```css
 /* Example of typography customization */
 :root {
-  --text--size--h1-max: var(--size--28);  /* Make headings larger */
-  --text--size--h1-min: var(--size--18);
-  --text--size--body-max: var(--size--12); /* Larger body text */
-  --text--size--body-min: var(--size--9);
+    --text--size--h1-max: var(--size--28); /* Make headings larger */
+    --text--size--h1-min: var(--size--18);
+    --text--size--body-max: var(--size--12); /* Larger body text */
+    --text--size--body-min: var(--size--9);
 }
 ```
 
 #### Container Variables
+
 All container-related variables can be adjusted for your layout needs:
+
 ```css
 :root {
-  --container--max: 1440px;     /* Wider container */
-  --container--narrow: 960px;   /* Wider narrow container */
+    --container--max: 1440px; /* Wider container */
+    --container--narrow: 960px; /* Wider narrow container */
 }
 ```
 
 #### Spacing Variables
+
 All spacing variables starting with `--spacing-` should be customized to match your design requirements:
+
 ```css
 :root {
-  --spacing--block: var(--spacing--xl);  /* More vertical spacing */
-  --spacing--inline: var(--spacing--xl); /* More horizontal spacing */
-  --section--padding-block: var(--spacing--2xl);
+    --spacing--block: var(--spacing--xl); /* More vertical spacing */
+    --spacing--inline: var(--spacing--xl); /* More horizontal spacing */
+    --section--padding-block: var(--spacing--2xl);
 }
 ```
 
 #### Color Variables
+
 All color variables (starting with `--color-`) are meant to be adjusted to match your brand:
+
 ```css
 :root {
-  /* Primary color palette */
-  --color--primary--500: #2d7d46;  /* Green primary */
-  --color--primary--700: #1a5c2d;  /* Darker green */
-  --color--primary--300: #5bae75;  /* Lighter green */
-  
-  /* Base colors can also be adjusted */
-  --color--base--50: #f5f7f5;
-  --color--base--900: #1e271e;
+    /* Primary color palette */
+    --color--primary--500: #2d7d46; /* Green primary */
+    --color--primary--700: #1a5c2d; /* Darker green */
+    --color--primary--300: #5bae75; /* Lighter green */
+
+    /* Base colors can also be adjusted */
+    --color--base--50: #f5f7f5;
+    --color--base--900: #1e271e;
 }
 ```
 
 #### Component Variables
+
 All component-specific variables are designed to be customized for your project's appearance:
+
 ```css
 :root {
-  /* Button customization */
-  --button--filled-bg-enabled: var(--color--primary--500);
-  --button--filled-text: var(--color--base--0);
-  
-  /* Card customization */
-  --card--border-radius: var(--radius--md);
-  --card--box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-  /* Badge customization */
-  --badge--filled-bg: var(--color--primary--100);
-  --badge--text: var(--color--primary--800);
+    /* Button customization */
+    --button--filled-bg-enabled: var(--color--primary--500);
+    --button--filled-text: var(--color--base--0);
+
+    /* Card customization */
+    --card--border-radius: var(--radius--md);
+    --card--box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Badge customization */
+    --badge--filled-bg: var(--color--primary--100);
+    --badge--text: var(--color--primary--800);
 }
 ```
 
@@ -803,7 +836,8 @@ To customize the color scheme of your site using this framework, you can overrid
 }
 ```
 
-This simple change will automatically update all components that use the primary color, including buttons, badges, borders, and more.
+This simple change will automatically update all components that use the primary color, including buttons, badges,
+borders, and more.
 
 ### Creating a Custom Component
 
@@ -817,7 +851,7 @@ You can create a custom component that uses the framework's variables:
     --text-color: var(--color--error--700);
     --icon-color: var(--color--error--500);
     --spacing: var(--spacing--lg);
-    
+
     /* Component styles using those variables */
     background-color: var(--background-color);
     border: var(--border--width) solid var(--border-color);
@@ -855,7 +889,7 @@ You can adjust the spacing of components by overriding their local variables:
 ```css
 /* Global spacing adjustment */
 :root {
-    --spacing--block: var(--spacing--xl);  /* Increase default block spacing */
+    --spacing--block: var(--spacing--xl); /* Increase default block spacing */
     --spacing--inline: var(--spacing--xl); /* Increase default inline spacing */
 }
 
@@ -866,7 +900,7 @@ You can adjust the spacing of components by overriding their local variables:
 
 /* Button-specific spacing */
 button, .button {
-    --spacing-block: var(--spacing--md);   /* Smaller vertical padding */
+    --spacing-block: var(--spacing--md); /* Smaller vertical padding */
     --spacing-inline: var(--spacing--2xl); /* Larger horizontal padding */
 }
 ```
@@ -893,8 +927,8 @@ You can customize the icon appearance:
 
 ```css
 .custom-link.hasicon-end {
-    --icon-size: 1.2em;             /* Change icon size */
-    --spacing-inline: 0.25em;       /* Adjust spacing between icon and text */
+    --icon-size: 1.2em; /* Change icon size */
+    --spacing-inline: 0.25em; /* Adjust spacing between icon and text */
 }
 
 .custom-link.hasicon-end::after {
@@ -911,7 +945,7 @@ You can use the grid system to create custom layouts:
     /* Extend the base grid */
     display: grid;
     gap: var(--spacing--lg);
-    
+
     /* Customize grid properties */
     --grid--item-min-width: 280px;
     grid-template-columns: repeat(auto-fit, minmax(var(--grid--item-min-width), 1fr));

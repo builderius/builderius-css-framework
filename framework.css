@@ -28,44 +28,43 @@
     --button--outlined-border-pressed: var(--color--primary--800);
     --button--outlined-text: var(--color--primary--800);
     --button--text-disabled: var(--color--base--500);
-    --color--base--0: #fff;
-    --color--base--25: #fafafa;
-    --color--base--50: #f1f2f6;
-    --color--base--100: #d6d7df;
-    --color--base--200: #bbbcc6;
-    --color--base--300: #a1a2ad;
-    --color--base--400: #868695;
-    --color--base--500: #716f82;
-    --color--base--600: #5e5a6c;
-    --color--base--700: #4b4557;
-    --color--base--800: #393444;
-    --color--base--900: #282432;
-    --color--base--950: #17131e;
-    --color--base--1000: #000;
-    --color--error--25: #ffdfe1;
-    --color--error--50: #ffbdc1;
-    --color--error--100: #ff9ba3;
-    --color--error--200: #ff8c96;
-    --color--error--300: #ff7c89;
-    --color--error--400: #f35b69;
-    --color--error--500: #e6324b;
-    --color--error--600: #bf1c2b;
-    --color--error--700: #990009;
-    --color--error--800: #890005;
-    --color--error--900: #7a0000;
-    --color--error--950: #590001;
-    --color--primary--25: #f7fcff;
-    --color--primary--50: #d4ddff;
-    --color--primary--100: #aebfff;
-    --color--primary--200: #9db2ff;
-    --color--primary--300: #8ca6ff;
-    --color--primary--400: #6883ff;
-    --color--primary--500: #2962ff;
-    --color--primary--600: #1b43de;
-    --color--primary--700: #0024be;
-    --color--primary--800: #001caf;
-    --color--primary--900: #0014a0;
-    --color--primary--950: #000c70;
+    --color--error--50: #fdf2f3;
+    --color--error--100: #fbe5e8;
+    --color--error--200: #f6c5cc;
+    --color--error--300: #f19da8;
+    --color--error--400: #ec6a7c;
+    --color--error--500: #e7374f;
+    --color--error--600: #cb1a33;
+    --color--error--700: #a1172a;
+    --color--error--800: #7c1221;
+    --color--error--900: #5f1620;
+    --color--error--950: #4b0c14;
+    --color--error--original: #e6324b;
+    --color--base--0: #ffffff;
+    --color--base--50: #f7f7f7;
+    --color--base--100: #f0f0f0;
+    --color--base--200: #dddedf;
+    --color--base--300: #c6c7c8;
+    --color--base--400: #a8aaad;
+    --color--base--500: #8b8e92;
+    --color--base--600: #6e7277;
+    --color--base--700: #585b5f;
+    --color--base--800: #44474b;
+    --color--base--900: #383a3e;
+    --color--base--950: #292b2e;
+    --color--base--1000: #000000;
+    --color--primary--50: #f2f6fc;
+    --color--primary--100: #e6edf9;
+    --color--primary--200: #c8d9f4;
+    --color--primary--300: #a1beed;
+    --color--primary--400: #709de6;
+    --color--primary--500: #3f7cde;
+    --color--primary--600: #2360c3;
+    --color--primary--700: #1e4d9a;
+    --color--primary--800: #183c77;
+    --color--primary--900: #1a335b;
+    --color--primary--950: #0f2548;
+    --color--primary--original: #558be2;
     --icon--filled-bg: var(--color--primary--700);
     --icon--filled-vector: var(--color--base--0);
     --icon--filled-tonal-bg: var(--color--primary--50);
@@ -419,7 +418,7 @@ a:where(:hover, :active, :focus) {
     --text-decoration: none;
     cursor: pointer
 }
-:is(button, .button, [role=button], [type=submit]) {
+:where(button, [role=button], [type=submit]), .button {
     --background-color: var(--button--filled-bg-enabled);
     --color-text: var(--button--filled-text);
     --spacing-block: var(--spacing--lg);
@@ -468,6 +467,51 @@ a:where(:hover, :active, :focus) {
 }
 :where(button, .button, [role=button], [type=submit])[aria-busy=true]::before {
     filter: brightness(0) invert(1)
+}
+:where([role=tab]) {
+    --background-color: transparent;
+    --color-text: var(--button--outlined-text);
+    --border-color: var(--button--outlined-border-enabled);
+    --spacing-block: var(--spacing--lg);
+    --spacing-inline: var(--spacing--xl);
+    --border-radius: var(--radius--xs);
+    --border-style: solid;
+    --border-width: 1px;
+    --text-decoration: none;
+    --font-weight: 600;
+    --font-size: var(--size--9);
+    display: flex;
+    justify-content: center;
+    color: var(--color-text);
+    background-color: var(--background-color);
+    padding: var(--spacing-block) var(--spacing-inline);
+    border-radius: var(--border-radius);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: var(--font--line-height);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: pointer;
+}
+:where([role=tab]):is(:hover) {
+    --background-color: var(--button--outlined-bg-hovered);
+    --border-color: var(--button--outlined-border-hovered)
+}
+:where([role=tab].active) {
+    --border-color: transparent;
+    --background-color: var(--button--filled-bg-enabled);
+    --color-text: var(--button--filled-text);
+}
+:where([role=tab].active):is(:hover) {
+    --background-color: var(--button--filled-bg-hovered);
+    --color-text: var(--button--filled-text);
+}
+:where([role=tab])[disabled] {
+    --border-color: transparent;
+    --background-color: var(--button--filled-bg-disabled);
+    --color-text: var(--button--text-disabled);
+    pointer-events: none;
 }
 .btn-tonal {
     --background-color: var(--button--filled-tonal-bg-enabled);
@@ -694,10 +738,6 @@ details {
     color: var(--accordion--close-summary-color);
     padding-inline: var(--accordion--spacing-inline)
 }
-details:where(:hover, :focus) {
-    color: var(--accordion--active-summary-color);
-    background-color: var(--accordion--active-summary-background)
-}
 details:where(:hover, :focus) summary::before,
 details:where(:hover, :focus) summary::after {
     background-color: var(--accordion--active-summary-color)
@@ -764,49 +804,6 @@ summary:not(.icon-right)::after {
 summary > :where(h1,h2,h3,h4,h5,h6) {
     font-weight: 500;
     font-size: var(--font--size--1)
-}
-[data-accordion-header] {
-    margin-block-end: 0.25rem;
-    border-radius: var(--radius--md);
-    border: var(--border-width) solid var(--accordion--border-color);
-    padding-block: var(--accordion--spacing-block);
-    padding-inline: var(--accordion--spacing-inline);
-    color: var(--accordion--close-summary-color);
-    user-select: none;
-    cursor: pointer;
-    display: flex;
-    text-decoration: none;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    width: 100%;
-    background-color: transparent
-}
-[aria-expanded=true] {
-    background-color: var(--accordion--open-summary-background);
-    border-radius: var(--radius--md) var(--radius--md) 0 0;
-    border-bottom-width: 0;
-    margin-block-end: 0
-}
-[data-accordion-header] [aria-hidden=true] {
-    content: "";
-    display: block;
-    position: relative;
-    background-image: var(--icon--chevron);
-    background-position: center center;
-    background-size: 1rem;
-    width: 24px;
-    height: 24px;
-    border-radius: 24px;
-    transform: rotate(-90deg);
-    transition: var(--transition)
-}
-[aria-expanded=true] [aria-hidden=true] {
-    transform: rotate(0deg)
-}
-[data-accordion-header]:where(:hover, :focus) {
-    color: var(--accordion--open-summary-color);
-    background-color: var(--accordion--active-summary-background);
-    --box-shadow: none
 }
 dialog[open] {
     display: block
@@ -1101,7 +1098,6 @@ builderius-menu-builder builderius-menu-toggle {
     background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
     gap: var(--bldr-menu-gap);
     justify-content: var(--bldr-menu-alignment, flex-end);
-    align-items: center;
 }
 .bldr-nav-item {
     display: flex
@@ -1176,18 +1172,23 @@ builderius-menu-builder:where(.is-mobile.is-expanded) .bldr-nav-link {
 *:focus:not(:focus-visible) {
     outline-style: none
 }
+[role=tablist] {
+    display: flex;
+}
 *:focus:focus-visible {
     outline: var(--outline--border)
 }
-.visuallyhidden {
+.visuallyhidden, .screen-reader-text {
     border-width: 0;
     clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px
+    width: 1px;
+    word-wrap: normal;
 }
 builderius-smart-form button.processing {
     cursor: progress
@@ -1350,20 +1351,6 @@ builderius-smart-form button.processing {
     color: var(--color--base--0);
     background-color: var(--color--primary--400);
     border-color: var(--color--primary--400)
-}
-.description-term + .description-details {
-    display: none;
-    width: 100%;
-    margin-block-end: 0.25rem;
-    border-radius: var(--radius--md) var(--radius--md) var(--radius--md) var(--radius--md);
-    border: var(--border--width) solid var(--accordion--border-color);
-    border-top: 0 solid var(--accordion--border-color);
-    background-color: var(--accordion--open-summary-background);
-    padding-inline: var(--accordion--spacing-inline);
-    padding-block: var(--accordion--spacing-block)
-}
-.description-term.expanded + .description-details {
-    display: block
 }
 :where(.icon-right) [data-accordion-header] {
     flex-direction: row;

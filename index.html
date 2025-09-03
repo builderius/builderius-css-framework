@@ -33,12 +33,12 @@
             <h2 class="color-primary">Typography</h2>
             <!-- Inline text elements-->
             <h3>Inline text elements</h3>
-            <div class="grid">
+            <div class="grid grid-auto">
                 <p><strong>Bold</strong></p>
                 <p><em>Italic</em></p>
                 <p><u>Underline</u></p>
             </div>
-            <div class="grid">
+            <div class="grid grid-auto">
                 <p>
                     <del>Deleted</del>
                 </p>
@@ -47,12 +47,12 @@
                 </p>
                 <p><s>Strikethrough</s></p>
             </div>
-            <div class="grid">
+            <div class="grid grid-auto gap-lg">
                 <p><small>Small </small></p>
                 <p>Text <sub>Sub</sub></p>
                 <p>Text <sup>Sup</sup></p>
             </div>
-            <div class="grid">
+            <div class="grid grid-auto gap-lg">
                 <p>
                     <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
                 </p>
@@ -165,29 +165,29 @@
     </section>
 
     <section id="badges">
-        <div class="container flex-column">
+        <div class="container flex flex-column gap-lg">
             <h2 class="color-primary">Badges</h2>
 
-            <div class="flex-row">
-                <div class="flex-column">
+            <div class="flex flex-row gap-lg">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Filled</h3>
                     <span class="badge">Badge</span>
                     <div class="badge">Badge</div>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Tonal</h3>
                     <span class="badge-tonal">Badge</span>
                     <div class="badge-tonal">Badge</div>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Outlined</h3>
                     <span class="badge-outlined">Badge</span>
                     <div class="badge-outlined">Badge</div>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Ghost</h3>
                     <span class="badge-ghost">Badge</span>
                     <div class="badge-ghost">Badge</div>
@@ -197,32 +197,32 @@
     </section>
 
     <section id="buttons">
-        <div class="container flex-column">
+        <div class="container flex flex-column gap-lg">
             <h2 class="color-primary">Buttons</h2>
 
-            <div class="flex-row">
-                <div class="flex-column">
+            <div class="flex flex-row gap-lg">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Filled</h3>
                     <button>Btn</button>
                     <button disabled>Btn</button>
                     <a class="button" href="#">Link Btn</a>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Tonal</h3>
                     <button class="btn-tonal">Btn</button>
                     <button class="btn-tonal" disabled>Btn</button>
                     <a class="button btn-tonal" href="#">Link Btn</a>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Outlined</h3>
                     <button class="btn-outlined">Btn</button>
                     <button class="btn-outlined" disabled>Btn</button>
                     <a class="button btn-outlined" href="#">Link Btn</a>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>Ghost</h3>
                     <button class="btn-ghost">Btn</button>
                     <button class="btn-ghost" disabled>Btn</button>
@@ -233,11 +233,11 @@
     </section>
 
     <section id="icons">
-        <div class="container flex-column">
+        <div class="container flex flex-column gap-lg">
             <h2 class="color-primary">Using SVG icons in buttons and badges</h2>
 
-            <div class="flex-row">
-                <div class="flex-column">
+            <div class="flex flex-row gap-lg">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>In button</h3>
                     <button class="icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
@@ -265,7 +265,7 @@
                     </button>
                 </div>
 
-                <div class="flex-column">
+                <div class="flex flex-column gap-lg icons-container">
                     <h3>In badge</h3>
                     <span class="badge icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
@@ -292,12 +292,12 @@
         </div>
     </section>
 
-    <section id="layout" class="flex-column">
-        <div class="container flex-column">
+    <section id="layout" class="flex flex-column gap-lg gap-lg">
+        <div class="container flex flex-column gap-lg">
             <h2 class="color-primary">Content & layout</h2>
-            <h3>Cards in layout flexbox "row"</h3>
+            <h3>Cards in layout flexbox "row" (<code>.flex</code> <code>.flex-row</code> <code>.gap-lg</code>)</h3>
         </div>
-        <div class="container flex-row">
+        <div class="container flex flex-row gap-lg">
             <article class="card">
                 <h3>Lorem ipsum</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
@@ -310,10 +310,10 @@
                     finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
             </article>
         </div>
-        <div class="container flex-column">
-            <h3>Cards in layout flexbox "column"</h3>
+        <div class="container flex flex-column gap-lg">
+            <h3>Cards in layout flexbox "column" (<code>.flex</code> <code>.flex-column</code> <code>.gap-lg</code>)</h3>
         </div>
-        <div class="container flex-column">
+        <div class="container flex flex-column gap-lg">
             <article class="card">
                 <h3>Lorem ipsum</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
@@ -326,10 +326,10 @@
                     finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
             </article>
         </div>
-        <div class="container flex-column">
-            <h3>Cards in layout grid</h3>
+        <div class="container flex flex-column">
+            <h3>Cards in layout responsive grid (<code>.grid</code> <code>.grid-auto</code> <code>.gap-lg</code>)</h3>
         </div>
-        <div class="container grid">
+        <div class="container grid grid-auto gap-lg">
             <article class="card">
                 <h3>Lorem ipsum</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
@@ -400,8 +400,8 @@
             <h2 class="color-primary">Forms</h2>
         </div>
 
-        <div class="container grid">
-            <div class="flex-column">
+        <div class="container grid grid-auto gap-lg">
+            <div class="flex flex-column gap-lg">
                 <h3>Search form #1</h3>
                 <form action="/" role="search" autocomplete="on" class="search-form">
                     <label for="search-input1" class="visuallyhidden">Search</label>
@@ -413,7 +413,7 @@
                 </form>
             </div>
 
-            <div class="flex-column">
+            <div class="flex flex-column  gap-lg">
                 <h3>Search form #2</h3>
                 <form action="/" role="search" autocomplete="on" class="search-form">
                     <label for="search-input2" class="visuallyhidden">Search</label>
@@ -426,9 +426,9 @@
             </div>
         </div>
         <div class="container grid">
-            <div class="flex-column">
+            <div class="flex flex-column gap-lg">
                 <h3>Contact form</h3>
-                <form class="contact-form flex-column container">
+                <form class="contact-form flex flex-column gap-lg container">
                     <div>
                         <label id="label-name" for="full-name" data-required-text=" required">Name</label>
                         <input id="full-name" type="text" placeholder="for eg. John Smith" autocomplete="name" required
@@ -612,20 +612,20 @@
                 </p>
             </fieldset>
 
-            <fieldset id="forms__action">
+            <fieldset id="forms__action" class="flex flex-column gap-lg">
                 <legend>Action buttons</legend>
-                <p>
+                <div class="flex flex-column gap-sm icons-container">
                     <input type="submit" value="<input type=submit>">
                     <input type="button" value="<input type=button>">
                     <input type="reset" value="<input type=reset>">
                     <input type="submit" value="<input disabled>" disabled="">
-                </p>
-                <p>
+                </div>
+                <div class="flex flex-column gap-sm icons-container">
                     <button type="submit">&lt;button type=submit&gt;</button>
                     <button type="button">&lt;button type=button&gt;</button>
                     <button type="reset">&lt;button type=reset&gt;</button>
                     <button type="button" disabled="">&lt;button disabled&gt;</button>
-                </p>
+                </div>
             </fieldset>
         </form>
     </section>
@@ -852,7 +852,7 @@
                     permission, we would like to set up some additional cookies to improve your experience. Our
                     <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
                 </p>
-                <form method="dialog" class="flex-row">
+                <form method="dialog" class="flex flex-row gap-lg">
                     <button class="btn-primary" value="accept">Accept</button>
                     <button class="btn-secondary" value="reject">Reject</button>
                 </form>
