@@ -1,4 +1,4 @@
-﻿# Builderius CSS - 1.0 Beta
+﻿# Builderius CSS - 1.1
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
@@ -73,7 +73,7 @@ We include a series of utilities and common use classes to get you started. `.fl
 Our parser in Builderius visual builder plugin captures the names of the variables and uses those names to organize the variables list in the UI. Knowing how this happens can help you organize the variables the way you want. By the way of naming, you can craft your own "Theme Settings" with the variables manager.
 
 ### Colors
-By default, color 'primary' and shade 500 is used in all styles. There is also a special class `.color-primary` to quickly apply primary to some texts etc. Support for custom color must be added manually, preferably using the similar approach.
+By default, shades of color 'primary' are used in all styles. There is also a special class `.color-primary` to quickly apply primary to some texts etc. Support for custom color must be added manually, preferably using the similar approach.
 
 ### Some principles as you work with the variables
 1. First part of the variable name will be the name of the variable group in "CSS vars" tab inside Builderius builder.
@@ -81,7 +81,7 @@ By default, color 'primary' and shade 500 is used in all styles. There is also a
 3. It is generally a good idea to group variables by their use-case, rather than the type.
 4. We suggest creating "functional" variables, rather than trying to extend "design" ones.
 5. It is generally better to redefine the variable in a specific "scope" then to make a new one.
-6. `color` group is a special one, and we suggest extending it by using our Figma plugin or manually re-creating the same structure and naming, which are: always adding 12 shades and calling them like `--color--<color_name>--25` etc.
+6. `color` group is a special one, and we suggest extending it by using our Figma plugin or manually re-creating the same structure and naming, which are: always adding 12 shades and calling them like `--color--<color_name>--50` etc.
 
 #### Names and grouping 
 **If you name your variables like:**

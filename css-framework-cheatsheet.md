@@ -4,27 +4,27 @@
 
 1. [Introduction](#introduction)
 2. [Root CSS Variables](#root-css-variables)
-    - [Color Variables](#color-variables)
-    - [Spacing Variables](#spacing-variables)
-    - [Size Variables](#size-variables)
-    - [Border & Radius Variables](#border--radius-variables)
-    - [Typography Variables](#typography-variables)
-    - [Container & Layout Variables](#container--layout-variables)
-    - [Component Variables](#component-variables)
+   - [Color Variables](#color-variables)
+   - [Spacing Variables](#spacing-variables)
+   - [Size Variables](#size-variables)
+   - [Border & Radius Variables](#border--radius-variables)
+   - [Typography Variables](#typography-variables)
+   - [Container & Layout Variables](#container--layout-variables)
+   - [Component Variables](#component-variables)
 3. [Global Classes](#global-classes)
-    - [Layout Classes](#layout-classes)
-    - [Component Classes](#component-classes)
-    - [Utility Classes](#utility-classes)
-    - [Icon & Interaction Classes](#icon--interaction-classes)
+   - [Layout Classes](#layout-classes)
+   - [Component Classes](#component-classes)
+   - [Utility Classes](#utility-classes)
+   - [Icon & Interaction Classes](#icon--interaction-classes)
 4. [Locally Scoped CSS Variables](#locally-scoped-css-variables)
-    - [How They Work](#how-they-work)
-    - [Button Example](#button-example)
-    - [Heading Example](#heading-example)
-    - [Navigation Example](#navigation-example)
+   - [How They Work](#how-they-work)
+   - [Button Example](#button-example)
+   - [Heading Example](#heading-example)
+   - [Navigation Example](#navigation-example)
 5. [Practical Examples](#practical-examples)
-    - [Customizing Colors](#customizing-colors)
-    - [Creating a Custom Component](#creating-a-custom-component)
-    - [Modifying Component Spacing](#modifying-component-spacing)
+   - [Customizing Colors](#customizing-colors)
+   - [Creating a Custom Component](#creating-a-custom-component)
+   - [Modifying Component Spacing](#modifying-component-spacing)
 
 ---
 
@@ -38,6 +38,16 @@ maintainable design system. The framework follows these key principles:
 - **Component-Based Design**: Provides pre-styled elements while allowing for customization
 - **Utility Classes**: Quick access to common styles without writing custom CSS
 - **Responsive Design**: Built-in responsive behavior using flexible layouts and container queries
+
+### CSS Variable Naming Convention
+
+The framework uses a consistent naming convention for CSS variables that helps distinguish between global and local scoped variables:
+
+- **Global Variables**: Use the pattern `--keyword--property--modifier` (double dashes around the keyword/group name). Examples: `--color--primary--500`, `--spacing--lg`, `--button--filled-bg-enabled`. These are defined at the `:root` level and are meant to be used throughout the system.
+
+- **Local Variables**: Use the pattern `--property-modifier` (single dashes throughout). Examples: `--background-color`, `--color-text`, `--spacing-block`. These are declared within specific selectors and provide a flexible way to customize that selector's styles without modifying the selector's declaration directly.
+
+This naming convention makes it clear at a glance whether a variable is part of the global design system or a local customization point.
 
 This cheatsheet will help you navigate the framework's structure and understand how to effectively use and customize it.
 
@@ -68,18 +78,32 @@ at more specific levels when needed.
     --color--base--1000: #000000;
 
     /* Primary colors */
-    --color--primary--50: #f2f6fc;
-    --color--primary--100: #e6edf9;
-    --color--primary--200: #c8d9f4;
-    --color--primary--300: #a1beed;
-    --color--primary--400: #709de6;
-    --color--primary--500: #3f7cde;
-    --color--primary--600: #2360c3;
-    --color--primary--700: #1e4d9a;
-    --color--primary--800: #183c77;
-    --color--primary--900: #1a335b;
-    --color--primary--950: #0f2548;
-    --color--primary--original: #558be2;
+    --color--primary--50: #f2f6fd;
+    --color--primary--100: #e5edfa;
+    --color--primary--200: #c6d8f6;
+    --color--primary--300: #9ebdf0;
+    --color--primary--400: #6b9cea;
+    --color--primary--500: #397be4;
+    --color--primary--600: #1c5fc9;
+    --color--primary--700: #194c9f;
+    --color--primary--800: #143c7b;
+    --color--primary--900: #17335e;
+    --color--primary--950: #0c244a;
+    --color--primary--original: #548de8;
+
+    /* Success colors */
+    --color--success--50: #f4fbf4;
+    --color--success--100: #e8f7e9;
+    --color--success--200: #cdefcf;
+    --color--success--300: #a9e5ad;
+    --color--success--400: #7dd983;
+    --color--success--500: #50cd58;
+    --color--success--600: #34b23c;
+    --color--success--700: #2b8c31;
+    --color--success--800: #226c27;
+    --color--success--900: #235226;
+    --color--success--950: #154118;
+    --color--success--original: #64d36b;
 
     /* Error colors */
     --color--error--50: #fdf2f3;
@@ -203,9 +227,8 @@ Size variables define the core measurements used throughout the system:
     --font--spacing-block: var(--size--8);
     --font--line-height: 1.5;
     --font--weight: 400;
-    --font--size: var(--size--8);
 
-    --text--color--content: var(--color--base--900);
+    --text--color--content: var(--color--base--800);
     --text--color--heading: var(--color--base--950);
 
     --text--size--h1-max: var(--size--24);
@@ -220,19 +243,22 @@ Size variables define the core measurements used throughout the system:
     --text--size--h5-min: var(--size--9);
     --text--size--h6-max: var(--size--8);
     --text--size--h6-min: var(--size--8);
-    --text--size--body-max: var(--size--10);
-    --text--size--body-min: var(--size--8);
     --text--size--content-max: var(--size--10);
     --text--size--content-min: var(--size--8);
+    --text--size--button-max: var(--size--9);
+    --text--size--button-min: var(--size--7);
+    --text--size--badge-max: var(--size--7);
+    --text--size--badge-min: var(--size--7);
 
-    --font--size--content: clamp(var(--text--size--content-min), 0.913rem + 0.4348vi, var(--text--size--content-max));
-    --font--size--body: clamp(var(--text--size--body-min), 0.913rem + 0.4348vi, var(--text--size--body-max));
-    --font--size--0: clamp(var(--text--size--h6-min), 0.913rem + 0.4348vi, var(--text--size--h6-max));
-    --font--size--1: clamp(var(--text--size--h5-min), 0.949rem + 0.59vi, var(--text--size--h5-max));
-    --font--size--2: clamp(var(--text--size--h4-min), 0.9842rem + 0.7714vi, var(--text--size--h4-max));
-    --font--size--3: clamp(var(--text--size--h3-min), 1.0182rem + 0.9826vi, var(--text--size--h3-max));
-    --font--size--4: clamp(var(--text--size--h2-min), 1.0506rem + 1.228vi, var(--text--size--h2-max));
-    --font--size--5: clamp(var(--text--size--h1-min), 1.0806rem + 1.5122vi, var(--text--size--h1-max));
+    --font--size--content: clamp(var(--text--size--content-min), 0.9038rem + 0.3846vi, var(--text--size--content-max));
+    --font--size--button: clamp(var(--text--size--button-min), 0.7788rem + 0.3846vi, var(--text--size--button-max));
+    --font--size--badge: clamp(var(--text--size--badge-min), 0.8750rem + 0.0000vi, var(--text--size--badge-max));
+    --font--size--0: clamp(var(--text--size--h6-min), 1.0000rem + 0.0000vi, var(--text--size--h6-max));
+    --font--size--1: clamp(var(--text--size--h5-min), 0.9808rem + 0.5769vi, var(--text--size--h5-max));
+    --font--size--2: clamp(var(--text--size--h4-min), 1.0577rem + 0.7692vi, var(--text--size--h4-max));
+    --font--size--3: clamp(var(--text--size--h3-min), 1.3077rem + 0.7692vi, var(--text--size--h3-max));
+    --font--size--4: clamp(var(--text--size--h2-min), 1.5577rem + 0.7692vi, var(--text--size--h2-max));
+    --font--size--5: clamp(var(--text--size--h1-min), 1.6154rem + 1.5385vi, var(--text--size--h1-max));
 }
 ```
 
@@ -271,42 +297,60 @@ Size variables define the core measurements used throughout the system:
     /* Button variables */
     --button--filled-bg-disabled: var(--color--base--300);
     --button--filled-bg-enabled: var(--color--primary--500);
-    --button--filled-bg-focused: var(--color--primary--700);
-    --button--filled-bg-hovered: var(--color--primary--700);
-    --button--filled-bg-pressed: var(--color--primary--800);
-    --button--filled-text: var(--color--base--0);
+    --button--filled-bg-focused: var(--color--primary--600);
+    --button--filled-bg-hovered: var(--color--primary--600);
+    --button--filled-bg-pressed: var(--color--primary--700);
+    --button--filled-tx-disabled: var(--color--base--0);
+    --button--filled-tx-enabled: var(--color--base--0);
+    --button--filled-tx-focused: var(--color--base--0);
+    --button--filled-tx-hovered: var(--color--base--0);
+    --button--filled-tx-pressed: var(--color--base--0);
 
     --button--filled-tonal-bg-disabled: var(--color--base--300);
     --button--filled-tonal-bg-enabled: var(--color--primary--100);
     --button--filled-tonal-bg-focused: var(--color--primary--200);
     --button--filled-tonal-bg-hovered: var(--color--primary--200);
     --button--filled-tonal-bg-pressed: var(--color--primary--300);
-    --button--filled-tonal-text: var(--color--base--950);
+    --button--filled-tonal-tx-disabled: var(--color--base--0);
+    --button--filled-tonal-tx-enabled: var(--color--primary--600);
+    --button--filled-tonal-tx-focused: var(--color--base--0);
+    --button--filled-tonal-tx-hovered: var(--color--base--0);
+    --button--filled-tonal-tx-pressed: var(--color--base--0);
 
-    --button--ghost-text-enabled: var(--color--primary--600);
-    --button--ghost-text-focused: var(--color--primary--800);
-    --button--ghost-text-hovered: var(--color--primary--800);
-    --button--ghost-text-pressed: var(--color--primary--900);
+    --button--ghost-tx-disabled: var(--color--base--500);
+    --button--ghost-tx-enabled: var(--color--primary--500);
+    --button--ghost-tx-focused: var(--color--primary--600);
+    --button--ghost-tx-hovered: var(--color--primary--600);
+    --button--ghost-tx-pressed: var(--color--primary--700);
 
+    --button--outlined-bg-disabled: var(--color--base--0);
     --button--outlined-bg-focused: var(--color--primary--50);
     --button--outlined-bg-hovered: var(--color--primary--50);
     --button--outlined-bg-pressed: var(--color--primary--100);
-    --button--outlined-border-disabled: var(--color--base--300);
-    --button--outlined-border-enabled: var(--color--primary--800);
-    --button--outlined-border-focused: var(--color--primary--800);
-    --button--outlined-border-hovered: var(--color--primary--800);
-    --button--outlined-border-pressed: var(--color--primary--800);
-    --button--outlined-text: var(--color--primary--800);
-    --button--text-disabled: var(--color--base--500);
+    --button--outlined-br-disabled: var(--color--base--500);
+    --button--outlined-br-enabled: var(--color--primary--400);
+    --button--outlined-br-focused: var(--color--primary--500);
+    --button--outlined-br-hovered: var(--color--primary--500);
+    --button--outlined-br-pressed: var(--color--primary--600);
+    --button--outlined-tx-disabled: var(--color--base--500);
+    --button--outlined-tx-enabled: var(--color--primary--600);
+    --button--outlined-tx-focused: var(--color--primary--700);
+    --button--outlined-tx-hovered: var(--color--primary--700);
+    --button--outlined-tx-pressed: var(--color--primary--800);
 
     /* Badge variables */
-    --badge--filled-bg: var(--color--primary--50);
-    --badge--outlined-border: var(--color--primary--200);
-    --badge--text: var(--color--primary--700);
+    --badge--filled-bg: var(--color--primary--500);
+    --badge--filled-tx: var(--color--base--0);
+    --badge--ghost-tx: var(--color--primary--600);
+    --badge--outlined-bg: var(--color--primary--50);
+    --badge--outlined-br: var(--color--primary--500);
+    --badge--outlined-tx: var(--color--primary--600);
+    --badge--tonal-bg: var(--color--primary--100);
+    --badge--tonal-tx: var(--color--primary--600);
 
     /* Card variables */
     --card--background-color: var(--color--base--0);
-    --card--border-color: var(--color--base--25);
+    --card--border-color: var(--color--base--50);
     --card--box-shadow: var(--box--shadow);
     --card--border-radius: var(--border--radius);
 
@@ -333,10 +377,10 @@ Centers content with configurable max-width:
 
 ```css
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: var(--max-width, var(--container--width));
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: var(--max-width, var(--container--width));
 }
 ```
 
@@ -346,10 +390,10 @@ Creates a responsive grid layout:
 
 ```css
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid--item-min-width), var(--grid--item-max-width)));
-    gap: var(--spacing--md);
-    width: 100%
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(var(--grid--item-min-width), var(--grid--item-max-width)));
+   gap: var(--spacing--md);
+   width: 100%
 }
 ```
 
@@ -359,9 +403,9 @@ Horizontal flexbox with configurable gap:
 
 ```css
 .flex-row {
-    display: flex;
-    gap: var(--spacing--inline);
-    justify-content: flex-start
+   display: flex;
+   gap: var(--spacing--inline);
+   justify-content: flex-start
 }
 ```
 
@@ -371,10 +415,10 @@ Vertical flexbox with configurable gap:
 
 ```css
 .flex-column {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing--block);
-    align-items: flex-start
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing--block);
+   align-items: flex-start
 }
 ```
 
@@ -387,49 +431,49 @@ The framework provides several button variants:
 ```css
 /* Default button styles */
 :is(button, .button, [role=button], [type=submit]) {
-    --background-color: var(--button--filled-bg-enabled);
-    --color-text: var(--button--filled-text);
-    --spacing-block: var(--spacing--lg);
-    --spacing-inline: var(--spacing--xl);
-    --border-radius: var(--radius--xs);
-    --border-color: transparent;
-    --border-style: solid;
-    --border-width: 1px;
-    --text-decoration: none;
-    --font-weight: 600;
-    --font-size: var(--size--9);
-    display: flex;
-    justify-content: center;
-    color: var(--color-text);
-    background-color: var(--background-color);
-    padding: var(--spacing-block) var(--spacing-inline);
-    border-radius: var(--border-radius);
-    border: var(--border-width) var(--border-style) var(--border-color);
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    line-height: var(--font--line-height);
-    text-align: center;
-    text-decoration: var(--text-decoration);
-    cursor: pointer;
-    user-select: none;
-    transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition)
+   --background-color: var(--button--filled-bg-enabled);
+   --color-text: var(--button--filled-text);
+   --spacing-block: var(--spacing--lg);
+   --spacing-inline: var(--spacing--xl);
+   --border-radius: var(--radius--xs);
+   --border-color: transparent;
+   --border-style: solid;
+   --border-width: 1px;
+   --text-decoration: none;
+   --font-weight: 600;
+   --font-size: var(--size--9);
+   display: flex;
+   justify-content: center;
+   color: var(--color-text);
+   background-color: var(--background-color);
+   padding: var(--spacing-block) var(--spacing-inline);
+   border-radius: var(--border-radius);
+   border: var(--border-width) var(--border-style) var(--border-color);
+   font-weight: var(--font-weight);
+   font-size: var(--font-size);
+   line-height: var(--font--line-height);
+   text-align: center;
+   text-decoration: var(--text-decoration);
+   cursor: pointer;
+   user-select: none;
+   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition)
 }
 
 /* Button variants */
 .btn-tonal {
-    --background-color: var(--button--filled-tonal-bg-enabled);
-    --color-text: var(--button--filled-tonal-text);
+   --background-color: var(--button--filled-tonal-bg-enabled);
+   --color-text: var(--button--filled-tonal-text);
 }
 
 .btn-outlined {
-    --background-color: transparent;
-    --color-text: var(--button--outlined-text);
-    --border-color: var(--button--outlined-border-enabled);
+   --background-color: transparent;
+   --color-text: var(--button--outlined-text);
+   --border-color: var(--button--outlined-border-enabled);
 }
 
 .btn-ghost {
-    --background-color: transparent;
-    --color-text: var(--button--ghost-text-enabled);
+   --background-color: transparent;
+   --color-text: var(--button--ghost-text-enabled);
 }
 ```
 
@@ -439,33 +483,33 @@ Badge styles with various variants:
 
 ```css
 :where(.badge, .badge-tonal, .badge-outlined, .badge-ghost) {
-    --background-color: var(--badge--filled-bg);
-    --color-text: var(--badge--text);
-    --spacing-block: var(--spacing--sm);
-    --spacing-inline: var(--spacing--md);
-    --border-radius: var(--radius--2xl);
-    --border-color: var(--badge--outlined-border);
-    --border-style: solid;
-    --border-width: 1px;
-    --text-decoration: none;
-    --font-weight: 400;
-    --font-size: var(--size--7);
-    --font-line-height: 1.1;
-    display: inline-block;
-    /* Additional styles... */
+   --background-color: var(--badge--filled-bg);
+   --color-text: var(--badge--text);
+   --spacing-block: var(--spacing--sm);
+   --spacing-inline: var(--spacing--md);
+   --border-radius: var(--radius--2xl);
+   --border-color: var(--badge--outlined-border);
+   --border-style: solid;
+   --border-width: 1px;
+   --text-decoration: none;
+   --font-weight: 400;
+   --font-size: var(--size--7);
+   --font-line-height: 1.1;
+   display: inline-block;
+   /* Additional styles... */
 }
 
 .badge-tonal {
-    --border-color: transparent;
+   --border-color: transparent;
 }
 
 .badge-outlined {
-    --background-color: transparent;
+   --background-color: transparent;
 }
 
 .badge-ghost {
-    --background-color: transparent;
-    --border-color: transparent;
+   --background-color: transparent;
+   --border-color: transparent;
 }
 ```
 
@@ -475,15 +519,15 @@ Simple card component:
 
 ```css
 .card {
-    padding: var(--spacing--3xl);
-    border-radius: var(--card--border-radius);
-    background-color: var(--card--background-color);
-    border: solid var(--border--width) var(--card--border-color);
-    box-shadow: var(--card--box-shadow);
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--spacing--sm);
-    align-items: flex-start;
+   padding: var(--spacing--3xl);
+   border-radius: var(--card--border-radius);
+   background-color: var(--card--background-color);
+   border: solid var(--border--width) var(--card--border-color);
+   box-shadow: var(--card--box-shadow);
+   display: flex;
+   flex-direction: column;
+   row-gap: var(--spacing--sm);
+   align-items: flex-start;
 }
 ```
 
@@ -493,43 +537,43 @@ Navigation components:
 
 ```css
 .bldr-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   width: 100%;
 }
 
 .bldr-nav-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    z-index: 999;
-    background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
-    gap: var(--bldr-menu-gap);
-    justify-content: var(--bldr-menu-alignment, flex-end);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   z-index: 999;
+   background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
+   gap: var(--bldr-menu-gap);
+   justify-content: var(--bldr-menu-alignment, flex-end);
 }
 
 .bldr-nav-item {
-    display: flex;
+   display: flex;
 }
 
 .bldr-nav-link {
-    display: flex;
-    text-decoration: none;
-    flex: 1;
-    text-align: center;
-    justify-content: center;
-    padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
-    color: var(--bldr-menu-link-color, var(--text--color--heading, #0014a0));
-    background-color: var(--bldr-menu-link-bg-color, transparent);
-    border: var(--border--width) solid var(--color--base--0);
-    border-radius: var(--radius--xs, 4px);
+   display: flex;
+   text-decoration: none;
+   flex: 1;
+   text-align: center;
+   justify-content: center;
+   padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
+   color: var(--bldr-menu-link-color, var(--text--color--heading, #0014a0));
+   background-color: var(--bldr-menu-link-bg-color, transparent);
+   border: var(--border--width) solid var(--color--base--0);
+   border-radius: var(--radius--xs, 4px);
 }
 ```
 
@@ -539,15 +583,15 @@ Navigation components:
 
 ```css
 .color-primary {
-    color: var(--color--primary--500);
+   color: var(--color--primary--500);
 }
 
 .bg-primary {
-    background-color: var(--color--primary--100);
+   background-color: var(--color--primary--100);
 }
 
 .border-color-primary {
-    border-color: var(--color--primary--500);
+   border-color: var(--color--primary--500);
 }
 ```
 
@@ -555,15 +599,15 @@ Navigation components:
 
 ```css
 .font-size-1 {
-    font-size: var(--font--size--0);
-    --font-line-height: 1.125;
-    --spacing-block-start: 3rem;
+   font-size: var(--font--size--0);
+   --font-line-height: 1.125;
+   --spacing-block-start: 3rem;
 }
 
 .font-size-2 {
-    font-size: var(--font--size--1);
-    --font-line-height: 1.15;
-    --spacing-block-start: 2.625rem;
+   font-size: var(--font--size--1);
+   --font-line-height: 1.15;
+   --spacing-block-start: 2.625rem;
 }
 
 /* Additional font size classes... */
@@ -573,56 +617,56 @@ Navigation components:
 
 ```css
 .icon-btn {
-    display: inherit;
-    --icon-height: var(--size--8);
-    --icon-width: var(--size--8);
-    --icon-bg: var(--button--filled-bg-enabled);
-    --icon-fill-color: var(--button--filled-text);
+   display: inherit;
+   --icon-height: var(--size--8);
+   --icon-width: var(--size--8);
+   --icon-bg: var(--button--filled-bg-enabled);
+   --icon-fill-color: var(--button--filled-text);
 }
 
 :where(.icon-btn) .icon {
-    mask-image: var(--icon--search);
-    -webkit-mask-image: var(--icon--search);
-    background-color: currentColor;
-    mask-size: 1em;
-    mask-position: center center;
-    mask-repeat: no-repeat;
-    height: var(--icon-height);
-    width: var(--icon-width);
+   mask-image: var(--icon--search);
+   -webkit-mask-image: var(--icon--search);
+   background-color: currentColor;
+   mask-size: 1em;
+   mask-position: center center;
+   mask-repeat: no-repeat;
+   height: var(--icon-height);
+   width: var(--icon-width);
 }
 
 .hasicon-end {
-    --icon-size: 1.5em;
-    --spacing-inline: 0.5em;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing--inline);
+   --icon-size: 1.5em;
+   --spacing-inline: 0.5em;
+   display: inline-flex;
+   align-items: center;
+   gap: var(--spacing--inline);
 }
 
 .hasicon-end::after {
-    display: inline-flex;
-    content: "";
-    width: var(--icon-size);
-    height: var(--icon-size);
-    mask-image: var(--icon--chevron);
-    background-color: currentColor;
+   display: inline-flex;
+   content: "";
+   width: var(--icon-size);
+   height: var(--icon-size);
+   mask-image: var(--icon--chevron);
+   background-color: currentColor;
 }
 
 .hasicon-start {
-    display: inline-flex;
-    align-items: center;
-    --icon-size: 1.5em;
-    --spacing-inline: 0.5em;
-    gap: var(--spacing--inline);
+   display: inline-flex;
+   align-items: center;
+   --icon-size: 1.5em;
+   --spacing-inline: 0.5em;
+   gap: var(--spacing--inline);
 }
 
 .hasicon-start::before {
-    display: inline-flex;
-    content: "";
-    width: var(--icon-size);
-    height: var(--icon-size);
-    mask-image: var(--icon--chevron);
-    background-color: currentColor;
+   display: inline-flex;
+   content: "";
+   width: var(--icon-size);
+   height: var(--icon-size);
+   mask-image: var(--icon--chevron);
+   background-color: currentColor;
 }
 ```
 
@@ -648,25 +692,25 @@ Buttons define their own scoped CSS variables that override or reference global 
 
 ```css
 :is(button, .button, [role=button], [type=submit]) {
-    --background-color: var(--button--filled-bg-enabled);
-    --color-text: var(--button--filled-text);
-    --spacing-block: var(--spacing--lg);
-    --spacing-inline: var(--spacing--xl);
-    --border-radius: var(--radius--xs);
-    --border-color: transparent;
-    --border-style: solid;
-    --border-width: 1px;
-    --text-decoration: none;
-    --font-weight: 600;
-    --font-size: var(--size--9);
+   --background-color: var(--button--filled-bg-enabled);
+   --color-text: var(--button--filled-text);
+   --spacing-block: var(--spacing--lg);
+   --spacing-inline: var(--spacing--xl);
+   --border-radius: var(--radius--xs);
+   --border-color: transparent;
+   --border-style: solid;
+   --border-width: 1px;
+   --text-decoration: none;
+   --font-weight: 600;
+   --font-size: var(--size--9);
 
-    /* Then these variables are used in the actual CSS properties */
-    color: var(--color-text);
-    background-color: var(--background-color);
-    padding: var(--spacing-block) var(--spacing-inline);
-    border-radius: var(--border-radius);
-    border: var(--border-width) var(--border-style) var(--border-color);
-    /* etc... */
+   /* Then these variables are used in the actual CSS properties */
+   color: var(--color-text);
+   background-color: var(--background-color);
+   padding: var(--spacing-block) var(--spacing-inline);
+   border-radius: var(--border-radius);
+   border: var(--border-width) var(--border-style) var(--border-color);
+   /* etc... */
 }
 ```
 
@@ -674,8 +718,8 @@ When a button variant is used, it overrides these local variables:
 
 ```css
 .btn-tonal {
-    --background-color: var(--button--filled-tonal-bg-enabled);
-    --color-text: var(--button--filled-tonal-text);
+   --background-color: var(--button--filled-tonal-bg-enabled);
+   --color-text: var(--button--filled-tonal-text);
 }
 ```
 
@@ -685,26 +729,26 @@ Headings define size-specific variables:
 
 ```css
 h1 {
-    --font-size: var(--font--size--5);
-    --font-line-height: 1.125;
-    --spacing-block-start: var(--size--24);
+   --font-size: var(--font--size--5);
+   --font-line-height: 1.125;
+   --spacing-block-start: var(--size--24);
 }
 
 h2 {
-    --font-size: var(--font--size--4);
-    --font-line-height: 1.15;
-    --spacing-block-start: var(--size--20);
+   --font-size: var(--font--size--4);
+   --font-line-height: 1.15;
+   --spacing-block-start: var(--size--20);
 }
 
 /* Then these shared properties use the local variables */
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: var(--spacing--block-end, var(--spacing--block));
-    color: var(--text--color--heading);
-    font-weight: var(--font--weight);
-    font-size: var(--font-size);
-    line-height: var(--font-line-height);
-    font-family: var(--font--family);
+   margin-top: 0;
+   margin-bottom: var(--spacing--block-end, var(--spacing--block));
+   color: var(--text--color--heading);
+   font-weight: var(--font--weight);
+   font-size: var(--font-size);
+   line-height: var(--font-line-height);
+   font-family: var(--font--family);
 }
 ```
 
@@ -714,22 +758,22 @@ The navigation components provide locally scoped variables for customization:
 
 ```css
 .bldr-nav-menu {
-    background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
-    gap: var(--bldr-menu-gap);
-    justify-content: var(--bldr-menu-alignment, flex-end);
-    align-items: center;
+   background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
+   gap: var(--bldr-menu-gap);
+   justify-content: var(--bldr-menu-alignment, flex-end);
+   align-items: center;
 }
 
 .bldr-nav-link {
-    padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
-    color: var(--bldr-menu-link-color, var(--text--color--heading, #0014a0));
-    background-color: var(--bldr-menu-link-bg-color, transparent);
+   padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
+   color: var(--bldr-menu-link-color, var(--text--color--heading, #0014a0));
+   background-color: var(--bldr-menu-link-bg-color, transparent);
 }
 
 .bldr-nav-link:hover, .bldr-nav-link.current-menu-item {
-    color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
-    background-color: var(--bldr-menu-link-bg-color-hover, var(--color--base--100, #bbbcc6));
-    border: var(--border--width) solid var(--color--primary--500);
+   color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
+   background-color: var(--bldr-menu-link-bg-color-hover, var(--color--base--100, #bbbcc6));
+   border: var(--border--width) solid var(--color--primary--500);
 }
 ```
 
@@ -749,10 +793,10 @@ All typography variables which start with `--text--size-` are meant to be adjust
 ```css
 /* Example of typography customization */
 :root {
-    --text--size--h1-max: var(--size--28); /* Make headings larger */
-    --text--size--h1-min: var(--size--18);
-    --text--size--body-max: var(--size--12); /* Larger body text */
-    --text--size--body-min: var(--size--9);
+   --text--size--h1-max: var(--size--28); /* Make headings larger */
+   --text--size--h1-min: var(--size--18);
+   --text--size--body-max: var(--size--12); /* Larger body text */
+   --text--size--body-min: var(--size--9);
 }
 ```
 
@@ -762,8 +806,8 @@ All container-related variables can be adjusted for your layout needs:
 
 ```css
 :root {
-    --container--max: 1440px; /* Wider container */
-    --container--narrow: 960px; /* Wider narrow container */
+   --container--max: 1440px; /* Wider container */
+   --container--narrow: 960px; /* Wider narrow container */
 }
 ```
 
@@ -773,9 +817,9 @@ All spacing variables starting with `--spacing-` should be customized to match y
 
 ```css
 :root {
-    --spacing--block: var(--spacing--xl); /* More vertical spacing */
-    --spacing--inline: var(--spacing--xl); /* More horizontal spacing */
-    --section--padding-block: var(--spacing--2xl);
+   --spacing--block: var(--spacing--xl); /* More vertical spacing */
+   --spacing--inline: var(--spacing--xl); /* More horizontal spacing */
+   --section--padding-block: var(--spacing--2xl);
 }
 ```
 
@@ -785,14 +829,14 @@ All color variables (starting with `--color-`) are meant to be adjusted to match
 
 ```css
 :root {
-    /* Primary color palette */
-    --color--primary--500: #2d7d46; /* Green primary */
-    --color--primary--700: #1a5c2d; /* Darker green */
-    --color--primary--300: #5bae75; /* Lighter green */
+   /* Primary color palette */
+   --color--primary--500: #2d7d46; /* Green primary */
+   --color--primary--700: #1a5c2d; /* Darker green */
+   --color--primary--300: #5bae75; /* Lighter green */
 
-    /* Base colors can also be adjusted */
-    --color--base--50: #f5f7f5;
-    --color--base--900: #1e271e;
+   /* Base colors can also be adjusted */
+   --color--base--50: #f5f7f5;
+   --color--base--900: #1e271e;
 }
 ```
 
@@ -802,17 +846,17 @@ All component-specific variables are designed to be customized for your project'
 
 ```css
 :root {
-    /* Button customization */
-    --button--filled-bg-enabled: var(--color--primary--500);
-    --button--filled-text: var(--color--base--0);
+   /* Button customization */
+   --button--filled-bg-enabled: var(--color--primary--500);
+   --button--filled-text: var(--color--base--0);
 
-    /* Card customization */
-    --card--border-radius: var(--radius--md);
-    --card--box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   /* Card customization */
+   --card--border-radius: var(--radius--md);
+   --card--box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    /* Badge customization */
-    --badge--filled-bg: var(--color--primary--100);
-    --badge--text: var(--color--primary--800);
+   /* Badge customization */
+   --badge--filled-bg: var(--color--primary--100);
+   --badge--text: var(--color--primary--800);
 }
 ```
 
@@ -822,17 +866,17 @@ To customize the color scheme of your site using this framework, you can overrid
 
 ```css
 :root {
-    /* Change primary color to purple */
-    --color--primary--50: #f3e5f5;
-    --color--primary--100: #e1bee7;
-    --color--primary--200: #ce93d8;
-    --color--primary--300: #ba68c8;
-    --color--primary--400: #ab47bc;
-    --color--primary--500: #9c27b0;
-    --color--primary--600: #8e24aa;
-    --color--primary--700: #7b1fa2;
-    --color--primary--800: #6a1b9a;
-    --color--primary--900: #4a148c;
+   /* Change primary color to purple */
+   --color--primary--50: #f3e5f5;
+   --color--primary--100: #e1bee7;
+   --color--primary--200: #ce93d8;
+   --color--primary--300: #ba68c8;
+   --color--primary--400: #ab47bc;
+   --color--primary--500: #9c27b0;
+   --color--primary--600: #8e24aa;
+   --color--primary--700: #7b1fa2;
+   --color--primary--800: #6a1b9a;
+   --color--primary--900: #4a148c;
 }
 ```
 
@@ -845,40 +889,40 @@ You can create a custom component that uses the framework's variables:
 
 ```css
 .custom-alert {
-    /* Local variables that reference global ones */
-    --background-color: var(--color--error--50);
-    --border-color: var(--color--error--300);
-    --text-color: var(--color--error--700);
-    --icon-color: var(--color--error--500);
-    --spacing: var(--spacing--lg);
+   /* Local variables that reference global ones */
+   --background-color: var(--color--error--50);
+   --border-color: var(--color--error--300);
+   --text-color: var(--color--error--700);
+   --icon-color: var(--color--error--500);
+   --spacing: var(--spacing--lg);
 
-    /* Component styles using those variables */
-    background-color: var(--background-color);
-    border: var(--border--width) solid var(--border-color);
-    border-radius: var(--border--radius);
-    color: var(--text-color);
-    padding: var(--spacing);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing--md);
+   /* Component styles using those variables */
+   background-color: var(--background-color);
+   border: var(--border--width) solid var(--border-color);
+   border-radius: var(--border--radius);
+   color: var(--text-color);
+   padding: var(--spacing);
+   display: flex;
+   align-items: flex-start;
+   gap: var(--spacing--md);
 }
 
 .custom-alert::before {
-    content: "";
-    width: 24px;
-    height: 24px;
-    background-color: var(--icon-color);
-    mask-image: url('path-to-warning-icon.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
+   content: "";
+   width: 24px;
+   height: 24px;
+   background-color: var(--icon-color);
+   mask-image: url('path-to-warning-icon.svg');
+   mask-size: contain;
+   mask-repeat: no-repeat;
 }
 
 /* Variant */
 .custom-alert-info {
-    --background-color: var(--color--primary--50);
-    --border-color: var(--color--primary--300);
-    --text-color: var(--color--primary--700);
-    --icon-color: var(--color--primary--500);
+   --background-color: var(--color--primary--50);
+   --border-color: var(--color--primary--300);
+   --text-color: var(--color--primary--700);
+   --icon-color: var(--color--primary--500);
 }
 ```
 
@@ -889,19 +933,19 @@ You can adjust the spacing of components by overriding their local variables:
 ```css
 /* Global spacing adjustment */
 :root {
-    --spacing--block: var(--spacing--xl); /* Increase default block spacing */
-    --spacing--inline: var(--spacing--xl); /* Increase default inline spacing */
+   --spacing--block: var(--spacing--xl); /* Increase default block spacing */
+   --spacing--inline: var(--spacing--xl); /* Increase default inline spacing */
 }
 
 /* Component-specific spacing */
 .card {
-    --spacing-block: var(--spacing--2xl); /* Larger padding for cards */
+   --spacing-block: var(--spacing--2xl); /* Larger padding for cards */
 }
 
 /* Button-specific spacing */
 button, .button {
-    --spacing-block: var(--spacing--md); /* Smaller vertical padding */
-    --spacing-inline: var(--spacing--2xl); /* Larger horizontal padding */
+   --spacing-block: var(--spacing--md); /* Smaller vertical padding */
+   --spacing-inline: var(--spacing--2xl); /* Larger horizontal padding */
 }
 ```
 
@@ -912,8 +956,8 @@ The framework provides several ways to work with icons:
 ```html
 <!-- Using icon-btn class with SVG -->
 <button class="icon-btn">
-    <svg>...</svg>
-    <span>Button Text</span>
+   <svg>...</svg>
+   <span>Button Text</span>
 </button>
 
 <!-- Using hasicon-start class for icon before text -->
@@ -927,12 +971,12 @@ You can customize the icon appearance:
 
 ```css
 .custom-link.hasicon-end {
-    --icon-size: 1.2em; /* Change icon size */
-    --spacing-inline: 0.25em; /* Adjust spacing between icon and text */
+   --icon-size: 1.2em; /* Change icon size */
+   --spacing-inline: 0.25em; /* Adjust spacing between icon and text */
 }
 
 .custom-link.hasicon-end::after {
-    mask-image: var(--icon--arrow); /* Use a different icon */
+   mask-image: var(--icon--arrow); /* Use a different icon */
 }
 ```
 
@@ -942,20 +986,20 @@ You can use the grid system to create custom layouts:
 
 ```css
 .product-grid {
-    /* Extend the base grid */
-    display: grid;
-    gap: var(--spacing--lg);
+   /* Extend the base grid */
+   display: grid;
+   gap: var(--spacing--lg);
 
-    /* Customize grid properties */
-    --grid--item-min-width: 280px;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid--item-min-width), 1fr));
+   /* Customize grid properties */
+   --grid--item-min-width: 280px;
+   grid-template-columns: repeat(auto-fit, minmax(var(--grid--item-min-width), 1fr));
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .product-grid {
-        --grid--item-min-width: 100%; /* Full width on mobile */
-    }
+   .product-grid {
+      --grid--item-min-width: 100%; /* Full width on mobile */
+   }
 }
 ```
 
@@ -966,31 +1010,31 @@ The framework includes fully responsive navigation components that can be easily
 ```css
 /* Desktop navigation customization */
 .bldr-nav-menu {
-    --bldr-menu-bg-color: var(--color--base--50);
-    --bldr-menu-gap: var(--spacing--xl);
-    --bldr-menu-alignment: space-between;
+   --bldr-menu-bg-color: var(--color--base--50);
+   --bldr-menu-gap: var(--spacing--xl);
+   --bldr-menu-alignment: space-between;
 }
 
 .bldr-nav-link {
-    --bldr-menu-link-color: var(--color--primary--700);
-    --bldr-menu-link-bg-color: transparent;
-    border-bottom: 2px solid transparent;
-    transition: border-color var(--transition);
+   --bldr-menu-link-color: var(--color--primary--700);
+   --bldr-menu-link-bg-color: transparent;
+   border-bottom: 2px solid transparent;
+   transition: border-color var(--transition);
 }
 
 .bldr-nav-link:hover, .bldr-nav-link.current-menu-item {
-    --bldr-menu-link-color-hover: var(--color--primary--900);
-    --bldr-menu-link-bg-color-hover: transparent;
-    border-bottom: 2px solid var(--color--primary--500);
+   --bldr-menu-link-color-hover: var(--color--primary--900);
+   --bldr-menu-link-bg-color-hover: transparent;
+   border-bottom: 2px solid var(--color--primary--500);
 }
 
 /* Mobile navigation customization */
 @media (max-width: 768px) {
-    :root {
-        --bldr-menu-mobile-bg-color: var(--color--base--0);
-        --bldr-menu-mobile-link-color: var(--color--primary--600);
-        --bldr-menu-mobile-link-bg-color: var(--color--base--50);
-        --bldr-menu-mobile-gap: var(--spacing--lg);
-    }
+   :root {
+      --bldr-menu-mobile-bg-color: var(--color--base--0);
+      --bldr-menu-mobile-link-color: var(--color--primary--600);
+      --bldr-menu-mobile-link-bg-color: var(--color--base--50);
+      --bldr-menu-mobile-gap: var(--spacing--lg);
+   }
 }
 ```
