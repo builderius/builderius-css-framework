@@ -43,7 +43,7 @@ Framework has to be easy to override on local level, without the need to overuse
 From tokens-based variables like `--size--1` to a more specific `--border--width` the framework makes it easy to apply consistent changes to as many or as little elements one wants.
 
 #### Colors
-Builderius CSS uses a structured, token-based color system for consistency and flexibility. The primary color (--color--primary) generates 12 shades automatically, ranging from light to dark. The base grayscale (--color--base) also consists of 12 steps (25, 50, 100, 200, ..., 950) and is subtly tinted with the primary color. Additional colors can be defined (e.g., --color--secondary or any custom name), each generating its own 12 shades. The shades are generated within the accompanying Figma plugin, ensuring a seamless transition between design and development.
+Builderius CSS uses a structured, token-based color system for consistency and flexibility. The primary color (--color--primary) generates 11 shades automatically, ranging from light to dark. The base grayscale (--color--base) also consists of 13 steps (0, 50, 100, 200, ..., 950, 1000) and is subtly tinted with the primary color. Additional colors can be defined (e.g., --color--secondary or any custom name), each generating its own 11 shades. Variable which name is suffixed with 'original' (example: `--color--primary--original`) is the reference color that is used to keep in sync all 11 shades generated. The shades are generated within the accompanying Figma plugin, ensuring a seamless transition between design and development.
 
 #### Typography
 Provides 6 sizes type scale applied to headings automatically or added with classes `.font-size-1` or with variables like `--font--size--1`.
