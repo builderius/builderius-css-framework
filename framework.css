@@ -1120,9 +1120,9 @@ builderius-menu-builder builderius-menu-toggle {
     display: flex;
 }
 .bldr-nav-link {
-    --padding: 0;
-    --radius: 0;
-    --border: none;
+    --padding: var(--bldr-nav-link-padding, var(--spacing--block, 16px) var(--spacing--inline, 16px));
+    --radius: var(--bldr-nav-link-radius, var(--radius--xs, 4px));
+    --border: var(--bldr-nav-link-border, var(--border--width) solid ransparent);
     display: flex;
     text-decoration: none;
     flex: 1;
@@ -1134,6 +1134,7 @@ builderius-menu-builder builderius-menu-toggle {
     border: var(--border);
     border-radius: var(--radius);
 }
+
 .bldr-nav-link:hover, .bldr-nav-link.current-menu-item {
     cursor: pointer;
     color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
