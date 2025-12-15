@@ -1112,7 +1112,7 @@ builderius-menu-builder builderius-menu-toggle {
     padding: 0;
     list-style: none;
     z-index: 999;
-    background-color: var(--bldr-menu-bg-color, var(--color--base--0, #fff));
+    background-color: var(--bldr-menu-bg-color, transparent);
     gap: var(--bldr-menu-gap);
     justify-content: var(--bldr-menu-alignment, flex-end);
 }
@@ -1122,7 +1122,7 @@ builderius-menu-builder builderius-menu-toggle {
 .bldr-nav-link {
     --padding: var(--bldr-nav-link-padding, var(--spacing--block, 16px) var(--spacing--inline, 16px));
     --radius: var(--bldr-nav-link-radius, var(--radius--xs, 4px));
-    --border: var(--bldr-nav-link-border, var(--border--width) solid ransparent);
+    --border: var(--bldr-nav-link-border, var(--border--width) solid transparent);
     display: flex;
     text-decoration: none;
     flex: 1;
@@ -1136,10 +1136,11 @@ builderius-menu-builder builderius-menu-toggle {
 }
 
 .bldr-nav-link:hover, .bldr-nav-link.current-menu-item {
+    --border-color: var(--color--primary--500);
     cursor: pointer;
     color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
     background-color: var(--bldr-menu-link-bg-color-hover, var(--color--base--100, #bbbcc6));
-    border: var(--border--width) solid var(--color--primary--500);
+    border-color: var(--border-color);
 }
 :where(builderius-menu-builder.is-mobile) {
     justify-content: var(--bldr-menu-alignment, flex-end);
