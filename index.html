@@ -11,873 +11,1150 @@
     <link rel="stylesheet" href="./page.css"/>
 </head>
 
-<body class="builderiusContent">
-<!-- Header -->
-<header class="site-edge-section outer-wrapper">
-    <div class="container">
-        <h1>Builderius CSS framework</h1>
-        <p>Builderius CSS is a utility-first framework designed to simplify and speed up web development. It provides a
-            mix of atomic classes and pre-styled components, allowing for flexible and consistent design. The framework
-            includes basic UI elements like buttons (filled, tonal, outlined, and ghost), badges, form fields, and
-            accordions. Additionally, it offers custom components such as pagination and a modal-based cookie notice
-            dialog. Built with scalability in mind, Builderius CSS helps developers create responsive and maintainable
-            interfaces with ease.</p>
-    </div>
-</header>
-<!-- ./ Header -->
-
-<!-- Main -->
-<main>
-    <section id="typography">
+<body>
+<div class="builderiusContent">
+    <!-- Header -->
+    <header class="site-edge-section outer-wrapper">
         <div class="container">
-            <h2 class="color-primary">Typography</h2>
-            <!-- Inline text elements-->
-            <h3>Inline text elements</h3>
-            <div class="grid grid-auto">
-                <p><strong>Bold</strong></p>
-                <p><em>Italic</em></p>
-                <p><u>Underline</u></p>
-            </div>
-            <div class="grid grid-auto">
-                <p>
-                    <del>Deleted</del>
-                </p>
-                <p>
-                    <ins>Inserted</ins>
-                </p>
-                <p><s>Strikethrough</s></p>
-            </div>
-            <div class="grid grid-auto gap-lg">
-                <p><small>Small </small></p>
-                <p>Text <sub>Sub</sub></p>
-                <p>Text <sup>Sup</sup></p>
-            </div>
-            <div class="grid grid-auto gap-lg">
-                <p>
-                    <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
-                </p>
-                <p><kbd>Kbd</kbd></p>
-                <p>
-                    <mark>Highlighted</mark>
-                </p>
-            </div>
-
-            <h3 class="color-primary">Regular content</h3>
-            <div class="page-content">
-                <!-- Headings-->
-                <h1>Heading 1 Integer bibendum malesuada</h1>
-                <p>
-                    Integer bibendum malesuada
-                    <mark>libero vel eleifend</mark>
-                    . Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-                <!-- Paragraph-->
-                <p>
-                    Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
-                    iaculis eros a elit pharetra egestas.
-                </p>
-                <h2 class="font-size-step-3">Heading 2 Integer bibendum malesuada</h2>
-                <p>
-                    Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-                <!-- Blockquote-->
-                <blockquote>
-                    "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet
-                    ipsum cursus ornare."
-                    <footer>
-                        <cite>- Phasellus eget lacinia</cite>
-                    </footer>
-                </blockquote>
-                <h3>Heading 3 Integer bibendum malesuada</h3>
-                <p>
-                    Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-                <ul>
-                    <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
-                    <li>Nam et magna at libero scelerisque egestas.</li>
-                    <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
-                    <li>Proin ultricies turpis et volutpat vehicula.</li>
-                </ul>
-                <p>
-                    Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-                <h4>Heading 4 Integer bibendum malesuada</h4>
-                <p>
-                    Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
-                    fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
-                </p>
-                <ol>
-                    <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
-                    <li>Nam et magna at libero scelerisque egestas.</li>
-                    <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
-                    <li>Proin ultricies turpis et volutpat vehicula.</li>
-                </ol>
-                <p>
-                    Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-                <h4>Heading 4 Integer bibendum malesuada</h4>
-                <p>
-                    Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
-                    fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
-                </p>
-                <dl>
-                    <dt>Aliquam lobortis lacus eu libero ornare facilisis.</dt>
-                    <dd>Some more text here as this is the definition content rather then the title</dd>
-                    <dt>Nam et magna at libero scelerisque egestas.</dt>
-                    <dd>Some more text here as this is the definition content rather then the title</dd>
-                    <dt>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</dt>
-                    <dd>Some more text here as this is the definition content rather then the title</dd>
-                    <dt>Proin ultricies turpis et volutpat vehicula.</dt>
-                    <dd>Some more text here as this is the definition content rather then the title</dd>
-                </dl>
-                <p>
-                    Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                    sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-
-                <h5>Heading 5 Integer bibendum malesuada</h5>
-                <p>
-                    Donec nec egestas nulla. Sed varius placerat felis eu suscipit. Mauris maximus ante in
-                    consequat luctus. Morbi euismod sagittis efficitur. Aenean non eros orci. Vivamus ut diam
-                    sem.
-                </p>
-                <h6>Heading 6 Integer bibendum malesuada</h6>
-                <p>
-                    Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt nulla ut
-                    tortor posuere, vitae malesuada tortor molestie. Sed nec interdum dolor. Vestibulum id
-                    auctor nisi, a efficitur sem. Aliquam sollicitudin efficitur turpis, sollicitudin
-                    hendrerit ligula semper id. Nunc risus felis, egestas eu tristique eget, convallis in
-                    velit.
-                </p>
-            </div>
+            <h1>Builderius CSS framework</h1>
+            <p>Builderius CSS is a utility-first framework designed to simplify and speed up web development. It
+                provides a
+                mix of atomic classes and pre-styled components, allowing for flexible and consistent design. The
+                framework
+                includes basic UI elements like buttons (filled, tonal, outlined, and ghost), badges, form fields, and
+                accordions. Additionally, it offers custom components such as pagination and a modal-based cookie notice
+                dialog. Built with scalability in mind, Builderius CSS helps developers create responsive and
+                maintainable
+                interfaces with ease.</p>
         </div>
-    </section>
+    </header>
+    <!-- ./ Header -->
 
-    <section id="badges">
-        <div class="container flex flex-column gap-lg">
-            <h2 class="color-primary">Badges</h2>
+    <!-- Main -->
+    <main>
+        <section id="colors">
+            <div class="container">
+                <h2 class="color-primary">Colors</h2>
+                <p>
+                    The Builderius CSS framework uses the modern OKLCH color space for perceptually uniform color generation.
+                    Each color is defined by a single <code>--original</code> CSS variable, from which all shades (50-950) are automatically calculated using CSS relative color syntax.
+                    This approach ensures consistent lightness steps and maintains color harmony across the entire palette.
+                    The framework intelligently adapts colors between light and dark themes, adjusting both lightness and chroma for optimal readability.
+                </p>
+            </div>
+        </section>
 
-            <div class="flex flex-row gap-lg">
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Filled</h3>
-                    <span class="badge">Badge</span>
-                    <div class="badge">Badge</div>
+        <section id="color-preview">
+            <div class="container">
+                <h3>Color Palette Preview</h3>
+                <p style="margin-bottom: var(--spacing--xl);">
+                    All available colors and their generated shades in the current theme.
+                </p>
+
+                <!-- Primary Colors -->
+                <div class="color-family">
+                    <div class="color-family-header">
+                        <h4 class="color-family-title">Primary</h4>
+                    </div>
+                    <div class="color-swatches grid gap-lg">
+                        <div class="color-swatch" data-shade="50" style="background-color: var(--color--primary--50);">
+                            <span class="color-label">50</span>
+                            <span class="color-var">--color--primary--50</span>
+                        </div>
+                        <div class="color-swatch" data-shade="100" style="background-color: var(--color--primary--100);">
+                            <span class="color-label">100</span>
+                            <span class="color-var">--color--primary--100</span>
+                        </div>
+                        <div class="color-swatch" data-shade="200" style="background-color: var(--color--primary--200);">
+                            <span class="color-label">200</span>
+                            <span class="color-var">--color--primary--200</span>
+                        </div>
+                        <div class="color-swatch" data-shade="300" style="background-color: var(--color--primary--300);">
+                            <span class="color-label">300</span>
+                            <span class="color-var">--color--primary--300</span>
+                        </div>
+                        <div class="color-swatch" data-shade="400" style="background-color: var(--color--primary--400);">
+                            <span class="color-label">400</span>
+                            <span class="color-var">--color--primary--400</span>
+                        </div>
+                        <div class="color-swatch" data-shade="500" style="background-color: var(--color--primary--500);">
+                            <span class="color-label">500</span>
+                            <span class="color-var">--color--primary--500</span>
+                        </div>
+                        <div class="color-swatch" data-shade="600" style="background-color: var(--color--primary--600);">
+                            <span class="color-label">600</span>
+                            <span class="color-var">--color--primary--600</span>
+                        </div>
+                        <div class="color-swatch" data-shade="700" style="background-color: var(--color--primary--700);">
+                            <span class="color-label">700</span>
+                            <span class="color-var">--color--primary--700</span>
+                        </div>
+                        <div class="color-swatch" data-shade="800" style="background-color: var(--color--primary--800);">
+                            <span class="color-label">800</span>
+                            <span class="color-var">--color--primary--800</span>
+                        </div>
+                        <div class="color-swatch" data-shade="900" style="background-color: var(--color--primary--900);">
+                            <span class="color-label">900</span>
+                            <span class="color-var">--color--primary--900</span>
+                        </div>
+                        <div class="color-swatch" data-shade="950" style="background-color: var(--color--primary--950);">
+                            <span class="color-label">950</span>
+                            <span class="color-var">--color--primary--950</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Tonal</h3>
-                    <span class="badge-tonal">Badge</span>
-                    <div class="badge-tonal">Badge</div>
+                <!-- Base Colors -->
+                <div class="color-family">
+                    <h4 class="color-family-title">Base (Neutral)</h4>
+                    <div class="color-swatches grid gap-lg">
+                        <div class="color-swatch" style="background-color: var(--color--base--0);">
+                            <span class="color-label">0</span>
+                            <span class="color-var">--color--base--0</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--50);">
+                            <span class="color-label">50</span>
+                            <span class="color-var">--color--base--50</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--100);">
+                            <span class="color-label">100</span>
+                            <span class="color-var">--color--base--100</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--200);">
+                            <span class="color-label">200</span>
+                            <span class="color-var">--color--base--200</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--300);">
+                            <span class="color-label">300</span>
+                            <span class="color-var">--color--base--300</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--400);">
+                            <span class="color-label">400</span>
+                            <span class="color-var">--color--base--400</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--500);">
+                            <span class="color-label">500</span>
+                            <span class="color-var">--color--base--500</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--600);">
+                            <span class="color-label">600</span>
+                            <span class="color-var">--color--base--600</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--700);">
+                            <span class="color-label">700</span>
+                            <span class="color-var">--color--base--700</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--800);">
+                            <span class="color-label">800</span>
+                            <span class="color-var">--color--base--800</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--900);">
+                            <span class="color-label">900</span>
+                            <span class="color-var">--color--base--900</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--950);">
+                            <span class="color-label">950</span>
+                            <span class="color-var">--color--base--950</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--base--1000);">
+                            <span class="color-label">1000</span>
+                            <span class="color-var">--color--base--1000</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Outlined</h3>
-                    <span class="badge-outlined">Badge</span>
-                    <div class="badge-outlined">Badge</div>
+                <!-- Error Colors -->
+                <div class="color-family">
+                    <h4 class="color-family-title">Error</h4>
+                    <div class="color-swatches grid gap-lg">
+                        <div class="color-swatch" style="background-color: var(--color--error--light);">
+                            <span class="color-label">Light</span>
+                            <span class="color-var">--color--error--light</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--error--original);">
+                            <span class="color-label">Original</span>
+                            <span class="color-var">--color--error--original</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--error--dark);">
+                            <span class="color-label">Dark</span>
+                            <span class="color-var">--color--error--dark</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Ghost</h3>
-                    <span class="badge-ghost">Badge</span>
-                    <div class="badge-ghost">Badge</div>
+                <!-- Success Colors -->
+                <div class="color-family">
+                    <h4 class="color-family-title">Success</h4>
+                    <div class="color-swatches grid gap-lg">
+                        <div class="color-swatch" style="background-color: var(--color--success--light);">
+                            <span class="color-label">Light</span>
+                            <span class="color-var">--color--success--light</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--success--original);">
+                            <span class="color-label">Original</span>
+                            <span class="color-var">--color--success--original</span>
+                        </div>
+                        <div class="color-swatch" style="background-color: var(--color--success--dark);">
+                            <span class="color-label">Dark</span>
+                            <span class="color-var">--color--success--dark</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="buttons">
-        <div class="container flex flex-column gap-lg">
-            <h2 class="color-primary">Buttons</h2>
-
-            <div class="flex flex-row gap-lg">
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Filled</h3>
-                    <button>Btn</button>
-                    <button disabled>Btn</button>
-                    <a class="button" href="#">Link Btn</a>
+        <section id="typography">
+            <div class="container">
+                <h2 class="color-primary">Typography</h2>
+                <!-- Inline text elements-->
+                <h3>Inline text elements</h3>
+                <div class="grid">
+                    <p><strong>Bold</strong></p>
+                    <p><em>Italic</em></p>
+                    <p><u>Underline</u></p>
+                </div>
+                <div class="grid">
+                    <p>
+                        <del>Deleted</del>
+                    </p>
+                    <p>
+                        <ins>Inserted</ins>
+                    </p>
+                    <p><s>Strikethrough</s></p>
+                </div>
+                <div class="grid gap-lg">
+                    <p><small>Small </small></p>
+                    <p>Text <sub>Sub</sub></p>
+                    <p>Text <sup>Sup</sup></p>
+                </div>
+                <div class="grid gap-lg">
+                    <p>
+                        <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+                    </p>
+                    <p><kbd>Kbd</kbd></p>
+                    <p>
+                        <mark>Highlighted</mark>
+                    </p>
                 </div>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Tonal</h3>
-                    <button class="btn-tonal">Btn</button>
-                    <button class="btn-tonal" disabled>Btn</button>
-                    <a class="button btn-tonal" href="#">Link Btn</a>
-                </div>
+                <h3 class="color-primary">Regular content</h3>
+                <div class="page-content">
+                    <!-- Headings-->
+                    <h1>Heading 1 Integer bibendum malesuada</h1>
+                    <p>
+                        Integer bibendum malesuada
+                        <mark>libero vel eleifend</mark>
+                        . Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <!-- Paragraph-->
+                    <p>
+                        Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
+                        iaculis eros a elit pharetra egestas.
+                    </p>
+                    <h2 class="font-size-step-3">Heading 2 Integer bibendum malesuada</h2>
+                    <p>
+                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <!-- Blockquote-->
+                    <blockquote>
+                        "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet
+                        ipsum cursus ornare."
+                        <footer>
+                            <cite>- Phasellus eget lacinia</cite>
+                        </footer>
+                    </blockquote>
+                    <h3>Heading 3 Integer bibendum malesuada</h3>
+                    <p>
+                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <ul>
+                        <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+                        <li>Nam et magna at libero scelerisque egestas.</li>
+                        <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+                        <li>Proin ultricies turpis et volutpat vehicula.</li>
+                    </ul>
+                    <p>
+                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <h4>Heading 4 Integer bibendum malesuada</h4>
+                    <p>
+                        Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
+                        fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
+                    </p>
+                    <ol>
+                        <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+                        <li>Nam et magna at libero scelerisque egestas.</li>
+                        <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
+                        <li>Proin ultricies turpis et volutpat vehicula.</li>
+                    </ol>
+                    <p>
+                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <h4>Heading 4 Integer bibendum malesuada</h4>
+                    <p>
+                        Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
+                        fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
+                    </p>
+                    <dl>
+                        <dt>Aliquam lobortis lacus eu libero ornare facilisis.</dt>
+                        <dd>Some more text here as this is the definition content rather then the title</dd>
+                        <dt>Nam et magna at libero scelerisque egestas.</dt>
+                        <dd>Some more text here as this is the definition content rather then the title</dd>
+                        <dt>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</dt>
+                        <dd>Some more text here as this is the definition content rather then the title</dd>
+                        <dt>Proin ultricies turpis et volutpat vehicula.</dt>
+                        <dd>Some more text here as this is the definition content rather then the title</dd>
+                    </dl>
+                    <p>
+                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
+                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Outlined</h3>
-                    <button class="btn-outlined">Btn</button>
-                    <button class="btn-outlined" disabled>Btn</button>
-                    <a class="button btn-outlined" href="#">Link Btn</a>
-                </div>
-
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>Ghost</h3>
-                    <button class="btn-ghost">Btn</button>
-                    <button class="btn-ghost" disabled>Btn</button>
-                    <a class="button btn-ghost" href="#">Link Btn</a>
+                    <h5>Heading 5 Integer bibendum malesuada</h5>
+                    <p>
+                        Donec nec egestas nulla. Sed varius placerat felis eu suscipit. Mauris maximus ante in
+                        consequat luctus. Morbi euismod sagittis efficitur. Aenean non eros orci. Vivamus ut diam
+                        sem.
+                    </p>
+                    <h6>Heading 6 Integer bibendum malesuada</h6>
+                    <p>
+                        Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt nulla ut
+                        tortor posuere, vitae malesuada tortor molestie. Sed nec interdum dolor. Vestibulum id
+                        auctor nisi, a efficitur sem. Aliquam sollicitudin efficitur turpis, sollicitudin
+                        hendrerit ligula semper id. Nunc risus felis, egestas eu tristique eget, convallis in
+                        velit.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="icons">
-        <div class="container flex flex-column gap-lg">
-            <h2 class="color-primary">Using SVG icons in buttons and badges</h2>
+        <section id="badges">
+            <div class="container flex flex-column gap-lg">
+                <h2 class="color-primary">Badges</h2>
 
-            <div class="flex flex-row gap-lg">
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>In button</h3>
-                    <button class="icon-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256">
-                            <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                        </svg>
-                    </button>
-                    <button class="icon-btn btn-tonal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256">
-                            <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                        </svg>
-                    </button>
-                    <button class="icon-btn btn-outlined">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256">
-                            <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                        </svg>
-                    </button>
-                    <button class="icon-btn btn-ghost">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256">
-                            <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                        </svg>
-                    </button>
+                <div class="flex flex-row gap-lg">
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Filled</h3>
+                        <span class="badge">Badge</span>
+                        <div class="badge">Badge</div>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Tonal</h3>
+                        <span class="badge-tonal">Badge</span>
+                        <div class="badge-tonal">Badge</div>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Outlined</h3>
+                        <span class="badge-outlined">Badge</span>
+                        <div class="badge-outlined">Badge</div>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Ghost</h3>
+                        <span class="badge-ghost">Badge</span>
+                        <div class="badge-ghost">Badge</div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="flex flex-column gap-lg icons-container">
-                    <h3>In badge</h3>
-                    <span class="badge icon-btn">
+        <section id="buttons">
+            <div class="container flex flex-column gap-lg">
+                <h2 class="color-primary">Buttons</h2>
+
+                <div class="flex flex-row gap-lg">
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Tab buttons</h3>
+                        <button role="tab" class="active">Tab active</button>
+                        <button role="tab">Tab inactive</button>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Filled</h3>
+                        <button>Btn</button>
+                        <button disabled>Btn</button>
+                        <a class="button" href="#">Link Btn</a>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Tonal</h3>
+                        <button class="btn-tonal">Btn</button>
+                        <button class="btn-tonal" disabled>Btn</button>
+                        <a class="button btn-tonal" href="#">Link Btn</a>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Outlined</h3>
+                        <button class="btn-outlined">Btn</button>
+                        <button class="btn-outlined" disabled>Btn</button>
+                        <a class="button btn-outlined" href="#">Link Btn</a>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>Ghost</h3>
+                        <button class="btn-ghost">Btn</button>
+                        <button class="btn-ghost" disabled>Btn</button>
+                        <a class="button btn-ghost" href="#">Link Btn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="icons">
+            <div class="container flex flex-column gap-lg">
+                <h2 class="color-primary">Using SVG icons in buttons and badges</h2>
+
+                <div class="flex flex-row gap-lg">
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>In button</h3>
+                        <button class="icon-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                 viewBox="0 0 256 256">
+                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn btn-tonal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                 viewBox="0 0 256 256">
+                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn btn-outlined">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                 viewBox="0 0 256 256">
+                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                 viewBox="0 0 256 256">
+                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-column gap-lg icons-container">
+                        <h3>In badge</h3>
+                        <span class="badge icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
                              viewBox="0 0 256 256"><path
                                 d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
                     </span>
-                    <span class="icon-btn badge-tonal">
+                        <span class="icon-btn badge-tonal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
                              viewBox="0 0 256 256"><path
                                 d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
                     </span>
-                    <span class="icon-btn badge-outlined">
+                        <span class="icon-btn badge-outlined">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
                              viewBox="0 0 256 256"><path
                                 d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
                     </span>
-                    <span class="icon-btn badge-ghost">
+                        <span class="icon-btn badge-ghost">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
                              viewBox="0 0 256 256"><path
                                 d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
                     </span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="layout" class="flex flex-column gap-lg gap-lg">
-        <div class="container flex flex-column gap-lg">
-            <h2 class="color-primary">Content & layout</h2>
-            <h3>Cards in layout flexbox "row" (<code>.flex</code> <code>.flex-row</code> <code>.gap-lg</code>)</h3>
-        </div>
-        <div class="container flex flex-row gap-lg">
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
-                    est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                    laoreet eu erat.</p>
-            </article>
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                    finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-            </article>
-        </div>
-        <div class="container flex flex-column gap-lg">
-            <h3>Cards in layout flexbox "column" (<code>.flex</code> <code>.flex-column</code> <code>.gap-lg</code>)</h3>
-        </div>
-        <div class="container flex flex-column gap-lg">
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
-                    est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                    laoreet eu erat.</p>
-            </article>
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                    finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-            </article>
-        </div>
-        <div class="container flex flex-column">
-            <h3>Cards in layout responsive grid (<code>.grid</code> <code>.grid-auto</code> <code>.gap-lg</code>)</h3>
-        </div>
-        <div class="container grid grid-auto gap-lg">
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
-                    est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                    laoreet eu erat.</p>
-            </article>
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                    finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-            </article>
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales mattis,
-                    est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                    laoreet eu erat.</p>
-            </article>
-            <article class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                    finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-            </article>
-        </div>
-    </section>
+        <section id="layout" class="flex flex-column gap-lg gap-lg">
+            <div class="container flex flex-column gap-lg">
+                <h2 class="color-primary">Content & layout</h2>
+                <h3>Cards in layout flexbox "row" (<code>.flex</code> <code>.flex-row</code> <code>.gap-lg</code>)</h3>
+            </div>
+            <div class="container flex flex-row gap-lg">
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
+                        mattis,
+                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
+                        laoreet eu erat.</p>
+                </article>
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
+                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
+                </article>
+            </div>
+            <div class="container flex flex-column gap-lg">
+                <h3>Cards in layout flexbox "column" (<code>.flex</code> <code>.flex-column</code> <code>.gap-lg</code>)
+                </h3>
+            </div>
+            <div class="container flex flex-column gap-lg">
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
+                        mattis,
+                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
+                        laoreet eu erat.</p>
+                </article>
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
+                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
+                </article>
+            </div>
+            <div class="container flex flex-column">
+                <h3>Cards in layout responsive grid (<code>.grid</code> <code>.gap-lg</code>)
+                </h3>
+            </div>
+            <div class="container grid gap-lg">
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
+                        mattis,
+                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
+                        laoreet eu erat.</p>
+                </article>
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
+                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
+                </article>
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
+                        mattis,
+                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
+                        laoreet eu erat.</p>
+                </article>
+                <article class="card">
+                    <h3>Lorem ipsum</h3>
+                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
+                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
+                </article>
+            </div>
+        </section>
 
-    <!-- TODO -->
-    <section id="media" style="display: none">
-        <div class="container flex-column">
-            <h2 class="color-primary">Media</h2>
-            <figure>
-                <img src="https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA"
-                     alt="Minimal landscape"/>
-                <figcaption>
-                    Image from
-                    <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
-                </figcaption>
-            </figure>
-            <video src="https://ia801903.us.archive.org/32/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
-                   controls></video>
-            <audio src="https://ia601204.us.archive.org/3/items/datpiff-mixtape-maab0307/02%20-%20Summertime%20Sadness.mp3"
-                   controls></audio>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=mw2W42pDC0HR6qai"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- TODO -->
+        <section id="media" style="display: none">
+            <div class="container flex-column">
+                <h2 class="color-primary">Media</h2>
+                <figure>
+                    <img src="https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA"
+                         alt="Minimal landscape"/>
+                    <figcaption>
+                        Image from
+                        <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+                    </figcaption>
+                </figure>
+                <video src="https://ia801903.us.archive.org/32/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
+                       controls></video>
+                <audio src="https://ia601204.us.archive.org/3/items/datpiff-mixtape-maab0307/02%20-%20Summertime%20Sadness.mp3"
+                       controls></audio>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=mw2W42pDC0HR6qai"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88583.7580350149!2d14.449699296371282!3d46.06620685137995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476531f5969886d1%3A0x400f81c823fec20!2sLjubljana!5e0!3m2!1sen!2ssi!4v1717075454372!5m2!1sen!2ssi"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <figure>
-                <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.762587 0.889252C-0.611945 28.6298 4.81119 84.1107 37.5 84.1107C70.1888 84.1107 75.6119 53.1214 74.2374 37.6267H37.5C37.5 35.6274 37.5 30.0543 37.5 23.7564C37.5 15.8841 48.3713 0.889252 74.2374 0.889252"
-                          stroke="black"/>
-                </svg>
-            </figure>
-            <figure>
-                <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M37.5 84.1107C4.8112 84.1107 -0.611941 28.6298 0.76259 0.889252H74.2374C48.3713 0.889252 37.5 15.8841 37.5 23.7564V37.6267H74.2374C75.6119 53.1214 70.1888 84.1107 37.5 84.1107Z"
-                          fill="black"/>
-                </svg>
-            </figure>
-        </div>
-
-    </section>
-
-    <section id="form">
-        <div class="container">
-            <h2 class="color-primary">Forms</h2>
-        </div>
-
-        <div class="container grid grid-auto gap-lg">
-            <div class="flex flex-column gap-lg">
-                <h3>Search form #1</h3>
-                <form action="/" role="search" autocomplete="on" class="search-form">
-                    <label for="search-input1" class="visuallyhidden">Search</label>
-                    <input id="search-input1" type="search" name="s" placeholder="Type search phrase">
-                    <button type="submit" class="search-button icon-btn">
-                        <span aria-hidden="true" class="icon"></span>
-                        <span class="visuallyhidden">Search</span>
-                    </button>
-                </form>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88583.7580350149!2d14.449699296371282!3d46.06620685137995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476531f5969886d1%3A0x400f81c823fec20!2sLjubljana!5e0!3m2!1sen!2ssi!4v1717075454372!5m2!1sen!2ssi"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <figure>
+                    <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.762587 0.889252C-0.611945 28.6298 4.81119 84.1107 37.5 84.1107C70.1888 84.1107 75.6119 53.1214 74.2374 37.6267H37.5C37.5 35.6274 37.5 30.0543 37.5 23.7564C37.5 15.8841 48.3713 0.889252 74.2374 0.889252"
+                              stroke="black"/>
+                    </svg>
+                </figure>
+                <figure>
+                    <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.5 84.1107C4.8112 84.1107 -0.611941 28.6298 0.76259 0.889252H74.2374C48.3713 0.889252 37.5 15.8841 37.5 23.7564V37.6267H74.2374C75.6119 53.1214 70.1888 84.1107 37.5 84.1107Z"
+                              fill="black"/>
+                    </svg>
+                </figure>
             </div>
 
-            <div class="flex flex-column  gap-lg">
-                <h3>Search form #2</h3>
-                <form action="/" role="search" autocomplete="on" class="search-form">
-                    <label for="search-input2" class="visuallyhidden">Search</label>
-                    <input id="search-input2" type="search" name="s" placeholder="Type search phrase">
-                    <button type="submit" class="search-button">
-                        <span aria-hidden="true" class="icon visuallyhidden"></span>
-                        <span>Search</span>
-                    </button>
-                </form>
+        </section>
+
+        <section id="form">
+            <div class="container">
+                <h2 class="color-primary">Forms</h2>
             </div>
-        </div>
-        <div class="container grid">
-            <div class="flex flex-column gap-lg">
-                <h3>Contact form</h3>
-                <form class="contact-form flex flex-column gap-lg container">
-                    <div>
-                        <label id="label-name" for="full-name" data-required-text=" required">Name</label>
-                        <input id="full-name" type="text" placeholder="for eg. John Smith" autocomplete="name" required
-                               name="name" aria-labelledby="label-name">
-                    </div>
-                    <div>
-                        <label id="label-subject" for="subject">Subject</label>
-                        <input id="subject" type="text" placeholder="" name="subject" aria-labelledby="label-subject">
-                    </div>
-                    <div>
-                        <label id="label-email" for="email">Email</label>
-                        <input id="email" type="email" autocomplete="email" name="email"
-                               placeholder="for eg. john@mail.com"
-                               required aria-labelledby="label-email" class="invalid">
-                    </div>
-                    <div>
-                        <label id="label-message" for="message">Message</label>
-                        <textarea placeholder="Tell us how we can help" aria-labelledby="label-message" required
-                                  id="message"
-                                  name="message" class="invalid"></textarea>
-                    </div>
-                    <input type="hidden" name="_nonce" value="">
-                    <button type="submit" class="btn-primary" disabled>Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <section id="form_elements">
-        <form class="container">
-            <fieldset id="forms__input">
-                <legend>Input fields</legend>
-                <p>
-                    <label for="input__text">Text Input</label>
-                    <input id="input__text" type="text" placeholder="Text Input">
-                </p>
-                <p>
-                    <label for="input__password">Password</label>
-                    <input id="input__password" type="password" placeholder="Type your Password">
-                </p>
-                <p>
-                    <label for="input__webaddress">Web Address</label>
-                    <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
-                </p>
-                <p>
-                    <label for="input__emailaddress">Email Address</label>
-                    <input id="input__emailaddress" type="email" placeholder="name@email.com">
-                </p>
-                <p>
-                    <label for="input__phone">Phone Number</label>
-                    <input id="input__phone" type="tel" placeholder="(999) 999-9999">
-                </p>
-                <p>
-                    <label for="input__search">Search</label>
-                    <input id="input__search" type="search" placeholder="Enter Search Term">
-                </p>
-                <p>
-                    <label for="input__text2">Number Input</label>
-                    <input id="input__text2" type="number" placeholder="Enter a Number">
-                </p>
-                <p>
-                    <label for="input__text3" class="error">Error</label>
-                    <input id="input__text3" class="error" type="text" placeholder="Text Input">
-                </p>
-                <p>
-                    <label for="input__text4" class="success">Valid</label>
-                    <input id="input__text4" class="success" type="text" placeholder="Text Input">
-                </p>
-                <p>
-                    <label for="input__text5">Disabled Text Input</label>
-                    <input id="input__text5" type="text" placeholder="Disabled Text Input" disabled="">
-                </p>
-                <p class="field-group">
-                    <input class="field-group-prepend" type="search" name="input__text6" id="input__text6"
-                           placeholder="Search">
-                    <button class="field-group-append">
-                        <img src="https://icongr.am/feather/search.svg?size=16">
-                        <span class="visuallyhidden">Search</span>
-                    </button>
-                </p>
-                <p class="field-group">
-                    <input class="field-group-prepend" type="text" name="input__text7" id="input__text7"
-                           placeholder="Username">
-                    <input type="text" name="input__text8" id="input__text8" placeholder="Password">
-                    <button class="field-group-append">Submit</button>
-                </p>
-            </fieldset>
-
-            <fieldset id="forms__select">
-                <legend>Select menus</legend>
-                <p>
-                    <label for="select">Select</label>
-                    <select id="select">
-                        <optgroup label="Option Group">
-                            <option>Option One</option>
-                            <option>Option Two</option>
-                            <option>Option Three</option>
-                        </optgroup>
-                    </select>
-                </p>
-            </fieldset>
-
-            <fieldset id="forms__checkbox">
-                <legend>Checkboxes</legend>
-                <ul class="list list--bare">
-                    <li>
-                        <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
-                            Choice A</label>
-                    </li>
-                    <li>
-                        <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox">
-                            Choice B</label>
-                    </li>
-                    <li>
-                        <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox">
-                            Choice C</label>
-                    </li>
-                </ul>
-            </fieldset>
-
-            <fieldset id="forms__radio">
-                <legend>Radio buttons</legend>
-                <ul class="list list--bare">
-                    <li>
-                        <label for="radio1"><input id="radio1" name="radio" type="radio" class="radio"
-                                                   checked="checked">
-                            Option 1</label>
-                    </li>
-                    <li>
-                        <label for="radio2"><input id="radio2" name="radio" type="radio" class="radio">
-                            Option 2</label>
-                    </li>
-                    <li>
-                        <label for="radio3"><input id="radio3" name="radio" type="radio" class="radio">
-                            Option 3</label>
-                    </li>
-                </ul>
-            </fieldset>
-
-            <fieldset id="forms__textareas">
-                <legend>Textareas</legend>
-                <p>
-                    <label for="textarea">Textarea</label>
-                    <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-                </p>
-            </fieldset>
-
-            <fieldset id="forms__html5">
-                <legend>HTML5 inputs</legend>
-                <p>
-                    <label for="ic">Color input</label>
-                    <input type="color" id="ic" value="#000000">
-                </p>
-                <p>
-                    <label for="in">Number input</label>
-                    <input type="number" id="in" min="0" max="10" value="5">
-                </p>
-                <p>
-                    <label for="ir">Range input</label>
-                    <input type="range" id="ir" value="10">
-                </p>
-                <p>
-                    <label for="idd">Date input</label>
-                    <input type="date" id="idd" value="1970-01-01">
-                </p>
-                <p>
-                    <label for="idm">Month input</label>
-                    <input type="month" id="idm" value="1970-01">
-                </p>
-                <p>
-                    <label for="idw">Week input</label>
-                    <input type="week" id="idw" value="1970-W01">
-                </p>
-                <p>
-                    <label for="idt">Datetime input</label>
-                    <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-                </p>
-                <p>
-                    <label for="idtl">Datetime-local input</label>
-                    <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-                </p>
-            </fieldset>
-
-            <fieldset id="forms__action" class="flex flex-column gap-lg">
-                <legend>Action buttons</legend>
-                <div class="flex flex-column gap-sm icons-container">
-                    <input type="submit" value="<input type=submit>">
-                    <input type="button" value="<input type=button>">
-                    <input type="reset" value="<input type=reset>">
-                    <input type="submit" value="<input disabled>" disabled="">
+            <div class="container grid gap-lg">
+                <div class="flex flex-column gap-lg">
+                    <h3>Search form #1</h3>
+                    <form action="/" role="search" autocomplete="on" class="search-form">
+                        <label for="search-input1" class="visuallyhidden">Search</label>
+                        <input id="search-input1" type="search" name="s" placeholder="Type search phrase">
+                        <button type="submit" class="search-button icon-btn">
+                            <span aria-hidden="true" class="icon"></span>
+                            <span class="visuallyhidden">Search</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="flex flex-column gap-sm icons-container">
-                    <button type="submit">&lt;button type=submit&gt;</button>
-                    <button type="button">&lt;button type=button&gt;</button>
-                    <button type="reset">&lt;button type=reset&gt;</button>
-                    <button type="button" disabled="">&lt;button disabled&gt;</button>
+
+                <div class="flex flex-column  gap-lg">
+                    <h3>Search form #2</h3>
+                    <form action="/" role="search" autocomplete="on" class="search-form">
+                        <label for="search-input2" class="visuallyhidden">Search</label>
+                        <input id="search-input2" type="search" name="s" placeholder="Type search phrase">
+                        <button type="submit" class="search-button">
+                            <span aria-hidden="true" class="icon visuallyhidden"></span>
+                            <span>Search</span>
+                        </button>
+                    </form>
                 </div>
-            </fieldset>
-        </form>
-    </section>
-
-    <section id="tables">
-        <div class="container">
-            <h2 class="color-primary">Tables</h2>
-            <div class="overflow-auto">
-                <table class="striped">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Heading</th>
-                        <th scope="col">Heading</th>
-                        <th scope="col">Heading</th>
-                        <th scope="col">Heading</th>
-                        <th scope="col">Heading</th>
-                    </tr>
-                    </thead>
-                    <tbody class="striped-rows">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Foot</th>
-                        <th scope="col">Foot</th>
-                        <th scope="col">Foot</th>
-                        <th scope="col">Foot</th>
-                        <th scope="col">Foot</th>
-                    </tr>
-                    </tfoot>
-                </table>
             </div>
-        </div>
-    </section>
+            <div class="container grid">
+                <div class="flex flex-column gap-lg">
+                    <h3>Contact form</h3>
+                    <form class="contact-form flex flex-column gap-lg container">
+                        <div>
+                            <label id="label-name" for="full-name" data-required-text=" required">Name</label>
+                            <input id="full-name" type="text" placeholder="for eg. John Smith" autocomplete="name"
+                                   required
+                                   name="name" aria-labelledby="label-name">
+                        </div>
+                        <div>
+                            <label id="label-subject" for="subject">Subject</label>
+                            <input id="subject" type="text" placeholder="" name="subject"
+                                   aria-labelledby="label-subject">
+                        </div>
+                        <div>
+                            <label id="label-email" for="email">Email</label>
+                            <input id="email" type="email" autocomplete="email" name="email"
+                                   placeholder="for eg. john@mail.com"
+                                   required aria-labelledby="label-email" class="invalid">
+                        </div>
+                        <div>
+                            <label id="label-message" for="message">Message</label>
+                            <textarea placeholder="Tell us how we can help" aria-labelledby="label-message" required
+                                      id="message"
+                                      name="message" class="invalid"></textarea>
+                        </div>
+                        <input type="hidden" name="_nonce" value="">
+                        <button type="submit" class="btn-primary" disabled>Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section id="accordions">
-        <div class="container">
-            <h2 class="color-primary">Accordions</h2>
+        <section id="form_elements">
+            <form class="container">
+                <fieldset id="forms__input">
+                    <legend>Input fields</legend>
+                    <p>
+                        <label for="input__text">Text Input</label>
+                        <input id="input__text" type="text" placeholder="Text Input">
+                    </p>
+                    <p>
+                        <label for="input__password">Password</label>
+                        <input id="input__password" type="password" placeholder="Type your Password">
+                    </p>
+                    <p>
+                        <label for="input__webaddress">Web Address</label>
+                        <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+                    </p>
+                    <p>
+                        <label for="input__emailaddress">Email Address</label>
+                        <input id="input__emailaddress" type="email" placeholder="name@email.com">
+                    </p>
+                    <p>
+                        <label for="input__phone">Phone Number</label>
+                        <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+                    </p>
+                    <p>
+                        <label for="input__search">Search</label>
+                        <input id="input__search" type="search" placeholder="Enter Search Term">
+                    </p>
+                    <p>
+                        <label for="input__text2">Number Input</label>
+                        <input id="input__text2" type="number" placeholder="Enter a Number">
+                    </p>
+                    <p>
+                        <label for="input__text3" class="error">Error</label>
+                        <input id="input__text3" class="error" type="text" placeholder="Text Input">
+                    </p>
+                    <p>
+                        <label for="input__text4" class="success">Valid</label>
+                        <input id="input__text4" class="success" type="text" placeholder="Text Input">
+                    </p>
+                    <p>
+                        <label for="input__text5">Disabled Text Input</label>
+                        <input id="input__text5" type="text" placeholder="Disabled Text Input" disabled="">
+                    </p>
+                    <p class="field-group">
+                        <input class="field-group-prepend" type="search" name="input__text6" id="input__text6"
+                               placeholder="Search">
+                        <button class="field-group-append">
+                            <img src="https://icongr.am/feather/search.svg?size=16">
+                            <span class="visuallyhidden">Search</span>
+                        </button>
+                    </p>
+                    <p class="field-group">
+                        <input class="field-group-prepend" type="text" name="input__text7" id="input__text7"
+                               placeholder="Username">
+                        <input type="text" name="input__text8" id="input__text8" placeholder="Password">
+                        <button class="field-group-append">Submit</button>
+                    </p>
+                </fieldset>
 
-            <h3>Accordion group</h3>
-            <details open name="faq">
-                <summary>Details question 1</summary>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                    amet, congue turpis.
-                </p>
-            </details>
-            <details name="faq">
-                <summary>Details question 2</summary>
-                <ul>
-                    <li>Vestibulum id elit quis massa interdum sodales.</li>
-                    <li>Nunc quis eros vel odio pretium tincidunt nec quis neque.</li>
-                    <li>Quisque sed eros non eros ornare elementum.</li>
-                    <li>Cras sed libero aliquet, porta dolor quis, dapibus ipsum.</li>
-                </ul>
-            </details>
+                <fieldset id="forms__select">
+                    <legend>Select menus</legend>
+                    <p>
+                        <label for="select">Select</label>
+                        <select id="select">
+                            <optgroup label="Option Group">
+                                <option>Option One</option>
+                                <option>Option Two</option>
+                                <option>Option Three</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
 
-            <h3>Accordion right icon</h3>
-            <details>
-                <summary class="icon-right">Details question 1</summary>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                    amet, congue turpis.
-                </p>
-            </details>
-
-            <h3>Accordion alternative icons</h3>
-            <details>
-                <summary class="icon-right icon-style-plus">Details question 1</summary>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                    amet, congue turpis.
-                </p>
-            </details>
-            <details>
-                <summary class="icon-right icon-style-arrow">Details question 1</summary>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                    amet, congue turpis.
-                </p>
-            </details>
-            <details>
-                <summary class="icon-right icon-style-caret">Details question 1</summary>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                    tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                    tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                    lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                    mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                    amet, congue turpis.
-                </p>
-            </details>
-        </div>
-    </section>
-
-    <section id="navigation_menu">
-        <div class="container">
-            <h2 class="color-primary">Navigation Menu</h2>
-
-            <h3>Desktop version navigation</h3>
-            <builderius-menu-builder>
-                <nav class="bldr-nav">
-                    <ul class="bldr-nav-menu">
-                        <li class="bldr-nav-item">
-                            <a href="#typography" class="bldr-nav-link">Typography</a>
+                <fieldset id="forms__checkbox">
+                    <legend>Checkboxes</legend>
+                    <ul class="list list--bare">
+                        <li>
+                            <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox"
+                                                          checked="checked">
+                                Choice A</label>
                         </li>
-                        <li class="bldr-nav-item">
-                            <a href="#badges" class="bldr-nav-link">Badges</a>
+                        <li>
+                            <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox">
+                                Choice B</label>
                         </li>
-                        <li class="bldr-nav-item">
-                            <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                        <li>
+                            <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox">
+                                Choice C</label>
                         </li>
                     </ul>
-                </nav>
-            </builderius-menu-builder>
+                </fieldset>
 
-            <h3>Mobile version navigation (expanded)</h3>
-            <builderius-menu-builder class="is-mobile is-expanded">
-                <nav class="bldr-nav">
-                    <ul class="bldr-nav-menu">
-                        <li class="bldr-nav-item">
-                            <a href="#typography" class="bldr-nav-link">Typography</a>
+                <fieldset id="forms__radio">
+                    <legend>Radio buttons</legend>
+                    <ul class="list list--bare">
+                        <li>
+                            <label for="radio1"><input id="radio1" name="radio" type="radio" class="radio"
+                                                       checked="checked">
+                                Option 1</label>
                         </li>
-                        <li class="bldr-nav-item">
-                            <a href="#badges" class="bldr-nav-link">Badges</a>
+                        <li>
+                            <label for="radio2"><input id="radio2" name="radio" type="radio" class="radio">
+                                Option 2</label>
                         </li>
-                        <li class="bldr-nav-item">
-                            <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                        <li>
+                            <label for="radio3"><input id="radio3" name="radio" type="radio" class="radio">
+                                Option 3</label>
                         </li>
                     </ul>
-                </nav>
-            </builderius-menu-builder>
-        </div>
-    </section>
+                </fieldset>
 
-    <section id="pagination">
-        <div class="container">
-            <h2 class="color-primary">Pagination</h2>
+                <fieldset id="forms__textareas">
+                    <legend>Textareas</legend>
+                    <p>
+                        <label for="textarea">Textarea</label>
+                        <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                    </p>
+                </fieldset>
 
-            <h3>Pagination List</h3>
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-numbers" href="#">«</a>
-                </li>
-                <li class="page-item active">
-                    <a class="page-numbers current" aria-current="page" href="#">1</a>
-                </li>
-                <li class="page-item">
+                <fieldset id="forms__html5">
+                    <legend>HTML5 inputs</legend>
+                    <p>
+                        <label for="ic">Color input</label>
+                        <input type="color" id="ic" value="#000000">
+                    </p>
+                    <p>
+                        <label for="in">Number input</label>
+                        <input type="number" id="in" min="0" max="10" value="5">
+                    </p>
+                    <p>
+                        <label for="ir">Range input</label>
+                        <input type="range" id="ir" value="10">
+                    </p>
+                    <p>
+                        <label for="idd">Date input</label>
+                        <input type="date" id="idd" value="1970-01-01">
+                    </p>
+                    <p>
+                        <label for="idm">Month input</label>
+                        <input type="month" id="idm" value="1970-01">
+                    </p>
+                    <p>
+                        <label for="idw">Week input</label>
+                        <input type="week" id="idw" value="1970-W01">
+                    </p>
+                    <p>
+                        <label for="idt">Datetime input</label>
+                        <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+                    </p>
+                    <p>
+                        <label for="idtl">Datetime-local input</label>
+                        <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+                    </p>
+                </fieldset>
+
+                <fieldset id="forms__action" class="flex flex-column gap-lg">
+                    <legend>Action buttons</legend>
+                    <div class="flex flex-column gap-sm icons-container">
+                        <input type="submit" value="<input type=submit>">
+                        <input type="button" value="<input type=button>">
+                        <input type="reset" value="<input type=reset>">
+                        <input type="submit" value="<input disabled>" disabled="">
+                    </div>
+                    <div class="flex flex-column gap-sm icons-container">
+                        <button type="submit">&lt;button type=submit&gt;</button>
+                        <button type="button">&lt;button type=button&gt;</button>
+                        <button type="reset">&lt;button type=reset&gt;</button>
+                        <button type="button" disabled="">&lt;button disabled&gt;</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="tables">
+            <div class="container">
+                <h2 class="color-primary">Tables</h2>
+                <div class="overflow-auto">
+                    <table class="striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Heading</th>
+                            <th scope="col">Heading</th>
+                            <th scope="col">Heading</th>
+                            <th scope="col">Heading</th>
+                            <th scope="col">Heading</th>
+                        </tr>
+                        </thead>
+                        <tbody class="striped-rows">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Foot</th>
+                            <th scope="col">Foot</th>
+                            <th scope="col">Foot</th>
+                            <th scope="col">Foot</th>
+                            <th scope="col">Foot</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="accordions">
+            <div class="container">
+                <h2 class="color-primary">Accordions</h2>
+
+                <h3>Accordion group</h3>
+                <details open name="faq">
+                    <summary>Details question 1</summary>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </details>
+                <details name="faq">
+                    <summary>Details question 2</summary>
+                    <ul>
+                        <li>Vestibulum id elit quis massa interdum sodales.</li>
+                        <li>Nunc quis eros vel odio pretium tincidunt nec quis neque.</li>
+                        <li>Quisque sed eros non eros ornare elementum.</li>
+                        <li>Cras sed libero aliquet, porta dolor quis, dapibus ipsum.</li>
+                    </ul>
+                </details>
+
+                <h3>Accordion right icon</h3>
+                <details>
+                    <summary class="icon-right">Details question 1</summary>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </details>
+
+                <h3>Accordion alternative icons</h3>
+                <details>
+                    <summary class="icon-right icon-style-plus">Details question 1</summary>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </details>
+                <details>
+                    <summary class="icon-right icon-style-arrow">Details question 1</summary>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </details>
+                <details>
+                    <summary class="icon-right icon-style-caret">Details question 1</summary>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
+                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
+                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
+                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
+                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
+                        amet, congue turpis.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <section id="navigation_menu">
+            <div class="container">
+                <h2 class="color-primary">Navigation Menu</h2>
+
+                <h3>Desktop version navigation</h3>
+                <builderius-menu-builder>
+                    <nav class="bldr-nav">
+                        <ul class="bldr-nav-menu">
+                            <li class="bldr-nav-item">
+                                <a href="#typography" class="bldr-nav-link">Typography</a>
+                            </li>
+                            <li class="bldr-nav-item">
+                                <a href="#badges" class="bldr-nav-link">Badges</a>
+                            </li>
+                            <li class="bldr-nav-item">
+                                <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </builderius-menu-builder>
+
+                <h3>Mobile version navigation (expanded)</h3>
+                <builderius-menu-builder class="is-mobile is-expanded">
+                    <nav class="bldr-nav">
+                        <ul class="bldr-nav-menu">
+                            <li class="bldr-nav-item">
+                                <a href="#typography" class="bldr-nav-link">Typography</a>
+                            </li>
+                            <li class="bldr-nav-item">
+                                <a href="#badges" class="bldr-nav-link">Badges</a>
+                            </li>
+                            <li class="bldr-nav-item">
+                                <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </builderius-menu-builder>
+            </div>
+        </section>
+
+        <section id="pagination">
+            <div class="container">
+                <h2 class="color-primary">Pagination</h2>
+
+                <h3>Pagination List</h3>
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-numbers" href="#">«</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-numbers current" aria-current="page" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-numbers" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-numbers" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-numbers" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-numbers" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-numbers" href="#">»</a>
+                    </li>
+                </ul>
+
+                <h3>Pagination WordPress</h3>
+                <div class="pagination">
+                    <span aria-current="page" class="page-numbers current">1</span>
                     <a class="page-numbers" href="#">2</a>
-                </li>
-                <li class="page-item">
                     <a class="page-numbers" href="#">3</a>
-                </li>
-                <li class="page-item">
                     <a class="page-numbers" href="#">4</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-numbers" href="#">5</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-numbers" href="#">»</a>
-                </li>
-            </ul>
+                    <a class="next page-numbers" href="#">Next »</a>
+                </div>
+            </div>
+        </section>
 
-            <h3>Pagination WordPress</h3>
-            <div class="pagination">
-                <span aria-current="page" class="page-numbers current">1</span>
-                <a class="page-numbers" href="#">2</a>
-                <a class="page-numbers" href="#">3</a>
-                <a class="page-numbers" href="#">4</a>
-                <a class="next page-numbers" href="#">Next »</a>
+        <section class="dialogs">
+            <div class="container">
+                <h2 class="color-primary">Cookie Notice</h2>
+                <p>Cookie notice modal window is displayed in bottom right corner of the page.</p>
+                <dialog open class="cookie-notice">
+                    <h2 id="cookieLabel" class=font-size-3">Cookie settings</h2>
+                    <p id="cookieDescription">Our website uses some essential cookies to function well. With your
+                        permission, we would like to set up some additional cookies to improve your experience. Our
+                        <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
+                    </p>
+                    <form method="dialog" class="flex flex-row gap-lg">
+                        <button class="btn-primary" value="accept">Accept</button>
+                        <button class="btn-secondary" value="reject">Reject</button>
+                    </form>
+                </dialog>
+            </div>
+        </section>
+    </main>
+    <!-- ./ Main -->
+
+    <footer class="site-edge-section outer-wrapper">
+        <div class="container">
+            <span class="font-size-5">Builderius CSS framework</span>
+            <p></p>
+        </div>
+    </footer>
+    <script>
+        class BuilderiusMenuBuilder extends HTMLElement {
+            constructor() {
+                super();
+            }
+        }
+
+        if (customElements.get('builderius-menu-builder') === undefined) {
+            customElements.define('builderius-menu-builder', BuilderiusMenuBuilder);
+        }
+    </script>
+    <script src="./customizer.js"></script>
+    <script src="./theme-switcher.js"></script>
+    <script src="./color-picker.js"></script>
+
+    <!-- Customizer Panel -->
+    <aside id="customizer-panel" class="customizer-panel" aria-label="Customization Panel" data-collapsed="false">
+        <!-- Toggle Button -->
+        <button type="button" id="customizer-toggle" class="customizer-toggle"
+                aria-expanded="true" aria-controls="customizer-content"
+                aria-label="Toggle customization panel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-icon lucide-paintbrush">
+                <path d="m14.622 17.897-10.68-2.913"/>
+                <path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/>
+                <path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/>
+            </svg>
+            <span class="toggle-label">Customize</span>
+        </button>
+
+        <!-- Panel Content -->
+        <div id="customizer-content" class="customizer-content">
+            <!-- Header -->
+            <div class="customizer-header">
+                <h2 class="customizer-title">Customize</h2>
+                <button type="button" class="customizer-close" aria-label="Close customization panel">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="15" y1="5" x2="5" y2="15"></line>
+                        <line x1="5" y1="5" x2="15" y2="15"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="customizer-body">
+                <!-- Theme Section -->
+                <section class="customizer-section">
+                    <h3 class="customizer-section-title">Theme</h3>
+                    <div class="theme-switcher" role="tablist" aria-label="Theme selection">
+                        <button role="tab" class="theme-btn" data-theme="light" aria-selected="false">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            Light
+                        </button>
+                        <button role="tab" class="theme-btn active" data-theme="auto" aria-selected="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            Auto
+                        </button>
+                        <button role="tab" class="theme-btn" data-theme="dark" aria-selected="false">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            Dark
+                        </button>
+                    </div>
+                    <p class="customizer-section-help">Auto mode follows your operating system preference</p>
+                </section>
+
+                <hr class="customizer-divider" />
+
+                <!-- Color Picker Section -->
+                <section class="customizer-section">
+                    <h3 class="customizer-section-title">Primary Color</h3>
+                    <div class="color-picker-controls">
+                        <div class="color-picker-wrapper">
+                            <input type="color" id="primary-color-picker" value="#5050ff" aria-label="Select primary color">
+                            <label for="primary-color-picker" class="color-picker-label">Pick Color</label>
+                        </div>
+                        <button type="button" id="reset-colors" class="btn-outlined" disabled>Reset</button>
+                    </div>
+                    <p class="customizer-section-help">Changes are preview only. Reset to restore default.</p>
+                </section>
             </div>
         </div>
-    </section>
-
-    <section class="dialogs">
-        <div class="container">
-            <h2 class="color-primary">Cookie Notice</h2>
-            <p>Cookie notice modal window is displayed in bottom right corner of the page.</p>
-            <dialog open class="cookie-notice">
-                <h2 id="cookieLabel" class=font-size-3">Cookie settings</h2>
-                <p id="cookieDescription">Our website uses some essential cookies to function well. With your
-                    permission, we would like to set up some additional cookies to improve your experience. Our
-                    <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
-                </p>
-                <form method="dialog" class="flex flex-row gap-lg">
-                    <button class="btn-primary" value="accept">Accept</button>
-                    <button class="btn-secondary" value="reject">Reject</button>
-                </form>
-            </dialog>
-        </div>
-    </section>
-</main>
-<!-- ./ Main -->
-
-<footer class="site-edge-section outer-wrapper">
-    <div class="container">
-        <span class="font-size-5">Builderius CSS framework</span>
-        <p></p>
-    </div>
-</footer>
-<script>
-    class BuilderiusMenuBuilder extends HTMLElement {
-        constructor() {
-            super();
-        }
-    }
-
-    if (customElements.get('builderius-menu-builder') === undefined) {
-        customElements.define('builderius-menu-builder', BuilderiusMenuBuilder);
-    }
-</script>
+    </aside>
+</div>
 </body>
 </html>

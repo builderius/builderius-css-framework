@@ -1,4 +1,4 @@
-﻿# Builderius CSS - 1.1
+﻿# Builderius CSS - 1.2
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
@@ -77,11 +77,10 @@ By default, shades of color 'primary' are used in all styles. There is also a sp
 
 ### Some principles as you work with the variables
 1. First part of the variable name will be the name of the variable group in "CSS vars" tab inside Builderius builder.
-2. Figma integration wise: any parts of CSS variable name split by `--` (double dash) will be transformed into Figma variable collection/category when using our Figma plugin for export/import the tokens.
-3. It is generally a good idea to group variables by their use-case, rather than the type.
-4. We suggest creating "functional" variables, rather than trying to extend "design" ones.
-5. It is generally better to redefine the variable in a specific "scope" then to make a new one.
-6. `color` group is a special one, and we suggest extending it by using our Figma plugin or manually re-creating the same structure and naming, which are: always adding 12 shades and calling them like `--color--<color_name>--50` etc.
+2. It is generally a good idea to group variables by their use-case, rather than the type.
+3. We suggest creating "functional" variables, rather than trying to extend "design" ones.
+4. It is generally better to redefine the variable in a specific "scope" then to make a new one.
+5. `color` group is a special one: there are CSS variables related to colors/shades automatically created. We use `oklch` for color formats and current architecture configured the way when `--color--<color_name>--original` var will be used for automattic generation of color shades
 
 #### Names and grouping 
 **If you name your variables like:**
