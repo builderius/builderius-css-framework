@@ -1,0 +1,275 @@
+:where(builderius-menu-builder) {
+  display: flex;
+  width: 100%;
+}
+
+:where(builderius-menu-builder:has(.b-nav-item-js.active))
+/*builderius-menu-builder[data-submenu-on-hover]:has(.menu-item-has-children:hover)*/ {
+  z-index: 1010;
+}
+
+:where(builderius-menu-builder builderius-menu-toggle) {
+  display: none;
+}
+
+.bldr-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bldr-nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 999;
+  isolation: isolate;
+  justify-content: var(--bldr-menu-alignment, flex-end);
+  align-items: center;
+}
+
+:where(.bldr-nav) > .bldr-nav-menu {
+  background-color: var(--bldr-menu-bg-color, transparent);
+  gap: var(--bldr-menu-gap);
+}
+
+.bldr-nav-item {
+  display: flex;
+  position: relative;
+}
+
+.bldr-nav-link:where(:not(.button)) {
+  --padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
+  --radius: var(--radius--xs, 4px);
+  display: flex;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  padding: var(--padding);
+  color: var(--bldr-menu-link-color, var(--text--color--heading, #0014a0));
+  background-color: var(--bldr-menu-link-bg-color, transparent);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.bldr-nav-link:where(:not(.button):hover) {
+  cursor: pointer;
+  color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
+  background-color: var(--bldr-menu-link-bg-color-hover, var(--color--base--0));
+}
+
+.bldr-nav-link:where(.current-menu-item:not(.button)) {
+  cursor: pointer;
+  color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
+  background-color: var(--bldr-menu-link-bg-color-hover, var(--color--base--0));
+}
+
+.bldr-nav-item :where(button) {
+  --radius: var(--radius--xs, 4px);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: var(--bldr-menu-link-icon-color, var(--bldr-menu-link-color));
+}
+
+.bldr-nav-link:where(.current-menu-item) :where(button:not(.button)) {
+  color: var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff));
+}
+
+:where(builderius-menu-builder.is-mobile) .bldr-nav-item :where(button) {
+  margin-left: 4px;
+}
+
+.bldr-nav-item :where(button:hover) {
+  color: var(--bldr-menu-link-icon-color-hover, var(--bldr-menu-link-color-hover));
+}
+
+:where(builderius-menu-builder[data-has-submenu-icon]) .bldr-nav-item :where(button::after) {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform 0.2s ease;
+}
+
+:where(.bldr-nav-item) .bldr-nav-menu {
+  --radius: var(--radius--xs, 4px);
+  --box-shadow: var(--box--shadow, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06));
+  flex-direction: column;
+  background-color: var(--bldr-submenu-bg-color, var(--bldr-menu-bg-color, var(--color--base--0, #fff)));
+  gap: var(--bldr-submenu-gap);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius);
+  opacity: 0;
+  top: 100%;
+  left: 0;
+}
+
+:where(builderius-menu-builder.is-mobile .bldr-nav-item) .bldr-nav-menu {
+  display: none;
+}
+
+:where(builderius-menu-builder:not(.is-mobile) .b-nav-item-js) .b-nav-menu-js {
+  position: absolute;
+  min-width: 200px;
+  visibility: hidden;
+  /*transform: translateY(-10px);
+  transition: all 0.2s ease;*/
+  z-index: 1000;
+}
+
+.b-nav-menu-js:where(:has(.b-nav-item-js.active)) {
+  z-index: 1000;
+}
+
+:where(.b-nav-item-js .b-nav-item-js) > .b-nav-menu-js {
+  left: 100%;
+}
+
+:where(.b-nav-item-js) .b-nav-menu-js:where([data-left-prop]) {
+  left: unset;
+  right: 0;
+}
+
+:where(.bldr-nav-item .bldr-nav-item) > .bldr-nav-menu:where([data-left-prop]) {
+  left: unset;
+  right: 100%;
+}
+
+:where(.bldr-nav-item .bldr-nav-menu) .bldr-nav-item {
+  width: 100%;
+}
+
+:where(.bldr-nav-item .bldr-nav-menu) .bldr-nav-link:where(:not(.button)) {
+  padding: 10px 16px;
+  border-radius: 0;
+  border: none;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: start;
+}
+
+:where(builderius-menu-builder[data-submenu-on-hover]:not(.is-mobile) .b-nav-item-js.active) > .b-nav-menu-js,
+:where(builderius-menu-builder[data-submenu-on-hover]:not(.is-mobile) .b-nav-item-js:hover) > .b-nav-menu-js {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+:where(builderius-menu-builder:not(.is-mobile)) .b-nav-item-js:where(.active),
+:where(builderius-menu-builder:not(.is-mobile)) .b-nav-item-js:where(:focus-within) {
+  z-index: 1010;
+  isolation: isolate;
+}
+
+:where(builderius-menu-builder:not(.is-mobile) .b-nav-item-js.active:focus-within) > .b-nav-menu-js {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+:where(builderius-menu-builder:not(.is-mobile) .b-nav-item-js.active) > .b-nav-menu-js,
+:where(builderius-menu-builder:not(.is-mobile) .b-nav-item-js:focus-within) > .b-nav-menu-js {
+  z-index: 1010;
+}
+
+:where(builderius-menu-builder[data-show-submenu] .b-nav-menu-js > .b-nav-item-js.menu-item-has-children) > .b-nav-menu-js,
+:where(builderius-menu-builder[data-show-submenu] .b-nav-menu-js > .b-nav-item-js.menu-item-has-children > .b-nav-menu-js .b-nav-item-js.menu-item-has-children) > .b-nav-menu-js {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+:where(builderius-menu-builder).is-mobile {
+  justify-content: var(--bldr-menu-alignment, flex-end);
+}
+
+:where(builderius-menu-builder.is-mobile) .bldr-nav {
+  display: none;
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded .bldr-nav) > .bldr-nav-menu {
+  --margin: var(--spacing--block, 16px) var(--spacing--inline, 16px);
+  --padding: var(--spacing--block, 16px) var(--spacing--inline, 16px);
+  --radius: var(--radius--xs, 4px);
+  --box-shadow: var(--box--shadow, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06));
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--bldr-menu-mobile-alignment, flex-start);
+  background-color: var(--bldr-menu-mobile-bg-color, var(--bldr-menu-bg-color, var(--color--base--0, #fff)));
+  gap: var(--bldr-menu-mobile-gap, 0);
+  width: 100%;
+  margin: var(--margin);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav-item {
+  width: 100%;
+  flex-direction: column;
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav-link:where(:not(.button)) {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  color: var(--bldr-menu-mobile-link-color, var(--bldr-menu-link-color, var(--text--color--heading, #0014a0)));
+  background-color: var(--bldr-menu-mobile-link-bg-color, var(--bldr-menu-link-bg-color, transparent));
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav-link:where(:not(.button):hover) {
+  color: var(--bldr-menu-mobile-link-color-hover, var(--bldr-menu-link-color-hover, var(--color--primary--500, #2962ff)));
+  background-color: var(--bldr-menu-mobile-link-bg-color-hover, var(--bldr-menu-link-bg-color-hover, var(--color--base--100)));
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded .bldr-nav-item.active) > .bldr-nav-menu {
+  --radius: var(--radius--xs, 4px);
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  box-shadow: none;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--bldr-submenu-mobile-bg-color, var(--color--base--0));
+  margin: 0;
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded .bldr-nav-item.active) > .bldr-nav-menu {
+  display: flex;
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav-item :where(button) {
+  color: var(--bldr-menu-mobile-link-color, var(--bldr-menu-link-color));
+}
+
+:where(builderius-menu-builder.is-mobile.is-expanded) .bldr-nav-item :where(button:hover) {
+  color: var(--bldr-menu-mobile-link-color-hover, var(--bldr-menu-link-color-hover));
+}

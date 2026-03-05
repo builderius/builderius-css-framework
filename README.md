@@ -1,4 +1,4 @@
-﻿# Builderius CSS - 1.2
+﻿# Builderius CSS - 1.3
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
@@ -8,7 +8,7 @@ A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CS
 
 
 ## How does it help users get a quick start?
-- Drop any html element into the canvas and it will look nice and be responsive out of the box. 
+- Drop any html element into the canvas and it will look nice and be responsive out of the box.
 - It takes care of the basic global styling so that you can extend it to fit your needs faster then building from scratch would take you.
 
 ## Video walkthrough
@@ -28,11 +28,6 @@ A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CS
 
 [Quick explanation of assets available and how to approach them](./css-framework-cheatsheet.md)
 
-### Tokenization and Figma integration
-The framework is built around "tokens"—constant values for colors, sizes, and style variations. These tokens are applied consistently throughout the framework, so updating them automatically updates all related CSS variables and classes. This approach ensures a reliable and scalable design system. It also enhances integration with our Figma design file, making the transition from design to development smoother and more efficient.
-- Figma basic design file (FREE): *to be revealed soon*
-- Figma plugin (FREE): *to be revealed soon*
-
 ### Fluid Typography
 Framework uses `clamp()` to set flexible sizes for typography that scale with the size of the browser making the typography fit every screen size.
 
@@ -43,7 +38,7 @@ Framework has to be easy to override on local level, without the need to overuse
 From tokens-based variables like `--size--1` to a more specific `--border--width` the framework makes it easy to apply consistent changes to as many or as little elements one wants.
 
 #### Colors
-Builderius CSS uses a structured, token-based color system for consistency and flexibility. The primary color (--color--primary) generates 11 shades automatically, ranging from light to dark. The base grayscale (--color--base) also consists of 13 steps (0, 50, 100, 200, ..., 950, 1000) and is subtly tinted with the primary color. Additional colors can be defined (e.g., --color--secondary or any custom name), each generating its own 11 shades. Variable which name is suffixed with 'original' (example: `--color--primary--original`) is the reference color that is used to keep in sync all 11 shades generated. The shades are generated within the accompanying Figma plugin, ensuring a seamless transition between design and development.
+Builderius CSS uses a structured, token-based color system for consistency and flexibility. The primary color (--color--primary) generates 11 shades automatically, ranging from light to dark. The base grayscale (--color--base) also consists of 13 steps (0, 50, 100, 200, ..., 950, 1000) and is subtly tinted with the primary color. Additional colors can be defined (e.g., --color--secondary or any custom name), each generating its own 11 shades. Variable which name is suffixed with 'original' (example: `--color--primary--original`) is the reference color that is used to keep in sync all 11 shades generated.
 
 #### Typography
 Provides 6 sizes type scale applied to headings automatically or added with classes `.font-size-1` or with variables like `--font--size--1`.
@@ -57,7 +52,7 @@ We use CSS variables `--spacing--sm`, `--spacing--lg` etc to apply spacing to yo
 We offer variables like `--border--color`, `--border--radius` and `--border--width`.
 
 #### Border radius
-Use `--radius--md`, `--radius--lg` ... to apply border radius to your elements. These are mapped to size related variables mentioned before. Add additional ones to the list, or change the values as per your need. 
+Use `--radius--md`, `--radius--lg` ... to apply border radius to your elements. These are mapped to size related variables mentioned before. Add additional ones to the list, or change the values as per your need.
 
 #### Container widths
 Use `--container--width`, for invoking the default maximum width for containers, or specify `--container--min`, `--container--narrow`, `--container--max`, and `--container--full`. We recommend not to give static value to `--container--width` itself, but reference one of the specific ones, by default we declare it like this `--container--width: var(--container--max);`.
@@ -82,7 +77,7 @@ By default, shades of color 'primary' are used in all styles. There is also a sp
 4. It is generally better to redefine the variable in a specific "scope" then to make a new one.
 5. `color` group is a special one: there are CSS variables related to colors/shades automatically created. We use `oklch` for color formats and current architecture configured the way when `--color--<color_name>--original` var will be used for automattic generation of color shades
 
-#### Names and grouping 
+#### Names and grouping
 **If you name your variables like:**
 
 - `--form--button--active`
@@ -92,7 +87,7 @@ By default, shades of color 'primary' are used in all styles. There is also a sp
 
 They will get grouped under the accordion **Form**, and **Border**
 
- **If you name your variables like:**
+**If you name your variables like:**
 
 - `--button--color--active`
 - `--button--color--disabled`

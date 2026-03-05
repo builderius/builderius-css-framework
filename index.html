@@ -7,6 +7,7 @@
     <meta name="description"
           content="Builderius CSS - well balanced between CSS vars plus several utility-like classes and progressive enhancement CSS framework."/>
 
+    <link rel="stylesheet" href="./builderius-menu-builder.css"/>
     <link rel="stylesheet" href="./framework.css"/>
     <link rel="stylesheet" href="./page.css"/>
 </head>
@@ -34,7 +35,8 @@
     <main>
         <section id="colors">
             <div class="container">
-                <h2 class="color-primary">Colors</h2>
+                <h2 class="color-primary"># Colors</h2>
+
                 <p>
                     The Builderius CSS framework uses the modern OKLCH color space for perceptually uniform color generation.
                     Each color is defined by a single <code>--original</code> CSS variable, from which all shades (50-950) are automatically calculated using CSS relative color syntax.
@@ -205,7 +207,7 @@
 
         <section id="typography">
             <div class="container">
-                <h2 class="color-primary">Typography</h2>
+                <h2 class="color-primary"># Typography</h2>
                 <!-- Inline text elements-->
                 <h3>Inline text elements</h3>
                 <div class="grid">
@@ -341,7 +343,7 @@
 
         <section id="badges">
             <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary">Badges</h2>
+                <h2 class="color-primary"># Badges</h2>
 
                 <div class="flex flex-row gap-lg">
                     <div class="flex flex-column gap-lg icons-container">
@@ -373,7 +375,7 @@
 
         <section id="buttons">
             <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary">Buttons</h2>
+                <h2 class="color-primary"># Buttons</h2>
 
                 <div class="flex flex-row gap-lg">
                     <div class="flex flex-column gap-lg icons-container">
@@ -410,36 +412,164 @@
                         <a class="button btn-ghost" href="#">Link Btn</a>
                     </div>
                 </div>
+
+                <h3>Size variants</h3>
+                <div class="flex flex-row gap-lg flex-wrap">
+                    <div class="flex flex-column gap-md icons-container">
+                        <h3>Filled</h3>
+                        <div class="flex flex-row gap-md">
+                            <div class="flex flex-column gap-sm">
+                                <button class="size-sm">Btn</button>
+                                <code>.size-sm</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button>Btn</button>
+                                <code>default</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="size-lg">Btn</button>
+                                <code>.size-lg</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-column gap-md icons-container">
+                        <h3>Tonal</h3>
+                        <div class="flex flex-row gap-md">
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-tonal size-sm">Btn</button>
+                                <code>.size-sm</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-tonal">Btn</button>
+                                <code>default</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-tonal size-lg">Btn</button>
+                                <code>.size-lg</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-column gap-md icons-container">
+                        <h3>Outlined</h3>
+                        <div class="flex flex-row gap-md">
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-outlined size-sm">Btn</button>
+                                <code>.size-sm</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-outlined">Btn</button>
+                                <code>default</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-outlined size-lg">Btn</button>
+                                <code>.size-lg</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-column gap-md icons-container">
+                        <h3>Ghost</h3>
+                        <div class="flex flex-row gap-md">
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-ghost size-sm">Btn</button>
+                                <code>.size-sm</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-ghost">Btn</button>
+                                <code>default</code>
+                            </div>
+                            <div class="flex flex-column gap-sm">
+                                <button class="btn-ghost size-lg">Btn</button>
+                                <code>.size-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="icons">
+        <section id="svg-icons">
             <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary">Using SVG icons in buttons and badges</h2>
+                <h2 class="color-primary"># SVG Icons</h2>
+
+                <h3>Coloring with <code>fill="currentColor"</code></h3>
+                <p>Add <code>fill="currentColor"</code> to SVG paths so icons inherit text color from their
+                    parent. Apply color utility classes to the wrapper to change the icon color.
+                    Icons automatically adapt to light/dark mode.</p>
+
+                <div class="flex flex-row gap-lg flex-wrap">
+                    <div class="flex flex-column gap-sm">
+                        <span>Default</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
+                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
+                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-column gap-sm color-primary">
+                        <code>.color-primary</code>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
+                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
+                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <h3>Real-world example: brand icons</h3>
+                <p>These icons use <code>fill="currentColor"</code> and respond to the page text color,
+                    including dark mode.</p>
+                <div class="flex flex-row gap-lg flex-wrap">
+                    <a href="#" aria-label="site logo link to homepage">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
+                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
+                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com" aria-label="social link youtube">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M33.2913 12.69C33.1735 12.2292 32.9478 11.803 32.6329 11.4465C32.318 11.0901 31.9228 10.8137 31.48 10.64C27.195 8.985 20.375 9 20 9C19.625 9 12.805 8.985 8.52 10.64C8.0772 10.8137 7.68204 11.0901 7.36712 11.4465C7.05219 11.803 6.82653 12.2292 6.70875 12.69C6.385 13.9375 6 16.2175 6 20C6 23.7825 6.385 26.0625 6.70875 27.31C6.82636 27.771 7.05194 28.1975 7.36687 28.5542C7.68181 28.9108 8.07706 29.1875 8.52 29.3613C12.625 30.945 19.05 31 19.9175 31H20.0825C20.95 31 27.3787 30.945 31.48 29.3613C31.9229 29.1875 32.3182 28.9108 32.6331 28.5542C32.9481 28.1975 33.1736 27.771 33.2913 27.31C33.615 26.06 34 23.7825 34 20C34 16.2175 33.615 13.9375 33.2913 12.69ZM24.0737 20.815L19.0737 24.315C18.9242 24.4198 18.7488 24.4816 18.5666 24.4938C18.3844 24.5059 18.2023 24.4679 18.0401 24.384C17.878 24.3 17.7419 24.1732 17.6467 24.0174C17.5515 23.8615 17.5007 23.6826 17.5 23.5V16.5C17.5001 16.3171 17.5503 16.1377 17.6452 15.9813C17.7402 15.8249 17.8762 15.6976 18.0385 15.6132C18.2008 15.5287 18.3831 15.4904 18.5656 15.5024C18.7482 15.5144 18.9239 15.5763 19.0737 15.6813L24.0737 19.1813C24.2053 19.2735 24.3126 19.396 24.3868 19.5386C24.4609 19.6811 24.4996 19.8394 24.4996 20C24.4996 20.1606 24.4609 20.3189 24.3868 20.4614C24.3126 20.604 24.2053 20.7265 24.0737 20.8188V20.815Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" aria-label="social link linkedin">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31 7H9C8.46957 7 7.96086 7.21071 7.58579 7.58579C7.21071 7.96086 7 8.46957 7 9V31C7 31.5304 7.21071 32.0391 7.58579 32.4142C7.96086 32.7893 8.46957 33 9 33H31C31.5304 33 32.0391 32.7893 32.4142 32.4142C32.7893 32.0391 33 31.5304 33 31V9C33 8.46957 32.7893 7.96086 32.4142 7.58579C32.0391 7.21071 31.5304 7 31 7ZM16 26C16 26.2652 15.8946 26.5196 15.7071 26.7071C15.5196 26.8946 15.2652 27 15 27C14.7348 27 14.4804 26.8946 14.2929 26.7071C14.1054 26.5196 14 26.2652 14 26V18C14 17.7348 14.1054 17.4804 14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17C15.2652 17 15.5196 17.1054 15.7071 17.2929C15.8946 17.4804 16 17.7348 16 18V26ZM15 16C14.7033 16 14.4133 15.912 14.1666 15.7472C13.92 15.5824 13.7277 15.3481 13.6142 15.074C13.5006 14.7999 13.4709 14.4983 13.5288 14.2074C13.5867 13.9164 13.7296 13.6491 13.9393 13.4393C14.1491 13.2296 14.4164 13.0867 14.7074 13.0288C14.9983 12.9709 15.2999 13.0006 15.574 13.1142C15.8481 13.2277 16.0824 13.42 16.2472 13.6666C16.412 13.9133 16.5 14.2033 16.5 14.5C16.5 14.8978 16.342 15.2794 16.0607 15.5607C15.7794 15.842 15.3978 16 15 16ZM27 26C27 26.2652 26.8946 26.5196 26.7071 26.7071C26.5196 26.8946 26.2652 27 26 27C25.7348 27 25.4804 26.8946 25.2929 26.7071C25.1054 26.5196 25 26.2652 25 26V21.5C25 20.837 24.7366 20.2011 24.2678 19.7322C23.7989 19.2634 23.163 19 22.5 19C21.837 19 21.2011 19.2634 20.7322 19.7322C20.2634 20.2011 20 20.837 20 21.5V26C20 26.2652 19.8946 26.5196 19.7071 26.7071C19.5196 26.8946 19.2652 27 19 27C18.7348 27 18.4804 26.8946 18.2929 26.7071C18.1054 26.5196 18 26.2652 18 26V18C18.0012 17.7551 18.0923 17.5191 18.256 17.3369C18.4197 17.1546 18.6446 17.0388 18.888 17.0114C19.1314 16.9839 19.3764 17.0468 19.5765 17.188C19.7767 17.3292 19.918 17.539 19.9738 17.7775C20.6502 17.3186 21.4389 17.0526 22.2552 17.0081C23.0714 16.9637 23.8844 17.1424 24.6067 17.5251C25.329 17.9078 25.9335 18.48 26.3551 19.1803C26.7768 19.8806 26.9997 20.6825 27 21.5V26Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="https://x.com" aria-label="social link twitter">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30.876 31.4813C30.7899 31.6381 30.6633 31.7689 30.5094 31.8602C30.3555 31.9514 30.1799 31.9997 30.001 32H24.001C23.8327 31.9999 23.6671 31.9574 23.5196 31.8764C23.3721 31.7953 23.2475 31.6783 23.1572 31.5362L18.096 23.5825L10.741 31.6725C10.5617 31.8651 10.3137 31.9793 10.0508 31.9903C9.78787 32.0012 9.53123 31.9082 9.33649 31.7312C9.14175 31.5542 9.02462 31.3076 9.01048 31.0448C8.99635 30.7821 9.08635 30.5243 9.26097 30.3275L16.9822 21.8275L9.15722 9.5375C9.06085 9.3863 9.0069 9.21198 9.00103 9.03278C8.99515 8.85357 9.03756 8.67609 9.12382 8.5189C9.21008 8.36172 9.33702 8.23062 9.49133 8.13932C9.64565 8.04803 9.82168 7.99991 10.001 8H16.001C16.1693 8.00005 16.3348 8.04258 16.4823 8.12365C16.6298 8.20471 16.7545 8.32169 16.8447 8.46375L21.906 16.4175L29.261 8.3275C29.4403 8.1349 29.6883 8.02073 29.9512 8.00974C30.2141 7.99876 30.4707 8.09185 30.6655 8.26882C30.8602 8.44579 30.9773 8.69239 30.9915 8.95515C31.0056 9.21791 30.9156 9.47565 30.741 9.6725L23.0197 18.1663L30.8447 30.4638C30.9406 30.615 30.994 30.7892 30.9995 30.9682C31.005 31.1472 30.9623 31.3244 30.876 31.4813Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <h3>SVG icons in buttons and badges</h3>
+                <p>Use the <code>.icon-btn</code> class for icon-only buttons and badges.
+                    The framework sets fill via <code>--icon-fill-color</code> based on variant.</p>
 
                 <div class="flex flex-row gap-lg">
                     <div class="flex flex-column gap-lg icons-container">
                         <h3>In button</h3>
                         <button class="icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                  viewBox="0 0 256 256">
                                 <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
                             </svg>
                         </button>
                         <button class="icon-btn btn-tonal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                  viewBox="0 0 256 256">
                                 <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
                             </svg>
                         </button>
                         <button class="icon-btn btn-outlined">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                  viewBox="0 0 256 256">
                                 <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
                             </svg>
                         </button>
                         <button class="icon-btn btn-ghost">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                  viewBox="0 0 256 256">
                                 <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
                             </svg>
@@ -449,25 +579,25 @@
                     <div class="flex flex-column gap-lg icons-container">
                         <h3>In badge</h3>
                         <span class="badge icon-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256"><path
-                                d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                    </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                 viewBox="0 0 256 256"><path
+                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
+                        </span>
                         <span class="icon-btn badge-tonal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256"><path
-                                d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                    </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                 viewBox="0 0 256 256"><path
+                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
+                        </span>
                         <span class="icon-btn badge-outlined">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256"><path
-                                d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                    </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                 viewBox="0 0 256 256"><path
+                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
+                        </span>
                         <span class="icon-btn badge-ghost">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                             viewBox="0 0 256 256"><path
-                                d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                    </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                 viewBox="0 0 256 256"><path
+                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -475,7 +605,7 @@
 
         <section id="layout" class="flex flex-column gap-lg gap-lg">
             <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary">Content & layout</h2>
+                <h2 class="color-primary"># Content & layout</h2>
                 <h3>Cards in layout flexbox "row" (<code>.flex</code> <code>.flex-row</code> <code>.gap-lg</code>)</h3>
             </div>
             <div class="container flex flex-row gap-lg">
@@ -542,10 +672,167 @@
             </div>
         </section>
 
+        <section id="layout-utilities">
+            <div class="container flex flex-column gap-lg">
+                <h2 class="color-primary"># Layout Utilities</h2>
+
+                <!-- FLEX ROW -->
+                <h3>Flex Row <code>.flex-row</code></h3>
+                <div class="flex-row">
+                    <div class="demo-box">A</div>
+                    <div class="demo-box">B</div>
+                    <div class="demo-box">C</div>
+                    <div class="demo-box">D</div>
+                </div>
+
+                <!-- FLEX COLUMN -->
+                <h3>Flex Column <code>.flex-column</code></h3>
+                <div class="flex-column">
+                    <div class="demo-box">A</div>
+                    <div class="demo-box">B</div>
+                    <div class="demo-box">C</div>
+                </div>
+
+                <!-- FLEX WRAP -->
+                <h3>Flex Wrap <code>.flex-wrap</code></h3>
+                <p>Container limited to 300px wide — boxes wrap onto the next line.</p>
+                <div class="flex flex-wrap gap-sm" style="max-width: 300px">
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                    <div class="demo-box">Item</div>
+                </div>
+
+
+                <!-- GAP SCALE -->
+                <h3>Gap Scale</h3>
+                <div class="flex flex-column gap-sm">
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-none</code>
+                        <div class="flex flex-row gap-none">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-xxs</code>
+                        <div class="flex flex-row gap-xxs">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-xs</code>
+                        <div class="flex flex-row gap-xs">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-sm</code>
+                        <div class="flex flex-row gap-sm">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-md</code>
+                        <div class="flex flex-row gap-md">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-lg</code>
+                        <div class="flex flex-row gap-lg">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-xl</code>
+                        <div class="flex flex-row gap-xl">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-2xl</code>
+                        <div class="flex flex-row gap-2xl">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-md">
+                        <code style="min-width: 9rem">.gap-3xl</code>
+                        <div class="flex flex-row gap-3xl">
+                            <div class="demo-box">A</div><div class="demo-box">B</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID COLUMNS -->
+                <h3>Grid Columns</h3>
+                <div class="flex flex-column gap-sm">
+                    <p><code>.grid</code> — auto-fit responsive (min 240px)</p>
+                    <div class="grid gap-sm">
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">2</div>
+                        <div class="demo-box">3</div>
+                        <div class="demo-box">4</div>
+                    </div>
+                    <p><code>.grid .grid-cols-2</code></p>
+                    <div class="grid grid-cols-2 gap-sm">
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">2</div>
+                        <div class="demo-box">3</div>
+                        <div class="demo-box">4</div>
+                    </div>
+                    <p><code>.grid .grid-cols-3</code></p>
+                    <div class="grid grid-cols-3 gap-sm">
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">2</div>
+                        <div class="demo-box">3</div>
+                        <div class="demo-box">4</div>
+                        <div class="demo-box">5</div>
+                        <div class="demo-box">6</div>
+                    </div>
+                    <p><code>.grid .grid-cols-4</code></p>
+                    <div class="grid grid-cols-4 gap-sm">
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">2</div>
+                        <div class="demo-box">3</div>
+                        <div class="demo-box">4</div>
+                        <div class="demo-box">5</div>
+                        <div class="demo-box">6</div>
+                        <div class="demo-box">7</div>
+                        <div class="demo-box">8</div>
+                    </div>
+                </div>
+
+                <!-- GRID SPANNING -->
+                <h3>Grid Spanning</h3>
+                <div class="flex flex-column gap-sm">
+                    <p><code>.grid-col-span-2</code> / <code>.grid-col-span-3</code></p>
+                    <div class="grid grid-cols-4 gap-sm">
+                        <div class="demo-box grid-col-span-2">grid-col-span-2</div>
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">1</div>
+                        <div class="demo-box grid-col-span-3">grid-col-span-3</div>
+                        <div class="demo-box">1</div>
+                    </div>
+                    <p><code>.grid-row-span-2</code></p>
+                    <div class="grid grid-cols-3 gap-sm">
+                        <div class="demo-box grid-row-span-2" style="align-content: center">grid-row-span-2</div>
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">1</div>
+                        <div class="demo-box">1</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- TODO -->
         <section id="media" style="display: none">
             <div class="container flex-column">
-                <h2 class="color-primary">Media</h2>
+                <h2 class="color-primary"># Media</h2>
                 <figure>
                     <img src="https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA"
                          alt="Minimal landscape"/>
@@ -584,7 +871,7 @@
 
         <section id="form">
             <div class="container">
-                <h2 class="color-primary">Forms</h2>
+                <h2 class="color-primary"># Forms</h2>
             </div>
 
             <div class="container grid gap-lg">
@@ -822,7 +1109,7 @@
 
         <section id="tables">
             <div class="container">
-                <h2 class="color-primary">Tables</h2>
+                <h2 class="color-primary"># Tables</h2>
                 <div class="overflow-auto">
                     <table class="striped">
                         <thead>
@@ -878,7 +1165,7 @@
 
         <section id="accordions">
             <div class="container">
-                <h2 class="color-primary">Accordions</h2>
+                <h2 class="color-primary"># Accordions</h2>
 
                 <h3>Accordion group</h3>
                 <details open name="faq">
@@ -949,12 +1236,30 @@
                         amet, congue turpis.
                     </p>
                 </details>
+                <h3>Accordion icon circle background</h3>
+                <div class="grid grid-cols-2 gap-md">
+                    <details style="--accordion--icon-circle-color: var(--color--base--300);--icon-scale: 1.4;">
+                        <summary class="icon-right">How does the icon circle background variable keep the circle aligned with the expand icon when the question text is very long and wraps across multiple lines?</summary>
+                        <p>
+                            The <code>--accordion--icon-circle-color</code> variable renders a filled circle
+                            behind the icon. Set it to any color on the <code>&lt;details&gt;</code> element —
+                            the circle is drawn on the <code>summary</code>'s background, outside the masked
+                            pseudo-element, so it is not clipped by the icon mask.
+                        </p>
+                    </details>
+                    <details style="--accordion--icon-circle-color: var(--color--primary--100);">
+                        <summary>Does the icon circle feature work correctly with both the default left-side icon position and the right-side icon position when the accordion label spans several lines of text?</summary>
+                        <p>
+                            Works with both default (left) and <code>.icon-right</code> icon positions.
+                        </p>
+                    </details>
+                </div>
             </div>
         </section>
 
         <section id="navigation_menu">
             <div class="container">
-                <h2 class="color-primary">Navigation Menu</h2>
+                <h2 class="color-primary"># Navigation Menu</h2>
 
                 <h3>Desktop version navigation</h3>
                 <builderius-menu-builder>
@@ -967,7 +1272,7 @@
                                 <a href="#badges" class="bldr-nav-link">Badges</a>
                             </li>
                             <li class="bldr-nav-item">
-                                <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                                <a href="#buttons" class="bldr-nav-link button">Buttons</a>
                             </li>
                         </ul>
                     </nav>
@@ -984,7 +1289,7 @@
                                 <a href="#badges" class="bldr-nav-link">Badges</a>
                             </li>
                             <li class="bldr-nav-item">
-                                <a href="#buttons" class="bldr-nav-link">Buttons</a>
+                                <a href="#buttons" class="bldr-nav-link button">Buttons</a>
                             </li>
                         </ul>
                     </nav>
@@ -994,7 +1299,7 @@
 
         <section id="pagination">
             <div class="container">
-                <h2 class="color-primary">Pagination</h2>
+                <h2 class="color-primary"># Pagination</h2>
 
                 <h3>Pagination List</h3>
                 <ul class="pagination">
@@ -1034,10 +1339,10 @@
 
         <section class="dialogs">
             <div class="container">
-                <h2 class="color-primary">Cookie Notice</h2>
+                <h2 class="color-primary"># Cookie Notice</h2>
                 <p>Cookie notice modal window is displayed in bottom right corner of the page.</p>
                 <dialog open class="cookie-notice">
-                    <h2 id="cookieLabel" class=font-size-3">Cookie settings</h2>
+                    <h2 id="cookieLabel" class="font-size-4">Cookie settings</h2>
                     <p id="cookieDescription">Our website uses some essential cookies to function well. With your
                         permission, we would like to set up some additional cookies to improve your experience. Our
                         <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
@@ -1054,7 +1359,7 @@
 
     <footer class="site-edge-section outer-wrapper">
         <div class="container">
-            <span class="font-size-5">Builderius CSS framework</span>
+            <span class="font-size-2">Builderius CSS framework</span>
             <p></p>
         </div>
     </footer>
