@@ -3,112 +3,206 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Builderius CSS</title>
+    <title>BCSS — Builderius CSS Framework</title>
     <meta name="description"
-          content="Builderius CSS - well balanced between CSS vars plus several utility-like classes and progressive enhancement CSS framework."/>
+          content="BCSS is a token-based CSS framework for Builderius. Zero dependencies, native dark mode, and a comprehensive component library built on modern CSS."/>
 
     <link rel="stylesheet" href="./builderius-menu-builder.css"/>
     <link rel="stylesheet" href="./framework.css"/>
+    <link rel="stylesheet" href="./special-layouts.css"/>
     <link rel="stylesheet" href="./page.css"/>
 </head>
 
 <body>
 <div class="builderiusContent">
-    <!-- Header -->
-    <header class="site-edge-section outer-wrapper">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <header class="demo-hero">
         <div class="container">
-            <h1>Builderius CSS framework</h1>
-            <p>Builderius CSS is a utility-first framework designed to simplify and speed up web development. It
-                provides a
-                mix of atomic classes and pre-styled components, allowing for flexible and consistent design. The
-                framework
-                includes basic UI elements like buttons (filled, tonal, outlined, and ghost), badges, form fields, and
-                accordions. Additionally, it offers custom components such as pagination and a modal-based cookie notice
-                dialog. Built with scalability in mind, Builderius CSS helps developers create responsive and
-                maintainable
-                interfaces with ease.</p>
+            <span class="demo-section-label">Builderius CSS Framework</span>
+            <h1>Build Beautiful Interfaces.<br>Ship Faster.</h1>
+            <p class="demo-hero__description">BCSS is a token-based CSS framework for Builderius. Zero dependencies,
+                native dark mode, and a comprehensive component library that gets out of your way.</p>
+            <div class="demo-hero__actions">
+                <button class="btn-filled size-lg">Get Started</button>
+                <button class="btn-outlined size-lg">View Documentation</button>
+            </div>
+            <div class="demo-hero__stats">
+                <span class="badge-tonal">0 Dependencies</span>
+                <span class="badge-tonal">Native Dark Mode</span>
+                <span class="badge-tonal">~18kb Gzipped</span>
+                <span class="badge-tonal">OKLCH Color Space</span>
+                <span class="badge-tonal">CSS Custom Properties</span>
+            </div>
         </div>
     </header>
-    <!-- ./ Header -->
 
-    <!-- Main -->
+    <!-- =====================================================
+         STATS / METRICS
+         ===================================================== -->
+    <section class="demo-section demo-section--alt">
+        <div class="container">
+            <div class="demo-stats-grid">
+                <div class="demo-stat">
+                    <span class="demo-stat__number">0</span>
+                    <span class="demo-stat__label">JavaScript Dependencies</span>
+                </div>
+                <div class="demo-stat">
+                    <span class="demo-stat__number">50+</span>
+                    <span class="demo-stat__label">Utility Classes</span>
+                </div>
+                <div class="demo-stat">
+                    <span class="demo-stat__number">12</span>
+                    <span class="demo-stat__label">Component Types</span>
+                </div>
+                <div class="demo-stat">
+                    <span class="demo-stat__number">100%</span>
+                    <span class="demo-stat__label">CSS Custom Properties</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main>
-        <section id="colors">
-            <div class="container">
-                <h2 class="color-primary"># Colors</h2>
 
-                <p>
-                    The Builderius CSS framework uses the modern OKLCH color space for perceptually uniform color generation.
-                    Each color is defined by a single <code>--original</code> CSS variable, from which all shades (50-950) are automatically calculated using CSS relative color syntax.
-                    This approach ensures consistent lightness steps and maintains color harmony across the entire palette.
-                    The framework intelligently adapts colors between light and dark themes, adjusting both lightness and chroma for optimal readability.
-                </p>
+        <!-- =====================================================
+             FEATURES
+             ===================================================== -->
+        <section class="demo-section demo-section--alt" id="features">
+            <div class="container">
+                <div class="demo-section-header">
+                    <span class="badge-ghost">Why BCSS</span>
+                    <h2>Everything you need, nothing you don't</h2>
+                    <p>A well-balanced approach between CSS variables, utility classes, and progressive enhancement —
+                        built for the modern web.</p>
+                </div>
+                <div class="grid gap-xl layout-floating-panels" style="--grid--item-min-width: 280px;">
+                    <div class="card demo-feature-card">
+                        <div class="demo-feature-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                            </svg>
+                        </div>
+                        <h3>Token-Based Design</h3>
+                        <p>Every value is a CSS custom property. Swap your entire palette, spacing scale, or type system
+                            by updating a single root variable — no rebuilds required.</p>
+                        <span class="badge-tonal">CSS Variables</span>
+                    </div>
+                    <div class="card demo-feature-card">
+                        <div class="demo-feature-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </div>
+                        <h3>Dark Mode Built-In</h3>
+                        <p>Automatic dark theme via <code>prefers-color-scheme</code>, plus explicit overrides. The
+                            OKLCH color space keeps contrast ratios perceptually consistent across both modes.</p>
+                        <span class="badge-tonal">OKLCH Colors</span>
+                    </div>
+                    <div class="card demo-feature-card">
+                        <div class="demo-feature-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3>Composable Classes</h3>
+                        <p>Combine utility classes with semantic components. Use <code>.grid.grid-cols-3.gap-xl</code>
+                            alongside <code>.card</code> and <code>.badge-tonal</code> — they were designed to work
+                            together.</p>
+                        <span class="badge-tonal">Utility First</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="color-preview">
+        <!-- =====================================================
+             COLOR SYSTEM
+             ===================================================== -->
+        <section class="demo-section" id="colors">
             <div class="container">
-                <h3>Color Palette Preview</h3>
-                <p style="margin-bottom: var(--spacing--xl);">
-                    All available colors and their generated shades in the current theme.
-                </p>
+                <div class="demo-section-header">
+                    <span class="badge-ghost">Design Tokens</span>
+                    <h2>Color System</h2>
+                    <p>BCSS uses the modern OKLCH color space for perceptually uniform shade generation. Every palette
+                        is derived from a single <code>--color--primary--original</code> variable — just change that one
+                        value to re-theme your entire site.</p>
+                </div>
 
                 <!-- Primary Colors -->
                 <div class="color-family">
                     <div class="color-family-header">
-                        <h4 class="color-family-title">Primary</h4>
+                        <h3 class="color-family-title">Primary</h3>
                     </div>
                     <div class="color-swatches grid gap-lg">
                         <div class="color-swatch" data-shade="50" style="background-color: var(--color--primary--50);">
                             <span class="color-label">50</span>
                             <span class="color-var">--color--primary--50</span>
                         </div>
-                        <div class="color-swatch" data-shade="100" style="background-color: var(--color--primary--100);">
+                        <div class="color-swatch" data-shade="100"
+                             style="background-color: var(--color--primary--100);">
                             <span class="color-label">100</span>
                             <span class="color-var">--color--primary--100</span>
                         </div>
-                        <div class="color-swatch" data-shade="200" style="background-color: var(--color--primary--200);">
+                        <div class="color-swatch" data-shade="200"
+                             style="background-color: var(--color--primary--200);">
                             <span class="color-label">200</span>
                             <span class="color-var">--color--primary--200</span>
                         </div>
-                        <div class="color-swatch" data-shade="300" style="background-color: var(--color--primary--300);">
+                        <div class="color-swatch" data-shade="300"
+                             style="background-color: var(--color--primary--300);">
                             <span class="color-label">300</span>
                             <span class="color-var">--color--primary--300</span>
                         </div>
-                        <div class="color-swatch" data-shade="400" style="background-color: var(--color--primary--400);">
+                        <div class="color-swatch" data-shade="400"
+                             style="background-color: var(--color--primary--400);">
                             <span class="color-label">400</span>
                             <span class="color-var">--color--primary--400</span>
                         </div>
-                        <div class="color-swatch" data-shade="500" style="background-color: var(--color--primary--500);">
+                        <div class="color-swatch" data-shade="500"
+                             style="background-color: var(--color--primary--500);">
                             <span class="color-label">500</span>
                             <span class="color-var">--color--primary--500</span>
                         </div>
-                        <div class="color-swatch" data-shade="600" style="background-color: var(--color--primary--600);">
+                        <div class="color-swatch" data-shade="600"
+                             style="background-color: var(--color--primary--600);">
                             <span class="color-label">600</span>
                             <span class="color-var">--color--primary--600</span>
                         </div>
-                        <div class="color-swatch" data-shade="700" style="background-color: var(--color--primary--700);">
+                        <div class="color-swatch" data-shade="700"
+                             style="background-color: var(--color--primary--700);">
                             <span class="color-label">700</span>
                             <span class="color-var">--color--primary--700</span>
                         </div>
-                        <div class="color-swatch" data-shade="800" style="background-color: var(--color--primary--800);">
+                        <div class="color-swatch" data-shade="800"
+                             style="background-color: var(--color--primary--800);">
                             <span class="color-label">800</span>
                             <span class="color-var">--color--primary--800</span>
                         </div>
-                        <div class="color-swatch" data-shade="900" style="background-color: var(--color--primary--900);">
+                        <div class="color-swatch" data-shade="900"
+                             style="background-color: var(--color--primary--900);">
                             <span class="color-label">900</span>
                             <span class="color-var">--color--primary--900</span>
                         </div>
-                        <div class="color-swatch" data-shade="950" style="background-color: var(--color--primary--950);">
+                        <div class="color-swatch" data-shade="950"
+                             style="background-color: var(--color--primary--950);">
                             <span class="color-label">950</span>
                             <span class="color-var">--color--primary--950</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Base Colors -->
+                <!-- Base / Neutral Colors -->
                 <div class="color-family">
-                    <h4 class="color-family-title">Base (Neutral)</h4>
+                    <h3 class="color-family-title">Base (Neutral)</h3>
                     <div class="color-swatches grid gap-lg">
                         <div class="color-swatch" style="background-color: var(--color--base--0);">
                             <span class="color-label">0</span>
@@ -165,1226 +259,726 @@
                     </div>
                 </div>
 
-                <!-- Error Colors -->
+                <!-- Semantic Colors -->
                 <div class="color-family">
-                    <h4 class="color-family-title">Error</h4>
-                    <div class="color-swatches grid gap-lg">
-                        <div class="color-swatch" style="background-color: var(--color--error--light);">
-                            <span class="color-label">Light</span>
-                            <span class="color-var">--color--error--light</span>
+                    <h3 class="color-family-title">Semantic</h3>
+                    <div class="grid grid-cols-3 gap-xl">
+                        <div>
+                            <p style="font-size: var(--size--6); font-weight: 600; margin-bottom: var(--spacing--md); color: var(--color--base--600);">
+                                Error</p>
+                            <div class="flex flex-column gap-sm">
+                                <div class="color-swatch" style="background-color: var(--color--error--light);">
+                                    <span class="color-label" style="font-size: var(--size--6);">light</span>
+                                    <span class="color-var">--color--error--light</span>
+                                </div>
+                                <div class="color-swatch" style="background-color: var(--color--error--original);">
+                                    <span class="color-label" style="font-size: var(--size--6);">original</span>
+                                    <span class="color-var">--color--error--original</span>
+                                </div>
+                                <div class="color-swatch" style="background-color: var(--color--error--dark);">
+                                    <span class="color-label" style="font-size: var(--size--6);">dark</span>
+                                    <span class="color-var">--color--error--dark</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="color-swatch" style="background-color: var(--color--error--original);">
-                            <span class="color-label">Original</span>
-                            <span class="color-var">--color--error--original</span>
-                        </div>
-                        <div class="color-swatch" style="background-color: var(--color--error--dark);">
-                            <span class="color-label">Dark</span>
-                            <span class="color-var">--color--error--dark</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Success Colors -->
-                <div class="color-family">
-                    <h4 class="color-family-title">Success</h4>
-                    <div class="color-swatches grid gap-lg">
-                        <div class="color-swatch" style="background-color: var(--color--success--light);">
-                            <span class="color-label">Light</span>
-                            <span class="color-var">--color--success--light</span>
-                        </div>
-                        <div class="color-swatch" style="background-color: var(--color--success--original);">
-                            <span class="color-label">Original</span>
-                            <span class="color-var">--color--success--original</span>
-                        </div>
-                        <div class="color-swatch" style="background-color: var(--color--success--dark);">
-                            <span class="color-label">Dark</span>
-                            <span class="color-var">--color--success--dark</span>
+                        <div>
+                            <p style="font-size: var(--size--6); font-weight: 600; margin-bottom: var(--spacing--md); color: var(--color--base--600);">
+                                Success</p>
+                            <div class="flex flex-column gap-sm">
+                                <div class="color-swatch" style="background-color: var(--color--success--light);">
+                                    <span class="color-label" style="font-size: var(--size--6);">light</span>
+                                    <span class="color-var">--color--success--light</span>
+                                </div>
+                                <div class="color-swatch" style="background-color: var(--color--success--original);">
+                                    <span class="color-label" style="font-size: var(--size--6);">original</span>
+                                    <span class="color-var">--color--success--original</span>
+                                </div>
+                                <div class="color-swatch" style="background-color: var(--color--success--dark);">
+                                    <span class="color-label" style="font-size: var(--size--6);">dark</span>
+                                    <span class="color-var">--color--success--dark</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="typography">
+        <!-- =====================================================
+             TYPOGRAPHY
+             ===================================================== -->
+        <section class="demo-section demo-section--alt" id="typography">
             <div class="container">
-                <h2 class="color-primary"># Typography</h2>
-                <!-- Inline text elements-->
-                <h3>Inline text elements</h3>
-                <div class="grid">
-                    <p><strong>Bold</strong></p>
-                    <p><em>Italic</em></p>
-                    <p><u>Underline</u></p>
-                </div>
-                <div class="grid">
-                    <p>
-                        <del>Deleted</del>
-                    </p>
-                    <p>
-                        <ins>Inserted</ins>
-                    </p>
-                    <p><s>Strikethrough</s></p>
-                </div>
-                <div class="grid gap-lg">
-                    <p><small>Small </small></p>
-                    <p>Text <sub>Sub</sub></p>
-                    <p>Text <sup>Sup</sup></p>
-                </div>
-                <div class="grid gap-lg">
-                    <p>
-                        <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
-                    </p>
-                    <p><kbd>Kbd</kbd></p>
-                    <p>
-                        <mark>Highlighted</mark>
+                <div class="demo-section-header page-content">
+                    <span class="badge-ghost">Typography</span>
+                    <h2 style="margin-top: 1rem">A Fluid Type Scale</h2>
+                    <p>All heading sizes use <code>clamp()</code> for fluid scaling between viewport breakpoints. Body
+                        text, badges, and buttons have their own independent scales.</p>
+                    <p>The framework uses a special class <code>.page-content</code> for the wrapper with actual content.
+                        Why it matters? Because we reset default browser's styling, like margin for paragraphs etc. Yet
+                        we keep consistent spacing for content specific elements inside an element with class <code>.page-content</code>.
                     </p>
                 </div>
+                <div class="card" style="align-items: stretch;">
+                    <article class="page-content" style="width: 100%;">
+                        <h1>Getting Started with BCSS</h1>
 
-                <h3 class="color-primary">Regular content</h3>
-                <div class="page-content">
-                    <!-- Headings-->
-                    <h1>Heading 1 Integer bibendum malesuada</h1>
-                    <p>
-                        Integer bibendum malesuada
-                        <mark>libero vel eleifend</mark>
-                        . Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <!-- Paragraph-->
-                    <p>
-                        Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
-                        iaculis eros a elit pharetra egestas.
-                    </p>
-                    <h2 class="font-size-step-3">Heading 2 Integer bibendum malesuada</h2>
-                    <p>
-                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <!-- Blockquote-->
-                    <blockquote>
-                        "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet
-                        ipsum cursus ornare."
-                        <footer>
-                            <cite>- Phasellus eget lacinia</cite>
-                        </footer>
-                    </blockquote>
-                    <h3>Heading 3 Integer bibendum malesuada</h3>
-                    <p>
-                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <ul>
-                        <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
-                        <li>Nam et magna at libero scelerisque egestas.</li>
-                        <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
-                        <li>Proin ultricies turpis et volutpat vehicula.</li>
-                    </ul>
-                    <p>
-                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <h4>Heading 4 Integer bibendum malesuada</h4>
-                    <p>
-                        Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
-                        fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
-                    </p>
-                    <ol>
-                        <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
-                        <li>Nam et magna at libero scelerisque egestas.</li>
-                        <li>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</li>
-                        <li>Proin ultricies turpis et volutpat vehicula.</li>
-                    </ol>
-                    <p>
-                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-                    <h4>Heading 4 Integer bibendum malesuada</h4>
-                    <p>
-                        Cras fermentum velit vitae auctor aliquet. Nunc non congue urna, at blandit nibh. Donec ac
-                        fermentum felis. Vivamus tincidunt arcu ut lacus hendrerit, eget mattis dui finibus.
-                    </p>
-                    <dl>
-                        <dt>Aliquam lobortis lacus eu libero ornare facilisis.</dt>
-                        <dd>Some more text here as this is the definition content rather then the title</dd>
-                        <dt>Nam et magna at libero scelerisque egestas.</dt>
-                        <dd>Some more text here as this is the definition content rather then the title</dd>
-                        <dt>Suspendisse id nisl ut leo finibus vehicula quis eu ex.</dt>
-                        <dd>Some more text here as this is the definition content rather then the title</dd>
-                        <dt>Proin ultricies turpis et volutpat vehicula.</dt>
-                        <dd>Some more text here as this is the definition content rather then the title</dd>
-                    </dl>
-                    <p>
-                        Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-                        sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    </p>
-
-                    <h5>Heading 5 Integer bibendum malesuada</h5>
-                    <p>
-                        Donec nec egestas nulla. Sed varius placerat felis eu suscipit. Mauris maximus ante in
-                        consequat luctus. Morbi euismod sagittis efficitur. Aenean non eros orci. Vivamus ut diam
-                        sem.
-                    </p>
-                    <h6>Heading 6 Integer bibendum malesuada</h6>
-                    <p>
-                        Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt nulla ut
-                        tortor posuere, vitae malesuada tortor molestie. Sed nec interdum dolor. Vestibulum id
-                        auctor nisi, a efficitur sem. Aliquam sollicitudin efficitur turpis, sollicitudin
-                        hendrerit ligula semper id. Nunc risus felis, egestas eu tristique eget, convallis in
-                        velit.
-                    </p>
+                        <h2>Installation &amp; Setup</h2>
+                        <p>Include the framework stylesheet in your HTML <code>&lt;head&gt;</code>. No build tools, no
+                            package managers — just a single CSS file that does the heavy lifting. The framework is
+                            designed to work out of the box with sensible defaults while remaining completely
+                            customizable through CSS custom properties.</p>
+                        <h3>Customizing Your Theme</h3>
+                        <p>Override <code>--color--primary--original</code> on the <code>:root</code> to shift the
+                            entire primary palette. Every shade from <code>50</code> to <code>950</code> recalculates
+                            automatically via CSS relative color syntax — no Sass, no PostCSS, no preprocessor required.
+                        </p>
+                        <blockquote>
+                            BCSS was built on the premise that a good CSS framework should accelerate your work, not
+                            constrain it. Sensible defaults with full escape hatches.
+                        </blockquote>
+                        <h4>Working with Dark Mode</h4>
+                        <p>Dark mode is handled automatically via <code>prefers-color-scheme: dark</code>. You can also
+                            force a specific theme by setting the <code>data-theme-default</code> attribute on the
+                            <code>&lt;html&gt;</code> element — useful for user preference overrides.</p>
+                        <p>Inline elements: <strong>bold text</strong>, <em>italic emphasis</em>, <u>underlined</u>, <s>strikethrough</s>,
+                            <code>inline code</code>,
+                            <mark>highlighted text</mark>
+                            , and <a href="#">hyperlinks</a>.
+                        </p>
+                        <h5>Heading Level 5</h5>
+                        <p>Used for fine-grained content hierarchy within a section. Pairs well with a supporting
+                            paragraph.</p>
+                        <h6>Heading Level 6</h6>
+                        <p>The smallest heading level — typically used for metadata labels, captions, or sidebar
+                            annotations.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="badges">
-            <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary"># Badges</h2>
-
-                <div class="flex flex-row gap-lg">
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Filled</h3>
-                        <span class="badge">Badge</span>
-                        <div class="badge">Badge</div>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Tonal</h3>
-                        <span class="badge-tonal">Badge</span>
-                        <div class="badge-tonal">Badge</div>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Outlined</h3>
-                        <span class="badge-outlined">Badge</span>
-                        <div class="badge-outlined">Badge</div>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Ghost</h3>
-                        <span class="badge-ghost">Badge</span>
-                        <div class="badge-ghost">Badge</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="buttons">
-            <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary"># Buttons</h2>
-
-                <div class="flex flex-row gap-lg">
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Tab buttons</h3>
-                        <button role="tab" class="active">Tab active</button>
-                        <button role="tab">Tab inactive</button>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Filled</h3>
-                        <button>Btn</button>
-                        <button disabled>Btn</button>
-                        <a class="button" href="#">Link Btn</a>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Tonal</h3>
-                        <button class="btn-tonal">Btn</button>
-                        <button class="btn-tonal" disabled>Btn</button>
-                        <a class="button btn-tonal" href="#">Link Btn</a>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Outlined</h3>
-                        <button class="btn-outlined">Btn</button>
-                        <button class="btn-outlined" disabled>Btn</button>
-                        <a class="button btn-outlined" href="#">Link Btn</a>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>Ghost</h3>
-                        <button class="btn-ghost">Btn</button>
-                        <button class="btn-ghost" disabled>Btn</button>
-                        <a class="button btn-ghost" href="#">Link Btn</a>
-                    </div>
-                </div>
-
-                <h3>Size variants</h3>
-                <div class="flex flex-row gap-lg flex-wrap">
-                    <div class="flex flex-column gap-md icons-container">
-                        <h3>Filled</h3>
-                        <div class="flex flex-row gap-md">
-                            <div class="flex flex-column gap-sm">
-                                <button class="size-sm">Btn</button>
-                                <code>.size-sm</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button>Btn</button>
-                                <code>default</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="size-lg">Btn</button>
-                                <code>.size-lg</code>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-column gap-md icons-container">
-                        <h3>Tonal</h3>
-                        <div class="flex flex-row gap-md">
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-tonal size-sm">Btn</button>
-                                <code>.size-sm</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-tonal">Btn</button>
-                                <code>default</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-tonal size-lg">Btn</button>
-                                <code>.size-lg</code>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-column gap-md icons-container">
-                        <h3>Outlined</h3>
-                        <div class="flex flex-row gap-md">
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-outlined size-sm">Btn</button>
-                                <code>.size-sm</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-outlined">Btn</button>
-                                <code>default</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-outlined size-lg">Btn</button>
-                                <code>.size-lg</code>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-column gap-md icons-container">
-                        <h3>Ghost</h3>
-                        <div class="flex flex-row gap-md">
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-ghost size-sm">Btn</button>
-                                <code>.size-sm</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-ghost">Btn</button>
-                                <code>default</code>
-                            </div>
-                            <div class="flex flex-column gap-sm">
-                                <button class="btn-ghost size-lg">Btn</button>
-                                <code>.size-lg</code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="svg-icons">
-            <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary"># SVG Icons</h2>
-
-                <h3>Coloring with <code>fill="currentColor"</code></h3>
-                <p>Add <code>fill="currentColor"</code> to SVG paths so icons inherit text color from their
-                    parent. Apply color utility classes to the wrapper to change the icon color.
-                    Icons automatically adapt to light/dark mode.</p>
-
-                <div class="flex flex-row gap-lg flex-wrap">
-                    <div class="flex flex-column gap-sm">
-                        <span>Default</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
-                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
-                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
-                        </svg>
-                    </div>
-                    <div class="flex flex-column gap-sm color-primary">
-                        <code>.color-primary</code>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
-                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
-                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <h3>Real-world example: brand icons</h3>
-                <p>These icons use <code>fill="currentColor"</code> and respond to the page text color,
-                    including dark mode.</p>
-                <div class="flex flex-row gap-lg flex-wrap">
-                    <a href="#" aria-label="site logo link to homepage">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="176" height="40" fill="none" viewBox="0 0 176 40">
-                            <path fill="currentColor" fill-rule="evenodd" d="M15 28a5 5 0 0 1-5-5V0H0v23c0 8.284 6.716 15 15 15h11V28H15ZM45 10a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-19 9C26 8.507 34.507 0 45 0s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM153 10a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9Zm-19 9c0-10.493 8.507-19 19-19s19 8.507 19 19-8.507 19-19 19-19-8.507-19-19ZM85 0C74.507 0 66 8.507 66 19s8.507 19 19 19h28c1.969 0 3.868-.3 5.654-.856L124 40l5.768-10.804A19.007 19.007 0 0 0 132 20.261V19c0-10.493-8.507-19-19-19H85Zm37 19a9 9 0 0 0-9-9H85a9 9 0 1 0 0 18h28a9 9 0 0 0 9-8.93V19Z" clip-rule="evenodd"></path>
-                            <path fill="currentColor" d="M176 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://youtube.com" aria-label="social link youtube">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.2913 12.69C33.1735 12.2292 32.9478 11.803 32.6329 11.4465C32.318 11.0901 31.9228 10.8137 31.48 10.64C27.195 8.985 20.375 9 20 9C19.625 9 12.805 8.985 8.52 10.64C8.0772 10.8137 7.68204 11.0901 7.36712 11.4465C7.05219 11.803 6.82653 12.2292 6.70875 12.69C6.385 13.9375 6 16.2175 6 20C6 23.7825 6.385 26.0625 6.70875 27.31C6.82636 27.771 7.05194 28.1975 7.36687 28.5542C7.68181 28.9108 8.07706 29.1875 8.52 29.3613C12.625 30.945 19.05 31 19.9175 31H20.0825C20.95 31 27.3787 30.945 31.48 29.3613C31.9229 29.1875 32.3182 28.9108 32.6331 28.5542C32.9481 28.1975 33.1736 27.771 33.2913 27.31C33.615 26.06 34 23.7825 34 20C34 16.2175 33.615 13.9375 33.2913 12.69ZM24.0737 20.815L19.0737 24.315C18.9242 24.4198 18.7488 24.4816 18.5666 24.4938C18.3844 24.5059 18.2023 24.4679 18.0401 24.384C17.878 24.3 17.7419 24.1732 17.6467 24.0174C17.5515 23.8615 17.5007 23.6826 17.5 23.5V16.5C17.5001 16.3171 17.5503 16.1377 17.6452 15.9813C17.7402 15.8249 17.8762 15.6976 18.0385 15.6132C18.2008 15.5287 18.3831 15.4904 18.5656 15.5024C18.7482 15.5144 18.9239 15.5763 19.0737 15.6813L24.0737 19.1813C24.2053 19.2735 24.3126 19.396 24.3868 19.5386C24.4609 19.6811 24.4996 19.8394 24.4996 20C24.4996 20.1606 24.4609 20.3189 24.3868 20.4614C24.3126 20.604 24.2053 20.7265 24.0737 20.8188V20.815Z" fill="currentColor"></path>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com" aria-label="social link linkedin">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M31 7H9C8.46957 7 7.96086 7.21071 7.58579 7.58579C7.21071 7.96086 7 8.46957 7 9V31C7 31.5304 7.21071 32.0391 7.58579 32.4142C7.96086 32.7893 8.46957 33 9 33H31C31.5304 33 32.0391 32.7893 32.4142 32.4142C32.7893 32.0391 33 31.5304 33 31V9C33 8.46957 32.7893 7.96086 32.4142 7.58579C32.0391 7.21071 31.5304 7 31 7ZM16 26C16 26.2652 15.8946 26.5196 15.7071 26.7071C15.5196 26.8946 15.2652 27 15 27C14.7348 27 14.4804 26.8946 14.2929 26.7071C14.1054 26.5196 14 26.2652 14 26V18C14 17.7348 14.1054 17.4804 14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17C15.2652 17 15.5196 17.1054 15.7071 17.2929C15.8946 17.4804 16 17.7348 16 18V26ZM15 16C14.7033 16 14.4133 15.912 14.1666 15.7472C13.92 15.5824 13.7277 15.3481 13.6142 15.074C13.5006 14.7999 13.4709 14.4983 13.5288 14.2074C13.5867 13.9164 13.7296 13.6491 13.9393 13.4393C14.1491 13.2296 14.4164 13.0867 14.7074 13.0288C14.9983 12.9709 15.2999 13.0006 15.574 13.1142C15.8481 13.2277 16.0824 13.42 16.2472 13.6666C16.412 13.9133 16.5 14.2033 16.5 14.5C16.5 14.8978 16.342 15.2794 16.0607 15.5607C15.7794 15.842 15.3978 16 15 16ZM27 26C27 26.2652 26.8946 26.5196 26.7071 26.7071C26.5196 26.8946 26.2652 27 26 27C25.7348 27 25.4804 26.8946 25.2929 26.7071C25.1054 26.5196 25 26.2652 25 26V21.5C25 20.837 24.7366 20.2011 24.2678 19.7322C23.7989 19.2634 23.163 19 22.5 19C21.837 19 21.2011 19.2634 20.7322 19.7322C20.2634 20.2011 20 20.837 20 21.5V26C20 26.2652 19.8946 26.5196 19.7071 26.7071C19.5196 26.8946 19.2652 27 19 27C18.7348 27 18.4804 26.8946 18.2929 26.7071C18.1054 26.5196 18 26.2652 18 26V18C18.0012 17.7551 18.0923 17.5191 18.256 17.3369C18.4197 17.1546 18.6446 17.0388 18.888 17.0114C19.1314 16.9839 19.3764 17.0468 19.5765 17.188C19.7767 17.3292 19.918 17.539 19.9738 17.7775C20.6502 17.3186 21.4389 17.0526 22.2552 17.0081C23.0714 16.9637 23.8844 17.1424 24.6067 17.5251C25.329 17.9078 25.9335 18.48 26.3551 19.1803C26.7768 19.8806 26.9997 20.6825 27 21.5V26Z" fill="currentColor"></path>
-                        </svg>
-                    </a>
-                    <a href="https://x.com" aria-label="social link twitter">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M30.876 31.4813C30.7899 31.6381 30.6633 31.7689 30.5094 31.8602C30.3555 31.9514 30.1799 31.9997 30.001 32H24.001C23.8327 31.9999 23.6671 31.9574 23.5196 31.8764C23.3721 31.7953 23.2475 31.6783 23.1572 31.5362L18.096 23.5825L10.741 31.6725C10.5617 31.8651 10.3137 31.9793 10.0508 31.9903C9.78787 32.0012 9.53123 31.9082 9.33649 31.7312C9.14175 31.5542 9.02462 31.3076 9.01048 31.0448C8.99635 30.7821 9.08635 30.5243 9.26097 30.3275L16.9822 21.8275L9.15722 9.5375C9.06085 9.3863 9.0069 9.21198 9.00103 9.03278C8.99515 8.85357 9.03756 8.67609 9.12382 8.5189C9.21008 8.36172 9.33702 8.23062 9.49133 8.13932C9.64565 8.04803 9.82168 7.99991 10.001 8H16.001C16.1693 8.00005 16.3348 8.04258 16.4823 8.12365C16.6298 8.20471 16.7545 8.32169 16.8447 8.46375L21.906 16.4175L29.261 8.3275C29.4403 8.1349 29.6883 8.02073 29.9512 8.00974C30.2141 7.99876 30.4707 8.09185 30.6655 8.26882C30.8602 8.44579 30.9773 8.69239 30.9915 8.95515C31.0056 9.21791 30.9156 9.47565 30.741 9.6725L23.0197 18.1663L30.8447 30.4638C30.9406 30.615 30.994 30.7892 30.9995 30.9682C31.005 31.1472 30.9623 31.3244 30.876 31.4813Z" fill="currentColor"></path>
-                        </svg>
-                    </a>
-                </div>
-
-                <h3>SVG icons in buttons and badges</h3>
-                <p>Use the <code>.icon-btn</code> class for icon-only buttons and badges.
-                    The framework sets fill via <code>--icon-fill-color</code> based on variant.</p>
-
-                <div class="flex flex-row gap-lg">
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>In button</h3>
-                        <button class="icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256">
-                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                            </svg>
-                        </button>
-                        <button class="icon-btn btn-tonal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256">
-                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                            </svg>
-                        </button>
-                        <button class="icon-btn btn-outlined">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256">
-                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                            </svg>
-                        </button>
-                        <button class="icon-btn btn-ghost">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256">
-                                <path d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <div class="flex flex-column gap-lg icons-container">
-                        <h3>In badge</h3>
-                        <span class="badge icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256"><path
-                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                        </span>
-                        <span class="icon-btn badge-tonal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256"><path
-                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                        </span>
-                        <span class="icon-btn badge-outlined">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256"><path
-                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                        </span>
-                        <span class="icon-btn badge-ghost">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                 viewBox="0 0 256 256"><path
-                                    d="M232,104a56.06,56.06,0,0,0-56-56H136a24,24,0,0,1,24-24,8,8,0,0,0,0-16,40,40,0,0,0-40,40H80a56.06,56.06,0,0,0-56,56,16,16,0,0,0,8,13.83V128c0,35.53,33.12,62.12,59.74,83.49C103.66,221.07,120,234.18,120,240a8,8,0,0,0,16,0c0-5.82,16.34-18.93,28.26-28.51C190.88,190.12,224,163.53,224,128V117.83A16,16,0,0,0,232,104ZM80,64h96a40.06,40.06,0,0,1,40,40H40A40,40,0,0,1,80,64Zm74.25,135c-10.62,8.52-20,16-26.25,23.37-6.25-7.32-15.63-14.85-26.25-23.37C77.8,179.79,48,155.86,48,128v-8H208v8C208,155.86,178.2,179.79,154.25,199Z"></path></svg>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="layout" class="flex flex-column gap-lg gap-lg">
-            <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary"># Content & layout</h2>
-                <h3>Cards in layout flexbox "row" (<code>.flex</code> <code>.flex-row</code> <code>.gap-lg</code>)</h3>
-            </div>
-            <div class="container flex flex-row gap-lg">
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
-                        mattis,
-                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                        laoreet eu erat.</p>
-                </article>
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-                </article>
-            </div>
-            <div class="container flex flex-column gap-lg">
-                <h3>Cards in layout flexbox "column" (<code>.flex</code> <code>.flex-column</code> <code>.gap-lg</code>)
-                </h3>
-            </div>
-            <div class="container flex flex-column gap-lg">
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
-                        mattis,
-                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                        laoreet eu erat.</p>
-                </article>
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-                </article>
-            </div>
-            <div class="container flex flex-column">
-                <h3>Cards in layout responsive grid (<code>.grid</code> <code>.gap-lg</code>)
-                </h3>
-            </div>
-            <div class="container grid gap-lg">
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
-                        mattis,
-                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                        laoreet eu erat.</p>
-                </article>
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-                </article>
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, massa vel sodales
-                        mattis,
-                        est augue consequat nulla, a mollis leo nisi ac nibh. Etiam leo risus, tempor in tincidunt in,
-                        laoreet eu erat.</p>
-                </article>
-                <article class="card">
-                    <h3>Lorem ipsum</h3>
-                    <p>Nullam euismod nibh augue, sed molestie felis ultricies ac. Curabitur gravida bibendum massa in
-                        finibus. Vestibulum faucibus diam vestibulum, scelerisque ante eget, rutrum lectus.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="layout-utilities">
-            <div class="container flex flex-column gap-lg">
-                <h2 class="color-primary"># Layout Utilities</h2>
-
-                <!-- FLEX ROW -->
-                <h3>Flex Row <code>.flex-row</code></h3>
-                <div class="flex-row">
-                    <div class="demo-box">A</div>
-                    <div class="demo-box">B</div>
-                    <div class="demo-box">C</div>
-                    <div class="demo-box">D</div>
-                </div>
-
-                <!-- FLEX COLUMN -->
-                <h3>Flex Column <code>.flex-column</code></h3>
-                <div class="flex-column">
-                    <div class="demo-box">A</div>
-                    <div class="demo-box">B</div>
-                    <div class="demo-box">C</div>
-                </div>
-
-                <!-- FLEX WRAP -->
-                <h3>Flex Wrap <code>.flex-wrap</code></h3>
-                <p>Container limited to 300px wide — boxes wrap onto the next line.</p>
-                <div class="flex flex-wrap gap-sm" style="max-width: 300px">
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                    <div class="demo-box">Item</div>
-                </div>
-
-
-                <!-- GAP SCALE -->
-                <h3>Gap Scale</h3>
-                <div class="flex flex-column gap-sm">
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-none</code>
-                        <div class="flex flex-row gap-none">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-xxs</code>
-                        <div class="flex flex-row gap-xxs">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-xs</code>
-                        <div class="flex flex-row gap-xs">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-sm</code>
-                        <div class="flex flex-row gap-sm">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-md</code>
-                        <div class="flex flex-row gap-md">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-lg</code>
-                        <div class="flex flex-row gap-lg">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-xl</code>
-                        <div class="flex flex-row gap-xl">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-2xl</code>
-                        <div class="flex flex-row gap-2xl">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-md">
-                        <code style="min-width: 9rem">.gap-3xl</code>
-                        <div class="flex flex-row gap-3xl">
-                            <div class="demo-box">A</div><div class="demo-box">B</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GRID COLUMNS -->
-                <h3>Grid Columns</h3>
-                <div class="flex flex-column gap-sm">
-                    <p><code>.grid</code> — auto-fit responsive (min 240px)</p>
-                    <div class="grid gap-sm">
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">2</div>
-                        <div class="demo-box">3</div>
-                        <div class="demo-box">4</div>
-                    </div>
-                    <p><code>.grid .grid-cols-2</code></p>
-                    <div class="grid grid-cols-2 gap-sm">
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">2</div>
-                        <div class="demo-box">3</div>
-                        <div class="demo-box">4</div>
-                    </div>
-                    <p><code>.grid .grid-cols-3</code></p>
-                    <div class="grid grid-cols-3 gap-sm">
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">2</div>
-                        <div class="demo-box">3</div>
-                        <div class="demo-box">4</div>
-                        <div class="demo-box">5</div>
-                        <div class="demo-box">6</div>
-                    </div>
-                    <p><code>.grid .grid-cols-4</code></p>
-                    <div class="grid grid-cols-4 gap-sm">
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">2</div>
-                        <div class="demo-box">3</div>
-                        <div class="demo-box">4</div>
-                        <div class="demo-box">5</div>
-                        <div class="demo-box">6</div>
-                        <div class="demo-box">7</div>
-                        <div class="demo-box">8</div>
-                    </div>
-                </div>
-
-                <!-- GRID SPANNING -->
-                <h3>Grid Spanning</h3>
-                <div class="flex flex-column gap-sm">
-                    <p><code>.grid-col-span-2</code> / <code>.grid-col-span-3</code></p>
-                    <div class="grid grid-cols-4 gap-sm">
-                        <div class="demo-box grid-col-span-2">grid-col-span-2</div>
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">1</div>
-                        <div class="demo-box grid-col-span-3">grid-col-span-3</div>
-                        <div class="demo-box">1</div>
-                    </div>
-                    <p><code>.grid-row-span-2</code></p>
-                    <div class="grid grid-cols-3 gap-sm">
-                        <div class="demo-box grid-row-span-2" style="align-content: center">grid-row-span-2</div>
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">1</div>
-                        <div class="demo-box">1</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TODO -->
-        <section id="media" style="display: none">
-            <div class="container flex-column">
-                <h2 class="color-primary"># Media</h2>
-                <figure>
-                    <img src="https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA"
-                         alt="Minimal landscape"/>
-                    <figcaption>
-                        Image from
-                        <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
-                    </figcaption>
-                </figure>
-                <video src="https://ia801903.us.archive.org/32/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
-                       controls></video>
-                <audio src="https://ia601204.us.archive.org/3/items/datpiff-mixtape-maab0307/02%20-%20Summertime%20Sadness.mp3"
-                       controls></audio>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=mw2W42pDC0HR6qai"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88583.7580350149!2d14.449699296371282!3d46.06620685137995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476531f5969886d1%3A0x400f81c823fec20!2sLjubljana!5e0!3m2!1sen!2ssi!4v1717075454372!5m2!1sen!2ssi"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <figure>
-                    <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.762587 0.889252C-0.611945 28.6298 4.81119 84.1107 37.5 84.1107C70.1888 84.1107 75.6119 53.1214 74.2374 37.6267H37.5C37.5 35.6274 37.5 30.0543 37.5 23.7564C37.5 15.8841 48.3713 0.889252 74.2374 0.889252"
-                              stroke="black"/>
-                    </svg>
-                </figure>
-                <figure>
-                    <svg width="75" height="85" viewBox="0 0 75 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37.5 84.1107C4.8112 84.1107 -0.611941 28.6298 0.76259 0.889252H74.2374C48.3713 0.889252 37.5 15.8841 37.5 23.7564V37.6267H74.2374C75.6119 53.1214 70.1888 84.1107 37.5 84.1107Z"
-                              fill="black"/>
-                    </svg>
-                </figure>
-            </div>
-
-        </section>
-
-        <section id="form">
+        <!-- =====================================================
+             BLOG POST CARDS + PAGINATION
+             ===================================================== -->
+        <section class="demo-section" id="articles">
             <div class="container">
-                <h2 class="color-primary"># Forms</h2>
-            </div>
-
-            <div class="container grid gap-lg">
-                <div class="flex flex-column gap-lg">
-                    <h3>Search form #1</h3>
-                    <form action="/" role="search" autocomplete="on" class="search-form">
-                        <label for="search-input1" class="visuallyhidden">Search</label>
-                        <input id="search-input1" type="search" name="s" placeholder="Type search phrase">
-                        <button type="submit" class="search-button icon-btn">
-                            <span aria-hidden="true" class="icon"></span>
-                            <span class="visuallyhidden">Search</span>
-                        </button>
-                    </form>
+                <div class="demo-section-header flex flex-row"
+                     style="justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--spacing--md);">
+                    <div>
+                        <span class="badge-ghost">Documentation</span>
+                        <h2 style="margin-bottom: 0;">Latest from the Docs</h2>
+                    </div>
+                    <a href="#" class="btn-ghost">Browse All Articles →</a>
                 </div>
 
-                <div class="flex flex-column  gap-lg">
-                    <h3>Search form #2</h3>
-                    <form action="/" role="search" autocomplete="on" class="search-form">
-                        <label for="search-input2" class="visuallyhidden">Search</label>
-                        <input id="search-input2" type="search" name="s" placeholder="Type search phrase">
-                        <button type="submit" class="search-button">
-                            <span aria-hidden="true" class="icon visuallyhidden"></span>
-                            <span>Search</span>
-                        </button>
-                    </form>
+                <div class="grid gap-xl" style="--grid--item-min-width: 280px;">
+                    <!-- Post Card 1 -->
+                    <article class="demo-post-card">
+                        <div class="demo-post-card__cover"
+                             style="background: linear-gradient(135deg, var(--color--primary--200), var(--color--primary--400));">
+                            <span class="badge-tonal"
+                                  style="background-color: rgba(255,255,255,0.9); color: var(--color--primary--700);">Guide</span>
+                        </div>
+                        <div class="demo-post-card__body">
+                            <h3>Getting Started with BCSS</h3>
+                            <p class="demo-post-card__excerpt">Set up BCSS in under five minutes. Learn how to include
+                                the stylesheet, set your primary color token, and start building responsive layouts with
+                                the grid system.</p>
+                        </div>
+                        <div class="demo-post-card__footer">
+                            <div class="demo-post-card__meta">
+                                <div class="demo-avatar" aria-hidden="true">T</div>
+                                <span>Team · Mar 2024</span>
+                            </div>
+                            <a href="#" class="btn-ghost" style="font-size: var(--size--6);">Read →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post Card 2 -->
+                    <article class="demo-post-card">
+                        <div class="demo-post-card__cover"
+                             style="background: linear-gradient(135deg, var(--color--primary--400), var(--color--primary--700));">
+                            <span class="badge-tonal"
+                                  style="background-color: rgba(255,255,255,0.9); color: var(--color--primary--700);">Deep Dive</span>
+                        </div>
+                        <div class="demo-post-card__body">
+                            <h3>Mastering the Dark Mode System</h3>
+                            <p class="demo-post-card__excerpt">Everything you need to know about BCSS's dual-theme
+                                architecture. Understand how OKLCH color shades invert for dark mode and how to override
+                                preferences per-element.</p>
+                        </div>
+                        <div class="demo-post-card__footer">
+                            <div class="demo-post-card__meta">
+                                <div class="demo-avatar" aria-hidden="true">V</div>
+                                <span>Vitalii · Apr 2024</span>
+                            </div>
+                            <a href="#" class="btn-ghost" style="font-size: var(--size--6);">Read →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post Card 3 -->
+                    <article class="demo-post-card">
+                        <div class="demo-post-card__cover"
+                             style="background: linear-gradient(135deg, var(--color--primary--600), var(--color--primary--950));">
+                            <span class="badge-tonal"
+                                  style="background-color: rgba(255,255,255,0.9); color: var(--color--primary--700);">Reference</span>
+                        </div>
+                        <div class="demo-post-card__body">
+                            <h3>Typography Scale Deep Dive</h3>
+                            <p class="demo-post-card__excerpt">A complete walkthrough of the BCSS type scale — from the
+                                fluid <code>clamp()</code> formulas powering each heading level to fine-tuning
+                                line-height and letter-spacing.</p>
+                        </div>
+                        <div class="demo-post-card__footer">
+                            <div class="demo-post-card__meta">
+                                <div class="demo-avatar" aria-hidden="true">T</div>
+                                <span>Team · May 2024</span>
+                            </div>
+                            <a href="#" class="btn-ghost" style="font-size: var(--size--6);">Read →</a>
+                        </div>
+                    </article>
                 </div>
-            </div>
-            <div class="container grid">
-                <div class="flex flex-column gap-lg">
-                    <h3>Contact form</h3>
-                    <form class="contact-form flex flex-column gap-lg container">
-                        <div>
-                            <label id="label-name" for="full-name" data-required-text=" required">Name</label>
-                            <input id="full-name" type="text" placeholder="for eg. John Smith" autocomplete="name"
-                                   required
-                                   name="name" aria-labelledby="label-name">
-                        </div>
-                        <div>
-                            <label id="label-subject" for="subject">Subject</label>
-                            <input id="subject" type="text" placeholder="" name="subject"
-                                   aria-labelledby="label-subject">
-                        </div>
-                        <div>
-                            <label id="label-email" for="email">Email</label>
-                            <input id="email" type="email" autocomplete="email" name="email"
-                                   placeholder="for eg. john@mail.com"
-                                   required aria-labelledby="label-email" class="invalid">
-                        </div>
-                        <div>
-                            <label id="label-message" for="message">Message</label>
-                            <textarea placeholder="Tell us how we can help" aria-labelledby="label-message" required
-                                      id="message"
-                                      name="message" class="invalid"></textarea>
-                        </div>
-                        <input type="hidden" name="_nonce" value="">
-                        <button type="submit" class="btn-primary" disabled>Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <section id="form_elements">
-            <form class="container">
-                <fieldset id="forms__input">
-                    <legend>Input fields</legend>
-                    <p>
-                        <label for="input__text">Text Input</label>
-                        <input id="input__text" type="text" placeholder="Text Input">
-                    </p>
-                    <p>
-                        <label for="input__password">Password</label>
-                        <input id="input__password" type="password" placeholder="Type your Password">
-                    </p>
-                    <p>
-                        <label for="input__webaddress">Web Address</label>
-                        <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
-                    </p>
-                    <p>
-                        <label for="input__emailaddress">Email Address</label>
-                        <input id="input__emailaddress" type="email" placeholder="name@email.com">
-                    </p>
-                    <p>
-                        <label for="input__phone">Phone Number</label>
-                        <input id="input__phone" type="tel" placeholder="(999) 999-9999">
-                    </p>
-                    <p>
-                        <label for="input__search">Search</label>
-                        <input id="input__search" type="search" placeholder="Enter Search Term">
-                    </p>
-                    <p>
-                        <label for="input__text2">Number Input</label>
-                        <input id="input__text2" type="number" placeholder="Enter a Number">
-                    </p>
-                    <p>
-                        <label for="input__text3" class="error">Error</label>
-                        <input id="input__text3" class="error" type="text" placeholder="Text Input">
-                    </p>
-                    <p>
-                        <label for="input__text4" class="success">Valid</label>
-                        <input id="input__text4" class="success" type="text" placeholder="Text Input">
-                    </p>
-                    <p>
-                        <label for="input__text5">Disabled Text Input</label>
-                        <input id="input__text5" type="text" placeholder="Disabled Text Input" disabled="">
-                    </p>
-                    <p class="field-group">
-                        <input class="field-group-prepend" type="search" name="input__text6" id="input__text6"
-                               placeholder="Search">
-                        <button class="field-group-append">
-                            <img src="https://icongr.am/feather/search.svg?size=16">
-                            <span class="visuallyhidden">Search</span>
-                        </button>
-                    </p>
-                    <p class="field-group">
-                        <input class="field-group-prepend" type="text" name="input__text7" id="input__text7"
-                               placeholder="Username">
-                        <input type="text" name="input__text8" id="input__text8" placeholder="Password">
-                        <button class="field-group-append">Submit</button>
-                    </p>
-                </fieldset>
-
-                <fieldset id="forms__select">
-                    <legend>Select menus</legend>
-                    <p>
-                        <label for="select">Select</label>
-                        <select id="select">
-                            <optgroup label="Option Group">
-                                <option>Option One</option>
-                                <option>Option Two</option>
-                                <option>Option Three</option>
-                            </optgroup>
-                        </select>
-                    </p>
-                </fieldset>
-
-                <fieldset id="forms__checkbox">
-                    <legend>Checkboxes</legend>
-                    <ul class="list list--bare">
-                        <li>
-                            <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox"
-                                                          checked="checked">
-                                Choice A</label>
+                <!-- Pagination -->
+                <div style="display: flex; justify-content: center; margin-top: var(--spacing--4xl);">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-numbers" href="#">«</a>
                         </li>
-                        <li>
-                            <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox">
-                                Choice B</label>
+                        <li class="page-item active">
+                            <a class="page-numbers current" aria-current="page" href="#">1</a>
                         </li>
-                        <li>
-                            <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox">
-                                Choice C</label>
+                        <li class="page-item">
+                            <a class="page-numbers" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-numbers" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-numbers" href="#">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-numbers" href="#">5</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-numbers" href="#">»</a>
                         </li>
                     </ul>
-                </fieldset>
-
-                <fieldset id="forms__radio">
-                    <legend>Radio buttons</legend>
-                    <ul class="list list--bare">
-                        <li>
-                            <label for="radio1"><input id="radio1" name="radio" type="radio" class="radio"
-                                                       checked="checked">
-                                Option 1</label>
-                        </li>
-                        <li>
-                            <label for="radio2"><input id="radio2" name="radio" type="radio" class="radio">
-                                Option 2</label>
-                        </li>
-                        <li>
-                            <label for="radio3"><input id="radio3" name="radio" type="radio" class="radio">
-                                Option 3</label>
-                        </li>
-                    </ul>
-                </fieldset>
-
-                <fieldset id="forms__textareas">
-                    <legend>Textareas</legend>
-                    <p>
-                        <label for="textarea">Textarea</label>
-                        <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-                    </p>
-                </fieldset>
-
-                <fieldset id="forms__html5">
-                    <legend>HTML5 inputs</legend>
-                    <p>
-                        <label for="ic">Color input</label>
-                        <input type="color" id="ic" value="#000000">
-                    </p>
-                    <p>
-                        <label for="in">Number input</label>
-                        <input type="number" id="in" min="0" max="10" value="5">
-                    </p>
-                    <p>
-                        <label for="ir">Range input</label>
-                        <input type="range" id="ir" value="10">
-                    </p>
-                    <p>
-                        <label for="idd">Date input</label>
-                        <input type="date" id="idd" value="1970-01-01">
-                    </p>
-                    <p>
-                        <label for="idm">Month input</label>
-                        <input type="month" id="idm" value="1970-01">
-                    </p>
-                    <p>
-                        <label for="idw">Week input</label>
-                        <input type="week" id="idw" value="1970-W01">
-                    </p>
-                    <p>
-                        <label for="idt">Datetime input</label>
-                        <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-                    </p>
-                    <p>
-                        <label for="idtl">Datetime-local input</label>
-                        <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-                    </p>
-                </fieldset>
-
-                <fieldset id="forms__action" class="flex flex-column gap-lg">
-                    <legend>Action buttons</legend>
-                    <div class="flex flex-column gap-sm icons-container">
-                        <input type="submit" value="<input type=submit>">
-                        <input type="button" value="<input type=button>">
-                        <input type="reset" value="<input type=reset>">
-                        <input type="submit" value="<input disabled>" disabled="">
-                    </div>
-                    <div class="flex flex-column gap-sm icons-container">
-                        <button type="submit">&lt;button type=submit&gt;</button>
-                        <button type="button">&lt;button type=button&gt;</button>
-                        <button type="reset">&lt;button type=reset&gt;</button>
-                        <button type="button" disabled="">&lt;button disabled&gt;</button>
-                    </div>
-                </fieldset>
-            </form>
+                </div>
+            </div>
         </section>
 
-        <section id="tables">
+        <!-- =====================================================
+             BADGES & BUTTONS IN CONTEXT
+             ===================================================== -->
+        <section class="demo-section demo-section--alt" id="components">
             <div class="container">
-                <h2 class="color-primary"># Tables</h2>
-                <div class="overflow-auto">
-                    <table class="striped">
+                <div class="demo-section-header">
+                    <span class="badge-ghost">Components</span>
+                    <h2>Badges &amp; Buttons</h2>
+                    <p>Components shown in realistic UI contexts, not isolated on a blank canvas.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-xl">
+
+                    <!-- Notification / Status Panel -->
+                    <div class="card" style="gap: var(--spacing--lg);">
+                        <h3 style="margin: 0;">Notification Center</h3>
+                        <p style="margin: 0; color: var(--color--base--600); font-size: var(--size--7);">Real-time build
+                            and deployment status</p>
+                        <div class="demo-status-panel">
+                            <div class="demo-status-row">
+                                <span class="demo-status-row__label">Build #142 — main branch</span>
+                                <span class="badge"
+                                      style="background-color: var(--color--success--light); color: var(--color--success--dark);">Passed</span>
+                            </div>
+                            <div class="demo-status-row">
+                                <span class="demo-status-row__label">Build #141 — feature/dark-mode</span>
+                                <span class="badge-tonal">In Progress</span>
+                            </div>
+                            <div class="demo-status-row">
+                                <span class="demo-status-row__label">Build #140 — fix/color-vars</span>
+                                <span class="badge"
+                                      style="background-color: var(--color--error--light); color: var(--color--error--dark);">Failed</span>
+                            </div>
+                            <div class="demo-status-row">
+                                <span class="demo-status-row__label">Deploy #89 — production</span>
+                                <span class="badge-outlined">Queued</span>
+                            </div>
+                            <div class="demo-status-row">
+                                <span class="demo-status-row__label">Deploy #88 — staging</span>
+                                <span class="badge-ghost">Draft</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-sm" style="padding-top: var(--spacing--sm);">
+                            <button class="btn-ghost size-sm">View All</button>
+                            <button class="btn-outlined size-sm">Clear Read</button>
+                        </div>
+                    </div>
+
+                    <!-- Article Editor Action Bar -->
+                    <div class="card" style="gap: var(--spacing--lg);">
+                        <h3 style="margin: 0;">Article Editor</h3>
+                        <p style="margin: 0; color: var(--color--base--600); font-size: var(--size--7);">Publishing
+                            workflow — all button variants in context. Size: default, <code>.size-sm</code>, <code>.size-lg</code></p>
+                        <div class="demo-action-bar">
+                            <div class="demo-action-row">
+                                <span class="demo-action-row__label"
+                                      style="font-size: var(--size--6); color: var(--color--base--500); min-width: 70px;">Filled</span>
+                                <button class="btn-filled">Publish Now</button>
+                                <button class="btn-filled size-sm">Save Draft</button>
+                                <button class="btn-filled size-lg">Schedule</button>
+                                <button class="btn-filled" disabled>Schedule</button>
+                            </div>
+                            <div class="demo-action-row">
+                                <span class="demo-action-row__label"
+                                      style="font-size: var(--size--6); color: var(--color--base--500); min-width: 70px;">Tonal</span>
+                                <button class="btn-tonal">Preview</button>
+                                <button class="btn-tonal size-sm">Revisions</button>
+                                <button class="btn-tonal size-lg">Settings</button>
+                                <button class="btn-tonal" disabled>Settings</button>
+                            </div>
+                            <div class="demo-action-row">
+                                <span class="demo-action-row__label"
+                                      style="font-size: var(--size--6); color: var(--color--base--500); min-width: 70px;">Outlined</span>
+                                <button class="btn-outlined">Share Link</button>
+                                <button class="btn-outlined size-sm">Copy URL</button>
+                                <button class="btn-outlined size-lg">Export</button>
+                                <button class="btn-outlined" disabled>Export</button>
+                            </div>
+                            <div class="demo-action-row">
+                                <span class="demo-action-row__label"
+                                      style="font-size: var(--size--6); color: var(--color--base--500); min-width: 70px;">Ghost</span>
+                                <button class="btn-ghost">Discard</button>
+                                <button class="btn-ghost size-sm">Cancel</button>
+                                <button class="btn-ghost size-lg">Archive</button>
+                                <button class="btn-ghost" disabled>Archive</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CONTACT FORM
+             ===================================================== -->
+        <section class="demo-section" id="contact">
+            <div class="container">
+                <div class="grid grid-cols-2 gap-6xl" style="align-items: start;">
+                    <!-- Left: Info -->
+                    <div>
+                        <div class="page-content">
+                            <span class="badge-ghost">Contact</span>
+                            <h2 style="margin-top: 1rem">Have a Question About BCSS?</h2>
+                            <p style="color: var(--color--base--600); margin-bottom: var(--spacing--3xl);">We're happy
+                                to help with integration questions, feature requests, or bug reports. For urgent issues,
+                                check the GitHub repository first — someone may have already found a solution.</p>
+                        </div>
+                        <div class="demo-contact-info">
+                            <div class="demo-contact-item">
+                                <div class="demo-contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="demo-contact-item__text">
+                                    <strong>Email</strong>
+                                    <span>support@builderius.io</span>
+                                </div>
+                            </div>
+                            <div class="demo-contact-item">
+                                <div class="demo-contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </div>
+                                <div class="demo-contact-item__text">
+                                    <strong>GitHub</strong>
+                                    <span>github.com/builderius</span>
+                                </div>
+                            </div>
+                            <div class="demo-contact-item">
+                                <div class="demo-contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                </div>
+                                <div class="demo-contact-item__text">
+                                    <strong>Documentation</strong>
+                                    <span>docs.builderius.io</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="card" style="gap: var(--spacing--lg);">
+                        <h3 style="margin: 0;">Send a Message</h3>
+                        <form class="contact-form flex flex-column gap-lg" style="width: 100%;"
+                              onsubmit="return false;">
+                            <div class="grid grid-cols-2 gap-md">
+                                <div>
+                                    <label for="contact-name" data-required-text=" *">Name</label>
+                                    <input id="contact-name" type="text" placeholder="Your full name"
+                                           autocomplete="name" required name="name"/>
+                                </div>
+                                <div>
+                                    <label for="contact-email" data-required-text=" *">Email</label>
+                                    <input id="contact-email" type="email" placeholder="you@example.com"
+                                           autocomplete="email" required name="email"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="contact-subject">Subject</label>
+                                <select id="contact-subject" name="subject">
+                                    <option value="">Select a topic…</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="integration">Integration Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="contact-message" data-required-text=" *">Message</label>
+                                <textarea id="contact-message" name="message" placeholder="Tell us how we can help…"
+                                          rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-filled">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             FAQ ACCORDION
+             ===================================================== -->
+        <section class="demo-section demo-section--alt" id="faq">
+            <div class="container">
+                <div class="demo-section-header text-center">
+                    <span class="badge-ghost">Support</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--spacing--sm);">
+                    <details>
+                        <summary>How do I install BCSS?</summary>
+                        <p>BCSS is a single CSS file with no build step required. Download <code>framework.css</code>
+                            and include it in your HTML <code>&lt;head&gt;</code>. For Builderius users, the framework
+                            is already included in the standard starter, no actions is needed. That's it — no npm, no
+                            webpack, no configuration files.</p>
+                    </details>
+                    <details open>
+                        <summary>Can I customize the primary color?</summary>
+                        <p>Yes — update the <code>--color--primary--original</code> CSS custom property on
+                            <code>:root</code> (or any parent element). All 11 primary shades (50 through 950) are
+                            computed automatically using CSS relative color syntax and the OKLCH color space. Use the
+                            live color picker in the Customize panel on this page to preview changes in real time.</p>
+                    </details>
+                    <details>
+                        <summary>Does BCSS work without Builderius?</summary>
+                        <p>Absolutely. BCSS is a plain CSS file that works in any web project. The <code>builderius-menu-builder.css</code>
+                            companion file is the only Builderius-specific piece — everything else
+                            (<code>framework.css</code>) is framework-agnostic and works with vanilla HTML, WordPress,
+                            or any other CMS.</p>
+                    </details>
+                    <details>
+                        <summary class="icon-right icon-style-plus">How does the dark mode system work?</summary>
+                        <p>BCSS listens to <code>prefers-color-scheme: dark</code> and remaps all color shades — so
+                            <code>--color--primary--100</code> becomes the darkest shade and
+                            <code>--color--primary--950</code> becomes the lightest. You can override this by setting
+                            <code>data-theme-default="light"</code> or <code>data-theme-default="dark"</code> on the
+                            <code>&lt;html&gt;</code> element, which is exactly what the theme switcher in the Customize
+                            panel does.</p>
+                    </details>
+                    <details>
+                        <summary class="icon-right icon-style-arrow">How do I contribute to BCSS?</summary>
+                        <p>Open an issue or pull request on the GitHub repository. Before submitting, check the existing
+                            issues to avoid duplicates. New component proposals should include a working HTML/CSS
+                            example. For bug reports, include a minimal reproduction case with the affected browser and
+                            OS version.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             NAVIGATION
+             ===================================================== -->
+        <section class="demo-section" id="navigation">
+            <div class="container">
+                <div class="demo-section-header page-content">
+                    <span class="badge-ghost">Navigation</span>
+                    <h2 style="margin-top: 1rem">Navigation Menu</h2>
+                    <p>The <code>&lt;builderius-menu-builder&gt;</code> web component handles both desktop and mobile
+                        navigation states. Add <code>.is-mobile.is-expanded</code> to simulate the open mobile drawer.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-xl" style="height: 350px;">
+                    <div class="card flex-column gap-md">
+                        <h3 style="margin: 0; font-size: var(--font--size--5);">Desktop Navigation</h3>
+                        <builderius-menu-builder>
+                            <nav class="bldr-nav">
+                                <ul class="bldr-nav-menu">
+                                    <li class="bldr-nav-item"><a href="#colors" class="bldr-nav-link">Colors</a></li>
+                                    <li class="bldr-nav-item"><a href="#typography" class="bldr-nav-link">Typography</a>
+                                    </li>
+                                    <li class="bldr-nav-item"><a href="#contact"
+                                                                 class="bldr-nav-link button">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </builderius-menu-builder>
+                    </div>
+                    <div class="card flex-column gap-md">
+                        <h3 style="margin: 0; font-size: var(--font--size--5);">Mobile Navigation (Expanded)</h3>
+                        <builderius-menu-builder class="is-mobile is-expanded" style="height: 100px">
+                            <nav class="bldr-nav">
+                                <ul class="bldr-nav-menu">
+                                    <li class="bldr-nav-item"><a href="#colors" class="bldr-nav-link">Colors</a></li>
+                                    <li class="bldr-nav-item"><a href="#typography" class="bldr-nav-link">Typography</a>
+                                    </li>
+                                    <li class="bldr-nav-item"><a href="#components" class="bldr-nav-link">Components</a>
+                                    </li>
+                                    <li class="bldr-nav-item"><a href="#contact"
+                                                                 class="bldr-nav-link button">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </builderius-menu-builder>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TABLES
+             ===================================================== -->
+        <section class="demo-section demo-section--alt" id="tables">
+            <div class="container">
+                <div class="demo-section-header">
+                    <span class="badge-ghost">Data</span>
+                    <h2>Component Reference</h2>
+                    <p>All BCSS component classes at a glance. Use the <code>.striped-rows</code> modifier on any table
+                        for alternating row backgrounds.</p>
+                </div>
+                <div class="card table-scroll" style="padding: 0;">
+                    <table class="striped-rows" style="margin: 0; min-width: 600px;">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Heading</th>
-                            <th scope="col">Heading</th>
-                            <th scope="col">Heading</th>
-                            <th scope="col">Heading</th>
-                            <th scope="col">Heading</th>
+                            <th>Component</th>
+                            <th>Class</th>
+                            <th>Variant</th>
+                            <th>Description</th>
                         </tr>
                         </thead>
-                        <tbody class="striped-rows">
+                        <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
+                            <td>Button</td>
+                            <td><code>btn-filled</code></td>
+                            <td><span class="badge">Primary</span></td>
+                            <td>Filled button with primary background color</td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
+                            <td>Button</td>
+                            <td><code>btn-tonal</code></td>
+                            <td><span class="badge-tonal">Tonal</span></td>
+                            <td>Muted tonal background, primary text</td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
-                            <td>Cell</td>
+                            <td>Button</td>
+                            <td><code>btn-outlined</code></td>
+                            <td><span class="badge-outlined">Outlined</span></td>
+                            <td>Transparent background, primary border and text</td>
+                        </tr>
+                        <tr>
+                            <td>Button</td>
+                            <td><code>btn-ghost</code></td>
+                            <td><span class="badge-ghost">Ghost</span></td>
+                            <td>No border or background, text only</td>
+                        </tr>
+                        <tr>
+                            <td>Badge</td>
+                            <td><code>badge</code></td>
+                            <td><span class="badge">Filled</span></td>
+                            <td>Small status label with filled primary background</td>
+                        </tr>
+                        <tr>
+                            <td>Badge</td>
+                            <td><code>badge-tonal</code></td>
+                            <td><span class="badge-tonal">Tonal</span></td>
+                            <td>Light tonal badge for low-emphasis labels</td>
+                        </tr>
+                        <tr>
+                            <td>Card</td>
+                            <td><code>card</code></td>
+                            <td>—</td>
+                            <td>Bordered container with padding and subtle shadow</td>
+                        </tr>
+                        <tr>
+                            <td>Grid</td>
+                            <td><code>grid grid-cols-N</code></td>
+                            <td>—</td>
+                            <td>Responsive CSS grid with explicit or auto column counts</td>
+                        </tr>
+                        <tr>
+                            <td>Accordion</td>
+                            <td><code>details / summary</code></td>
+                            <td>—</td>
+                            <td>Native HTML disclosure element with BCSS styling</td>
+                        </tr>
+                        <tr>
+                            <td>Pagination</td>
+                            <td><code>pagination</code></td>
+                            <td>—</td>
+                            <td>Page navigation with active, disabled, and current states</td>
                         </tr>
                         </tbody>
-                        <tfoot>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Foot</th>
-                            <th scope="col">Foot</th>
-                            <th scope="col">Foot</th>
-                            <th scope="col">Foot</th>
-                            <th scope="col">Foot</th>
-                        </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>
         </section>
 
-        <section id="accordions">
+        <!-- =====================================================
+             MODAL / DIALOG
+             ===================================================== -->
+        <section class="demo-section" id="dialog">
             <div class="container">
-                <h2 class="color-primary"># Accordions</h2>
-
-                <h3>Accordion group</h3>
-                <details open name="faq">
-                    <summary>Details question 1</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                        amet, congue turpis.
-                    </p>
-                </details>
-                <details name="faq">
-                    <summary>Details question 2</summary>
-                    <ul>
-                        <li>Vestibulum id elit quis massa interdum sodales.</li>
-                        <li>Nunc quis eros vel odio pretium tincidunt nec quis neque.</li>
-                        <li>Quisque sed eros non eros ornare elementum.</li>
-                        <li>Cras sed libero aliquet, porta dolor quis, dapibus ipsum.</li>
-                    </ul>
-                </details>
-
-                <h3>Accordion right icon</h3>
-                <details>
-                    <summary class="icon-right">Details question 1</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                        amet, congue turpis.
-                    </p>
-                </details>
-
-                <h3>Accordion alternative icons</h3>
-                <details>
-                    <summary class="icon-right icon-style-plus">Details question 1</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                        amet, congue turpis.
-                    </p>
-                </details>
-                <details>
-                    <summary class="icon-right icon-style-arrow">Details question 1</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                        amet, congue turpis.
-                    </p>
-                </details>
-                <details>
-                    <summary class="icon-right icon-style-caret">Details question 1</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque urna diam,
-                        tincidunt nec porta sed, auctor id velit. Etiam venenatis nisl ut orci consequat, vitae
-                        tempus quam commodo. Nulla non mauris ipsum. Aliquam eu posuere orci. Nulla convallis
-                        lectus rutrum quam hendrerit, in facilisis elit sollicitudin. Mauris pulvinar pulvinar
-                        mi, dictum tristique elit auctor quis. Maecenas ac ipsum ultrices, porta turpis sit
-                        amet, congue turpis.
-                    </p>
-                </details>
-                <h3>Accordion icon circle background</h3>
-                <div class="grid grid-cols-2 gap-md">
-                    <details style="--accordion--icon-circle-color: var(--color--base--300);--icon-scale: 1.4;">
-                        <summary class="icon-right">How does the icon circle background variable keep the circle aligned with the expand icon when the question text is very long and wraps across multiple lines?</summary>
-                        <p>
-                            The <code>--accordion--icon-circle-color</code> variable renders a filled circle
-                            behind the icon. Set it to any color on the <code>&lt;details&gt;</code> element —
-                            the circle is drawn on the <code>summary</code>'s background, outside the masked
-                            pseudo-element, so it is not clipped by the icon mask.
-                        </p>
-                    </details>
-                    <details style="--accordion--icon-circle-color: var(--color--primary--100);">
-                        <summary>Does the icon circle feature work correctly with both the default left-side icon position and the right-side icon position when the accordion label spans several lines of text?</summary>
-                        <p>
-                            Works with both default (left) and <code>.icon-right</code> icon positions.
-                        </p>
-                    </details>
+                <div class="demo-section-header">
+                    <span class="badge-ghost">Dialogs</span>
+                    <h2>Modal &amp; Cookie Notice</h2>
+                    <p>BCSS styles the native HTML <code>&lt;dialog&gt;</code> element. The cookie notice appears fixed
+                        to the bottom-right corner of the viewport.</p>
+                </div>
+                <div class="flex flex-row gap-md flex-wrap">
+                    <button class="btn-outlined" id="show-subscribe-modal">Open Subscribe Modal</button>
+                    <button class="btn-ghost" id="show-cookie-notice">Show Cookie Notice</button>
                 </div>
             </div>
         </section>
 
-        <section id="navigation_menu">
-            <div class="container">
-                <h2 class="color-primary"># Navigation Menu</h2>
-
-                <h3>Desktop version navigation</h3>
-                <builderius-menu-builder>
-                    <nav class="bldr-nav">
-                        <ul class="bldr-nav-menu">
-                            <li class="bldr-nav-item">
-                                <a href="#typography" class="bldr-nav-link">Typography</a>
-                            </li>
-                            <li class="bldr-nav-item">
-                                <a href="#badges" class="bldr-nav-link">Badges</a>
-                            </li>
-                            <li class="bldr-nav-item">
-                                <a href="#buttons" class="bldr-nav-link button">Buttons</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </builderius-menu-builder>
-
-                <h3>Mobile version navigation (expanded)</h3>
-                <builderius-menu-builder class="is-mobile is-expanded">
-                    <nav class="bldr-nav">
-                        <ul class="bldr-nav-menu">
-                            <li class="bldr-nav-item">
-                                <a href="#typography" class="bldr-nav-link">Typography</a>
-                            </li>
-                            <li class="bldr-nav-item">
-                                <a href="#badges" class="bldr-nav-link">Badges</a>
-                            </li>
-                            <li class="bldr-nav-item">
-                                <a href="#buttons" class="bldr-nav-link button">Buttons</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </builderius-menu-builder>
-            </div>
-        </section>
-
-        <section id="pagination">
-            <div class="container">
-                <h2 class="color-primary"># Pagination</h2>
-
-                <h3>Pagination List</h3>
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-numbers" href="#">«</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-numbers current" aria-current="page" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-numbers" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-numbers" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-numbers" href="#">4</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-numbers" href="#">5</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-numbers" href="#">»</a>
-                    </li>
-                </ul>
-
-                <h3>Pagination WordPress</h3>
-                <div class="pagination">
-                    <span aria-current="page" class="page-numbers current">1</span>
-                    <a class="page-numbers" href="#">2</a>
-                    <a class="page-numbers" href="#">3</a>
-                    <a class="page-numbers" href="#">4</a>
-                    <a class="next page-numbers" href="#">Next »</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="dialogs">
-            <div class="container">
-                <h2 class="color-primary"># Cookie Notice</h2>
-                <p>Cookie notice modal window is displayed in bottom right corner of the page.</p>
-                <dialog open class="cookie-notice">
-                    <h2 id="cookieLabel" class="font-size-4">Cookie settings</h2>
-                    <p id="cookieDescription">Our website uses some essential cookies to function well. With your
-                        permission, we would like to set up some additional cookies to improve your experience. Our
-                        <a href="https://builderius.io/privacy-policy/" target="_blank">Privacy Policy</a>
-                    </p>
-                    <form method="dialog" class="flex flex-row gap-lg">
-                        <button class="btn-primary" value="accept">Accept</button>
-                        <button class="btn-secondary" value="reject">Reject</button>
-                    </form>
-                </dialog>
-            </div>
-        </section>
     </main>
-    <!-- ./ Main -->
 
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
     <footer class="site-edge-section outer-wrapper">
         <div class="container">
-            <span class="font-size-2">Builderius CSS framework</span>
-            <p></p>
+            <div class="demo-footer-grid">
+                <div class="demo-footer-brand">
+                    <h2>BCSS</h2>
+                    <p>A token-based CSS framework for Builderius. Zero dependencies, native dark mode, and a
+                        comprehensive component library built on modern CSS.</p>
+                </div>
+                <div class="demo-footer-col">
+                    <h4>Framework</h4>
+                    <ul>
+                        <li><a href="#colors">Color System</a></li>
+                        <li><a href="#typography">Typography</a></li>
+                        <li><a href="#components">Components</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="demo-footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://docs.builderius.io">Documentation</a></li>
+                        <li><a href="https://github.com/builderius">GitHub</a></li>
+                        <li><a href="https://builderius.io/roadmap-changelog">Changelog</a></li>
+                        <li><a href="https://builderius.io">Builderius.io</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="color: var(--color--base--600); font-size: var(--size--6); margin: 0;">© 2024 Builderius. Built
+                with BCSS — the framework eating its own cooking.</p>
         </div>
     </footer>
-    <script>
-        class BuilderiusMenuBuilder extends HTMLElement {
-            constructor() {
-                super();
-            }
-        }
 
+    <!-- =====================================================
+         SUBSCRIBE MODAL
+         ===================================================== -->
+    <dialog id="subscribe-modal" aria-labelledby="subscribe-title">
+        <h2 id="subscribe-title" class="font-size-4" style="margin-top: 0;">Stay up to date</h2>
+        <p style="color: var(--color--base--600); margin-bottom: var(--spacing--xl);">Get notified about new BCSS
+            releases, component additions, and breaking change migration guides.</p>
+        <form method="dialog" class="flex flex-column gap-md" onsubmit="return false;" style="min-width: 300px;">
+            <div>
+                <label for="subscribe-email" data-required-text=" *">Email address</label>
+                <input id="subscribe-email" type="email" placeholder="you@example.com" autocomplete="email" required/>
+            </div>
+            <div class="flex flex-row gap-sm">
+                <button type="submit" class="btn-filled" value="subscribe">Subscribe</button>
+                <button type="button" class="btn-ghost" id="close-subscribe-modal">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- =====================================================
+         COOKIE NOTICE
+         ===================================================== -->
+    <dialog id="cookie-notice-dialog" class="cookie-notice">
+        <h2 id="cookieLabel" class="font-size-4">Cookie Settings</h2>
+        <p id="cookieDescription">BCSS uses essential cookies to remember your theme and color preferences. With your
+            permission, we'd also like to set analytics cookies to understand how developers use the framework.</p>
+        <form method="dialog" class="flex flex-row gap-lg">
+            <button class="btn-filled" value="accept">Accept All</button>
+            <button class="btn-outlined" value="reject">Essential Only</button>
+        </form>
+    </dialog>
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+    <script>
         if (customElements.get('builderius-menu-builder') === undefined) {
+            class BuilderiusMenuBuilder extends HTMLElement {
+                constructor() {
+                    super();
+                }
+            }
+
             customElements.define('builderius-menu-builder', BuilderiusMenuBuilder);
         }
+
+        // Subscribe modal
+        const subscribeModal = document.getElementById('subscribe-modal');
+        document.getElementById('show-subscribe-modal')?.addEventListener('click', () => {
+            subscribeModal?.showModal();
+        });
+        document.getElementById('close-subscribe-modal')?.addEventListener('click', () => {
+            subscribeModal?.close();
+        });
+        subscribeModal?.addEventListener('click', (e) => {
+            if (e.target === subscribeModal) subscribeModal.close();
+        });
+
+        // Cookie notice
+        const cookieNotice = document.getElementById('cookie-notice-dialog');
+        document.getElementById('show-cookie-notice')?.addEventListener('click', () => {
+            cookieNotice?.setAttribute('open', '');
+        });
+        cookieNotice?.addEventListener('close', () => {
+            cookieNotice.removeAttribute('open');
+        });
     </script>
     <script src="./customizer.js"></script>
     <script src="./theme-switcher.js"></script>
     <script src="./color-picker.js"></script>
 
-    <!-- Customizer Panel -->
+    <!-- =====================================================
+         CUSTOMIZER PANEL
+         ===================================================== -->
     <aside id="customizer-panel" class="customizer-panel" aria-label="Customization Panel" data-collapsed="false">
         <!-- Toggle Button -->
         <button type="button" id="customizer-toggle" class="customizer-toggle"
                 aria-expanded="true" aria-controls="customizer-content"
                 aria-label="Toggle customization panel">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-icon lucide-paintbrush">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-paintbrush">
                 <path d="m14.622 17.897-10.68-2.913"/>
                 <path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/>
                 <path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/>
@@ -1398,7 +992,8 @@
             <div class="customizer-header">
                 <h2 class="customizer-title">Customize</h2>
                 <button type="button" class="customizer-close" aria-label="Close customization panel">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="15" y1="5" x2="5" y2="15"></line>
                         <line x1="5" y1="5" x2="15" y2="15"></line>
                     </svg>
@@ -1412,30 +1007,33 @@
                     <h3 class="customizer-section-title">Theme</h3>
                     <div class="theme-switcher" role="tablist" aria-label="Theme selection">
                         <button role="tab" class="theme-btn" data-theme="light" aria-selected="false">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="12" cy="12" r="5"></circle>
-                                <line x1="12" y1="1" x2="12" y2="3"></line>
-                                <line x1="12" y1="21" x2="12" y2="23"></line>
-                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                <line x1="1" y1="12" x2="3" y2="12"></line>
-                                <line x1="21" y1="12" x2="23" y2="12"></line>
-                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                             </svg>
                             Light
                         </button>
                         <button role="tab" class="theme-btn active" data-theme="auto" aria-selected="true">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
                             </svg>
                             Auto
                         </button>
                         <button role="tab" class="theme-btn" data-theme="dark" aria-selected="false">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                             </svg>
                             Dark
                         </button>
@@ -1443,14 +1041,15 @@
                     <p class="customizer-section-help">Auto mode follows your operating system preference</p>
                 </section>
 
-                <hr class="customizer-divider" />
+                <hr class="customizer-divider"/>
 
                 <!-- Color Picker Section -->
                 <section class="customizer-section">
                     <h3 class="customizer-section-title">Primary Color</h3>
                     <div class="color-picker-controls">
                         <div class="color-picker-wrapper">
-                            <input type="color" id="primary-color-picker" value="#5050ff" aria-label="Select primary color">
+                            <input type="color" id="primary-color-picker" value="#5050ff"
+                                   aria-label="Select primary color"/>
                             <label for="primary-color-picker" class="color-picker-label">Pick Color</label>
                         </div>
                         <button type="button" id="reset-colors" class="btn-outlined" disabled>Reset</button>
@@ -1460,6 +1059,7 @@
             </div>
         </div>
     </aside>
+
 </div>
 </body>
 </html>

@@ -157,22 +157,22 @@
     --spacing--15xl: var(--size--96);
     --text--color--content: var(--color--base--800);
     --text--color--heading: var(--color--base--950);
-    --text--size--badge-max: var(--size--7);
-    --text--size--badge-min: var(--size--7);
-    --text--size--button-max: var(--size--9);
-    --text--size--button-min: var(--size--7);
-    --text--size--content-max: var(--size--10);
-    --text--size--content-min: var(--size--8);
-    --text--size--h1-max: var(--size--24);
+    --text--size--badge-max: var(--size--6);
+    --text--size--badge-min: var(--size--6);
+    --text--size--button-max: var(--size--8);
+    --text--size--button-min: var(--size--6);
+    --text--size--content-max: var(--size--8);
+    --text--size--content-min: var(--size--6);
+    --text--size--h1-max: var(--size--20);
     --text--size--h1-min: var(--size--16);
-    --text--size--h2-max: var(--size--18);
-    --text--size--h2-min: var(--size--14);
-    --text--size--h3-max: var(--size--16);
-    --text--size--h3-min: var(--size--12);
-    --text--size--h4-max: var(--size--14);
-    --text--size--h4-min: var(--size--10);
-    --text--size--h5-max: var(--size--12);
-    --text--size--h5-min: var(--size--9);
+    --text--size--h2-max: var(--size--16);
+    --text--size--h2-min: var(--size--12);
+    --text--size--h3-max: var(--size--14);
+    --text--size--h3-min: var(--size--10);
+    --text--size--h4-max: var(--size--12);
+    --text--size--h4-min: var(--size--9);
+    --text--size--h5-max: var(--size--10);
+    --text--size--h5-min: var(--size--8);
     --text--size--h6-max: var(--size--8);
     --text--size--h6-min: var(--size--8);
     --container--full: 100%;
@@ -391,18 +391,18 @@ pre {
     font-weight: var(--font--weight);
 }
 
-p, dl, ol, address {
+p, dl, ol, ul, address {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
-ul, table {
+table {
     margin-top: 0;
-    margin-bottom: var(--spacing--block-end, var(--spacing--block));
 }
 
 blockquote {
     display: block;
-    margin: var(--spacing--block) 0;
+    margin: 0;
     padding: var(--spacing--lg);
     border-right-style: none;
     border-left: 0.25rem solid var(--blockquote--border-color);
@@ -520,7 +520,7 @@ a:where(:hover, :active, :focus) {
     --border-width: 1px;
     --text-decoration: none;
     --font-weight: 600;
-    --font-size: var(--size--9);
+    --font-size: var(--font--size--button);
     display: flex;
     justify-content: center;
     color: var(--color-text);
@@ -656,7 +656,7 @@ a:where(:hover, :active, :focus) {
     --border-width: 1px;
     --text-decoration: none;
     --font-weight: 400;
-    --font-size: var(--size--7);
+    --font-size: var(--font--size--badge);
     --font-line-height: 1.1;
     display: inline-block;
     color: var(--color-text);
@@ -691,6 +691,7 @@ a:where(:hover, :active, :focus) {
     --background-color: transparent;
     --border-color: transparent;
     --color-text: var(--badge--ghost-tx);
+    --spacing-inline: var(--spacing--none);
 }
 
 [aria-controls] {
@@ -902,17 +903,17 @@ summary {
     gap: var(--spacing--sm);
     overflow-wrap: anywhere;
     background-image: radial-gradient(
-            circle calc(var(--accordion--icon-circle) + 0px) at var(--accordion--icon-circle) 50%,
-            var(--accordion--icon-circle-color) 100%,
-            transparent 100%
+        circle calc(var(--accordion--icon-circle) + 0px) at var(--accordion--icon-circle) 50%,
+        var(--accordion--icon-circle-color) 100%,
+        transparent 100%
     );
 }
 
 summary:where(.icon-right) {
     background-image: radial-gradient(
-            circle calc(var(--accordion--icon-circle) + 0px) at calc(100% - var(--accordion--icon-circle)) 50%,
-            var(--accordion--icon-circle-color) 100%,
-            transparent 100%
+        circle calc(var(--accordion--icon-circle) + 0px) at calc(100% - var(--accordion--icon-circle)) 50%,
+        var(--accordion--icon-circle-color) 100%,
+        transparent 100%
     );
 }
 
@@ -1211,6 +1212,14 @@ pre > code {
     margin-bottom: var(--spacing--block-end, var(--spacing--block));
 }
 
+.page-content :where(p, ul, ol, dl, blockquote):not(:last-child) {
+    margin-bottom: var(--spacing--block-end, var(--spacing--block));
+}
+
+.page-content :where(blockquote):not(:first-child) {
+    margin-top: var(--spacing--block);
+}
+
 .flex, .flex-row {
     display: flex;
     gap: var(--spacing--inline);
@@ -1278,6 +1287,39 @@ pre > code {
 
 .grid-cols-12 {
     grid-template-columns: repeat(12, 1fr);
+}
+
+/* Responsive grid: at tablet, 3+ columns collapse to 2; at mobile, all collapse to 1 */
+@media (max-width: 1024px) {
+    .grid-cols-3,
+    .grid-cols-4,
+    .grid-cols-5,
+    .grid-cols-6,
+    .grid-cols-7,
+    .grid-cols-8,
+    .grid-cols-12 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4,
+    .grid-cols-5,
+    .grid-cols-6,
+    .grid-cols-7,
+    .grid-cols-8,
+    .grid-cols-12 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Table horizontal scroll utility */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 
 .grid-rows-1 {
