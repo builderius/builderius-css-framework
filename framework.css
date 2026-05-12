@@ -79,15 +79,19 @@
     --color--success--original: oklch(0.65 0.18 145);
     --color--success--light: oklch(from var(--color--success--original) 0.78 calc(c * 0.65) h);
     --color--success--dark: oklch(from var(--color--success--original) 0.39 calc(c * 0.85) h);
-    --font--size--1: clamp(var(--text--size--h1-min), 1.6154rem + 1.5385vi, var(--text--size--h1-max));
-    --font--size--2: clamp(var(--text--size--h2-min), 1.5577rem + 0.7692vi, var(--text--size--h2-max));
-    --font--size--3: clamp(var(--text--size--h3-min), 1.3077rem + 0.7692vi, var(--text--size--h3-max));
-    --font--size--4: clamp(var(--text--size--h4-min), 1.0577rem + 0.7692vi, var(--text--size--h4-max));
-    --font--size--5: clamp(var(--text--size--h5-min), 0.9808rem + 0.5769vi, var(--text--size--h5-max));
-    --font--size--6: clamp(var(--text--size--h6-min), 1.0000rem + 0.0000vi, var(--text--size--h6-max));
-    --font--size--badge: clamp(var(--text--size--badge-min), 0.8750rem + 0.0000vi, var(--text--size--badge-max));
-    --font--size--button: clamp(var(--text--size--button-min), 0.7788rem + 0.3846vi, var(--text--size--button-max));
-    --font--size--content: clamp(var(--text--size--content-min), 0.9038rem + 0.3846vi, var(--text--size--content-max));
+    --fluid--viewport-min: 400px;
+    --fluid--viewport-max: 1440px;
+    --fluid--viewport-range: calc(var(--fluid--viewport-max) - var(--fluid--viewport-min));
+    --fluid--viewport-progress: calc((100vi - var(--fluid--viewport-min)) / var(--fluid--viewport-range));
+    --font--size--1: clamp(var(--text--size--h1-min), calc(var(--text--size--h1-min) + (var(--text--size--h1-max) - var(--text--size--h1-min)) * var(--fluid--viewport-progress)), var(--text--size--h1-max));
+    --font--size--2: clamp(var(--text--size--h2-min), calc(var(--text--size--h2-min) + (var(--text--size--h2-max) - var(--text--size--h2-min)) * var(--fluid--viewport-progress)), var(--text--size--h2-max));
+    --font--size--3: clamp(var(--text--size--h3-min), calc(var(--text--size--h3-min) + (var(--text--size--h3-max) - var(--text--size--h3-min)) * var(--fluid--viewport-progress)), var(--text--size--h3-max));
+    --font--size--4: clamp(var(--text--size--h4-min), calc(var(--text--size--h4-min) + (var(--text--size--h4-max) - var(--text--size--h4-min)) * var(--fluid--viewport-progress)), var(--text--size--h4-max));
+    --font--size--5: clamp(var(--text--size--h5-min), calc(var(--text--size--h5-min) + (var(--text--size--h5-max) - var(--text--size--h5-min)) * var(--fluid--viewport-progress)), var(--text--size--h5-max));
+    --font--size--6: clamp(var(--text--size--h6-min), calc(var(--text--size--h6-min) + (var(--text--size--h6-max) - var(--text--size--h6-min)) * var(--fluid--viewport-progress)), var(--text--size--h6-max));
+    --font--size--badge: clamp(var(--text--size--badge-min), calc(var(--text--size--badge-min) + (var(--text--size--badge-max) - var(--text--size--badge-min)) * var(--fluid--viewport-progress)), var(--text--size--badge-max));
+    --font--size--button: clamp(var(--text--size--button-min), calc(var(--text--size--button-min) + (var(--text--size--button-max) - var(--text--size--button-min)) * var(--fluid--viewport-progress)), var(--text--size--button-max));
+    --font--size--content: clamp(var(--text--size--content-min), calc(var(--text--size--content-min) + (var(--text--size--content-max) - var(--text--size--content-min)) * var(--fluid--viewport-progress)), var(--text--size--content-max));
     --radius--none: var(--size--0);
     --radius--xxs: var(--size--1);
     --radius--xs: var(--size--2);
@@ -624,11 +628,7 @@ a:where(:hover, :active, :focus) {
 :where(button, [role=button], [type=submit], .button, .btn-filled, .btn-tonal, .btn-outlined, .btn-ghost):is(.size-sm) {
     --spacing-block: calc(var(--spacing--block) * var(--button--size-sm-scale));
     --spacing-inline: calc(var(--spacing--inline) * var(--button--size-sm-scale));
-    --font-size: clamp(
-            calc(var(--text--size--button-min) * var(--button--size-sm-scale)),
-            calc(0.7788rem * var(--button--size-sm-scale) + 0.3846vi * var(--button--size-sm-scale)),
-            calc(var(--text--size--button-max) * var(--button--size-sm-scale))
-    );
+    --font-size: calc(var(--font--size--button) * var(--button--size-sm-scale));
     padding: var(--spacing-block) var(--spacing-inline);
     font-size: var(--font-size);
 }
@@ -636,11 +636,7 @@ a:where(:hover, :active, :focus) {
 :where(button, [role=button], [type=submit], .button, .btn-filled, .btn-tonal, .btn-outlined, .btn-ghost):is(.size-lg) {
     --spacing-block: calc(var(--spacing--block) * var(--button--size-lg-scale));
     --spacing-inline: calc(var(--spacing--inline) * var(--button--size-lg-scale));
-    --font-size: clamp(
-            calc(var(--text--size--button-min) * var(--button--size-lg-scale)),
-            calc(0.7788rem * var(--button--size-lg-scale) + 0.3846vi * var(--button--size-lg-scale)),
-            calc(var(--text--size--button-max) * var(--button--size-lg-scale))
-    );
+    --font-size: calc(var(--font--size--button) * var(--button--size-lg-scale));
     padding: var(--spacing-block) var(--spacing-inline);
     font-size: var(--font-size);
 }
