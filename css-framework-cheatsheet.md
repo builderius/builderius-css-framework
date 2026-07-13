@@ -250,17 +250,16 @@ Size variables define the core measurements used throughout the system:
     --text--size--badge-max: var(--size--7);
     --text--size--badge-min: var(--size--7);
 
-    --font--size--content: clamp(var(--text--size--content-min), 0.9038rem + 0.3846vi, var(--text--size--content-max));
-    --font--size--button: clamp(var(--text--size--button-min), 0.7788rem + 0.3846vi, var(--text--size--button-max));
-    --font--size--badge: clamp(var(--text--size--badge-min), 0.8750rem + 0.0000vi, var(--text--size--badge-max));
-    --font--size--0: clamp(var(--text--size--h6-min), 1.0000rem + 0.0000vi, var(--text--size--h6-max));
-    --font--size--1: clamp(var(--text--size--h5-min), 0.9808rem + 0.5769vi, var(--text--size--h5-max));
-    --font--size--2: clamp(var(--text--size--h4-min), 1.0577rem + 0.7692vi, var(--text--size--h4-max));
-    --font--size--3: clamp(var(--text--size--h3-min), 1.3077rem + 0.7692vi, var(--text--size--h3-max));
-    --font--size--4: clamp(var(--text--size--h2-min), 1.5577rem + 0.7692vi, var(--text--size--h2-max));
-    --font--size--5: clamp(var(--text--size--h1-min), 1.6154rem + 1.5385vi, var(--text--size--h1-max));
+    /* Fluid sizes: author only min/max — the preferred value is a computed clamp(). */
+    --font--size--1: clamp(var(--text--size--h1-min), calc(var(--text--size--h1-min) + tan(atan2(var(--text--size--h1-max) - var(--text--size--h1-min), 1200px - 375px)) * (100vi - 375px)), var(--text--size--h1-max));
+    /* …--font--size--2 … --font--size--6, --badge, --button, --content follow the same pattern. */
 }
 ```
+
+Each fluid size scales from its min at a 375px viewport to its max at 1200px. The slope
+is computed live via `tan(atan2())`, so overriding any `--text--size--*` token recomputes
+automatically. It uses only widely-supported CSS (`clamp()`, the `vi` unit, and the
+`tan()`/`atan2()` trig functions) — every current browser, no JavaScript, no polyfill.
 
 ### Container & Layout Variables
 

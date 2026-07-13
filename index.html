@@ -312,8 +312,14 @@
                 <div class="demo-section-header page-content">
                     <span class="badge-ghost">Typography</span>
                     <h2 style="margin-top: 1rem">A Fluid Type Scale</h2>
-                    <p>All heading sizes use <code>clamp()</code> for fluid scaling between viewport breakpoints. Body
-                        text, badges, and buttons have their own independent scales.</p>
+                    <p>Every type size scales fluidly between viewport breakpoints using pure-CSS
+                        <code>clamp()</code>. You define only the min and max sizes as tokens, and the preferred value
+                        (the slope) is computed live with <code>tan(atan2())</code> — so overriding a size token
+                        recomputes automatically, with no hand-tuned magic numbers to maintain. Body text, badges, and
+                        buttons have their own independent scales.</p>
+                    <p>It relies only on widely-supported CSS (<code>clamp()</code>, the <code>vi</code> viewport unit,
+                        and trigonometric functions), so it works in every current browser with no JavaScript and no
+                        polyfill.</p>
                     <p>The framework uses a special class <code>.page-content</code> for the wrapper with actual content.
                         Why it matters? Because we reset default browser's styling, like margin for paragraphs etc. Yet
                         we keep consistent spacing for content specific elements inside an element with class <code>.page-content</code>.
@@ -426,7 +432,7 @@
                         <div class="demo-post-card__body">
                             <h3>Typography Scale Deep Dive</h3>
                             <p class="demo-post-card__excerpt">A complete walkthrough of the BCSS type scale — from the
-                                fluid <code>clamp()</code> formulas powering each heading level to fine-tuning
+                                fluid <code>clamp()</code> sizing powering each heading level to fine-tuning
                                 line-height and letter-spacing.</p>
                         </div>
                         <div class="demo-post-card__footer">

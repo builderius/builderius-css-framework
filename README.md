@@ -1,14 +1,15 @@
-﻿# Builderius CSS - 1.3
+﻿# Builderius CSS - 1.4
 ## A Minimal CSS Framework for Builderius Site Builder
 A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CSS Variables and simple utility classes. It takes this minimalist approach to CSS frameworks and adapts them to the specific visual builder environment so that it aligns better with the logic of the UI and helps users get a quick start.
 
-## A video walkthrough of the framework
-[![Watch the video](https://img.youtube.com/vi/EwfXgAwvsRo/0.jpg)](https://www.youtube.com/watch?v=EwfXgAwvsRo)
+## Live Preview
+See the framework in action — every component, the color system, fluid typography, and a live theme/color customizer:
 
+**[builderius.github.io/builderius-css-framework](https://builderius.github.io/builderius-css-framework/)**
 
 
 ## How does it help users get a quick start?
-- Drop any html element into the canvas and it will look nice and be responsive out of the box.
+- Drop any html element into the Builder canvas and it will look nice and be responsive out of the box.
 - It takes care of the basic global styling so that you can extend it to fit your needs faster then building from scratch would take you.
 
 ## Video walkthrough
@@ -29,7 +30,23 @@ A minimalist and lightweight starter CSS that prioritizes semantic HTML, uses CS
 [Quick explanation of assets available and how to approach them](./css-framework-cheatsheet.md)
 
 ### Fluid Typography
-Framework uses `clamp()` to set flexible sizes for typography that scale with the size of the browser making the typography fit every screen size.
+Typography scales fluidly with the viewport so text fits every screen size. Each size is expressed by just its min and max tokens, wrapped in a `clamp()` whose preferred value (the slope) is computed live with `tan(atan2())`:
+
+```css
+--font--size--1: clamp(
+    var(--text--size--h1-min),
+    calc(var(--text--size--h1-min) + tan(atan2(var(--text--size--h1-max) - var(--text--size--h1-min), 1200px - 375px)) * (100vi - 375px)),
+    var(--text--size--h1-max)
+);
+```
+
+The size scales from its min at a 375px viewport to its max at 1200px. Because the slope is computed rather than hardcoded, changing a size token (or overriding it — e.g. `--text--size--h1-max: 3rem`) recomputes automatically, with no magic numbers to hand-tune.
+
+This uses only widely-supported CSS — `clamp()`, the `vi` viewport unit, and the `tan()`/`atan2()` trigonometric functions — so it works in every current browser with no JavaScript and no polyfill:
+
+```html
+<link rel="stylesheet" href="framework.css">
+```
 
 ### Modern selectors for managing low specificity
 Framework has to be easy to override on local level, without the need to overuse the high specificity selectors like ID based selectors. We use `:where()` frequently for this reason as well as making the selectors grouping more elegant and readable.
